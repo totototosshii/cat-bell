@@ -1,0 +1,19 @@
+@use "../global" as g;
+
+// 接頭辞：ly_
+
+// ----------------------------------------------------------------
+//  フッターレイアウト
+// ----------------------------------------------------------------
+.ly_footer{
+  padding: 55px 0 4px 0;
+  border-top: 1px solid g.$color-yellow;
+  @include	g.mq(){
+    padding-top: 30px;
+  }
+}
+.ly_footerInner{
+  max-width: 564px;
+  margin: 0 auto;
+  text-align: center;
+}

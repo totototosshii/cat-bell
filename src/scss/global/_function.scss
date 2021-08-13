@@ -1,0 +1,98 @@
+// ----------------------------------------
+// フォントサイズ
+// ----------------------------------------
+@mixin fz($size: 16) {
+	font-size: ($size / 10) + rem;
+}
+// 参考→https://jajaaan.co.jp/css/font-size-rem/
+// remは可変となっても大丈夫な箇所にのみ指定し、それ以外はpx推奨。
+// 例）
+//  p {
+//     @include g.fz();
+//  }
+//  p {
+//     @include g.fz(18);
+//  }
+
+
+// ----------------------------------------
+// 上下左右中央寄せ
+// ----------------------------------------
+// position中央寄せ
+@mixin cc($top:50%, $left:50%) {
+	position: absolute;
+	top: $top;
+	left: $left;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+// 例）
+//  .center {
+//     @include g.cc();
+//  }
+//  .center {
+//     @include g.cc(30%, 40%);
+//  }
+
+
+// ----------------------------------------
+// 子要素をインナー幅からはみ出して画面一杯
+// ----------------------------------------
+@mixin go {
+	width: 100vw;
+	margin: 0 calc(50% - 50vw);
+}
+// 参考→https://haniwaman.com/inner-over/
+// 例）
+//  .child {
+//     @include g.go;
+//  }
+
+
+// ----------------------------------------
+// ブレークポイント・メディアクエリ
+// ----------------------------------------
+$breakpoints: (
+	"sp": "(max-width: 767px)",
+	"pc": "(min-width: 768px)"
+);
+
+@mixin mq($breakpoint: sp) {
+	@media #{map-get($breakpoints, $breakpoint)}  {
+	@content;
+	}
+}
+// 例）↓
+// @include g.mq('pc'){
+// 	.text{
+// 		color: #333;
+// 	}
+// }
+
+
+// 割り算           // 分子     // 分母
+@function division($numerator, $denominator) {
+	@return $numerator / $denominator;
+}
+// （例）line-height: g.division(34,16);→行間/フォントサイズ
+// （例）letter-spacing: g.division(34,1000) + em;→文字間(AV)/1000em
+
+// デザインカンプの数値をそのまま入力
+// 括弧内は左から、フォントサイズ、行送り、フォントウェイト、トラッキングの順
+// フォントサイズには引数を指定
+@mixin f_around($pixels, $height: false, $weight: false, $spacing: false) {
+  font-size: $pixels * 1rem;
+  @if $weight{
+    font-weight: $weight;
+  }
+  @if $height{
+    line-height: $height / $pixels;
+  }
+  @if $spacing{
+    letter-spacing: ($spacing / 1000) * 1em;
+  }
+}
+// 例）
+// .txt {
+//   @include g.f_around(2, $height: 5, $weight: bold, $spacing: 200);
+// }

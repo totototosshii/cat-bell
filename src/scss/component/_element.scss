@@ -1,0 +1,285 @@
+@use "../global" as g;
+
+// 接頭辞：el_
+
+// 使用例
+// h2{
+//   color: #ddd;
+//   @include	g.fz(30);
+// }
+// .txt{
+//   line-height:	g.division(18,	20);
+//   letter-spacing:	g.division(200,	20)	+	em;
+//   @include g.f_around(2, $height: 5, $weight: bold, $spacing: 200);
+//   @include	g.cc();
+//   z-index: map-get(g.$layer, "modal");
+// }
+
+// ----------------------------------------------------------------
+// ドロワーボタン
+// ----------------------------------------------------------------
+.el_drawerBtn{
+  @include	g.mq('pc'){
+    display: none;
+  }
+  width: 40px;
+  height: 30px;
+  display: block;
+  position: relative;
+  z-index:	map-get(g.$layer,"drawer");
+}
+.el_drawerBtn > .el_drawerLine{
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-color: currentColor;
+  transition: all .4s;
+  @include	g.cc();
+  &::before, &::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    display: block;
+    position: absolute;
+    background-color: currentColor;
+    transition: all .4s;
+  }
+  &::before{
+    top: -9px;
+  }
+  &::after{
+    top: 9px;
+  }
+}
+// スクリーンリーダー用テキスト
+.el_visuallyHidden{
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+// ----------------------------------------------------------------
+//  ボタン
+// ----------------------------------------------------------------
+.el_btn{
+  display: inline-block;
+  text-align: center;
+  @include	g.mq('pc'){
+    transition: all .4s;
+  }
+}
+// ファーストビュー内ボタン
+.el_btn__fv{
+  @include	g.fz(18);
+  line-height:	g.division(28,	18);
+  letter-spacing:	g.division(18,	1000)	+	em;
+  border-radius: 30px;
+  border: 1px solid g.$color-active;
+  background-color:	g.$color-active;
+  color: g.$color-white;
+  width: 192px;
+  padding: 15px 0;
+  @include	g.mq(){
+    @include	g.fz(15);
+    width: 140px;
+    padding: 8px 0
+  }
+  &:nth-of-type(2){
+    margin-left: 8px;
+    @include	g.mq(){
+      margin-left: 10px;
+    }
+  }
+  &:hover{
+    color: g.$color-active;
+    background-color:	g.$color-white;
+  }
+}
+// 各セクションの一覧へのリンクボタン
+.el_btn__archive{
+  position: relative;
+  border-radius: 30px;
+  border: 1px solid currentColor;
+  color: g.$color-active;
+  max-width: 420px;
+  width: 100%;
+  @include	g.fz(18);
+  line-height:	g.division(27,	18);
+  padding: 15.5px 0;
+  @include	g.mq('pc'){
+    &:hover{
+      border: 1px solid currentColor;
+      color: g.$color-active;
+      opacity: 0.5;
+    }
+  }
+  @include	g.mq(){
+    @include	g.fz(15);
+    max-width: 280px;
+  }
+  &::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+    background-image: url(../img/common/arrow_orange.svg);
+    width: 8px;
+    height: 14px;
+  }
+}
+// マップ内の店舗へのリンクボタン
+.el_btn__mapSapporo,
+.el_btn__mapMiyagi,
+.el_btn__mapSinjuku,
+.el_btn__mapIshikawa,
+.el_btn__mapUmeda,
+.el_btn__mapShizuoka,
+.el_btn__mapFukuoka,
+.el_btn__mapKagoshima{
+  border-radius: 24px;
+  border: 1px solid g.$color-active;
+  background-color: g.$color-active;
+  color: g.$color-white;
+  line-height:	g.division(27,	18);
+  position: absolute;
+  width: 100%;
+  @include	g.mq('pc'){
+    @include	g.fz(18);
+    max-width: 144px;
+    padding: 9.5px 0;
+    &:hover{
+      background-color: g.$color-white;
+      border: 1px solid currentColor;
+      color: g.$color-active;
+    }
+  }
+  @include	g.mq(){
+    @include	g.fz(12);
+    max-width: 70px;
+    padding: 5px 0;
+  }
+}
+.el_btn__mapSapporo{
+  top: 0;
+  right: 0;
+  @include	g.mq(){
+    top: -46px;
+  }
+}
+.el_btn__mapMiyagi{
+  top: 160px;
+  right: 0;
+  @include	g.mq(){
+    top: 30px;
+  }
+}
+.el_btn__mapSinjuku{
+  right: 0;
+  bottom: 0;
+}
+.el_btn__mapIshikawa{
+  top: 160px;
+  left: 299px;
+  @include	g.mq(){
+    top: 30px;
+    left: 140px;
+  }
+}
+.el_btn__mapUmeda{
+  top: 240px;
+  left: 299px;
+  @include	g.mq(){
+    top: 74px;
+    left: 140px;
+  }
+}
+.el_btn__mapShizuoka{
+  left: 299px;
+  bottom: 0;
+  @include	g.mq(){
+    left: 140px;
+  }
+}
+.el_btn__mapFukuoka{
+  top: 240px;
+  left: 99px;
+  @include	g.mq(){
+    top: 30px;
+    left: 50px;
+  }
+}
+.el_btn__mapKagoshima{
+  bottom: 0;
+  left: 0;
+}
+// ----------------------------------------------------------------
+//  ヘッダーロゴ
+// ----------------------------------------------------------------
+.el_lv1Heading{
+  a{
+    display: block;
+  }
+  @include	g.mq(){
+    position: relative;
+    z-index:	map-get(g.$layer,"drawer");
+    width: 130px;
+  }
+}
+// ----------------------------------------------------------------
+//  各セクション見出し
+// ----------------------------------------------------------------
+.el_lv2Heading{
+  @include	g.fz(36);
+  font-family:	g.$ff-notosans-medium;
+  font-weight: 500;
+  letter-spacing:	g.division(2,	1000)	+	em;
+  line-height:	g.division(54,	36);
+  text-align: center;
+  @include	g.mq(){
+    @include	g.fz(24);
+  }
+  span{
+    color: g.$color-active;
+    @include	g.fz(12);
+    font-family:	g.$ff-hiramaru;
+    letter-spacing:	2px;
+    line-height:	g.division(19,	12);
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+}
+// ----------------------------------------------------------------
+//  ファースビュー
+// ----------------------------------------------------------------
+.el_lv2Heading__fv{
+  font-family:	g.$ff-notosans-medium;
+  font-weight: bold;
+  @include	g.fz(48);
+  line-height:	g.division(72,	48);
+  letter-spacing:	g.division(2.4,	1000)	+	em;
+  text-align: left;
+  @include	g.mq(){
+    @include	g.fz(24);
+  }
+}
+// ----------------------------------------------------------------
+//  お知らせ
+// ----------------------------------------------------------------
+.el_lv2Heading__info{
+  color:	g.$color-active;
+  font-family:	g.$ff-hiramaru;
+  @include	g.fz(18);
+  letter-spacing:	g.division(.2,	1000)	+	em;
+  font-weight: normal;
+  @include	g.mq(){
+    margin-bottom: 1em;
+  }
+}

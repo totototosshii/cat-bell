@@ -1,0 +1,3 @@
+# GitHubに保管しないファイル
+node_modules
+.DS_Store

@@ -1,0 +1,183 @@
+@use "../global" as g;
+
+// 接頭辞：ly_
+
+// 使用例
+// .ly_section{
+//   max-width: g.$layout-width-inner;
+//   margin: 0 auto;
+//   position: relative;
+//   width: 500px;
+//   height: 500px;
+//   background-color:	g.$color-active;
+//   .div{
+//     background-color:	g.$color-main;
+//     width: 200px;
+//     height: 200px;
+//     border-radius: 50%;
+//     position: relative;
+//   }
+// }
+
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// トップページ
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+.ly_section{
+  padding: 96px 0;
+  @include	g.mq(){
+    padding: 30px 0;
+  }
+}
+.ly_sectionInner{
+  max-width: g.$layout-width-inner;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  @include	g.mq(){
+    width: 100%;
+  }
+}
+// ----------------------------------------------------------------
+//  ファーストビュー
+// ----------------------------------------------------------------
+.ly_fv{
+  overflow-x: hidden;
+  background-color:	g.$color-base;
+  position: relative;
+  @include	g.mq(){
+    padding-bottom: 30px;
+  }
+}
+.ly_fvInner{
+  position: relative;
+  margin: 0 auto;
+  max-width: 940px;
+  width: 100%;
+  @include	g.mq('pc'){
+    height: 587px;
+  }
+  @include	g.mq(){
+    padding: 0 4vw;
+  }
+  img{
+    position: absolute;
+    top: 0;
+    right: -240px;
+    @include	g.mq(){
+      transform: translateX(-50%);
+    }
+  }
+}
+// ----------------------------------------------------------------
+//  お知らせ
+// ----------------------------------------------------------------
+.ly_section__info{
+  @include	g.mq('pc'){
+    padding: 0;
+    position: relative;
+  }
+  @include	g.mq(){
+    background-color:	g.$color-base;
+    padding-right: 4vw;
+    padding-left: 4vw;
+  }
+  .ly_sectionInner{
+    background-color: rgba(255,255,255,.7);
+    display: flex;
+    border-radius: 16px;
+    text-align: left;
+    @include	g.mq('pc'){
+      padding: 38px 40px 17px 40px;
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @include	g.mq(){
+      flex-direction: column;
+      padding: 4vw;
+    }
+  }
+}
+// ----------------------------------------------------------------
+//  ペットを探す
+// ----------------------------------------------------------------
+.ly_home .ly_section__pet{
+  background-color:	g.$color-base;
+  @include	g.mq('pc'){
+    padding-top: 190px;
+  }
+  @include	g.mq(){
+    padding-bottom: 60px;
+    .ly_sectionInner{
+      padding: 0 4vw;
+    }
+  }
+}
+// ----------------------------------------------------------------
+//  お店を探す
+// ----------------------------------------------------------------
+.ly_section__shop{
+  padding-bottom: 60px;
+  @include	g.mq(){
+    .ly_sectionInner{
+      padding: 0 4vw;
+    }
+  }
+}
+// ----------------------------------------------------------------
+//  ブログ
+// ----------------------------------------------------------------
+.ly_section__blog{
+  background-color:	g.$color-base;
+  padding-bottom: 60px;
+  @include	g.mq(){
+    .ly_sectionInner{
+      padding: 0 4vw;
+    }
+  }
+}
+// ----------------------------------------------------------------
+//  サイトについて
+// ----------------------------------------------------------------
+.ly_section__about{
+  background-color:	g.$color-gray;
+  padding-bottom: 83px;
+  @include	g.mq(){
+    padding-bottom: 0;
+  }
+  .ly_sectionInner{
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    @include	g.mq(){
+      padding: 0 4vw;
+    }
+  }
+  img{
+    @include	g.mq('pc'){
+      position: absolute;
+      width: 363px;
+      top: 20px;
+      left: -5%;
+    }
+  }
+}
+
+
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// 一覧ページ
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+.ly_under{
+  padding-top: 125px;
+  @include	g.mq(){
+    padding-top: 70px;
+  }
+  .ly_sectionInner{
+    padding: 0 4vw;
+  }
+}

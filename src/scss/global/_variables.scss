@@ -1,0 +1,40 @@
+// ----------------------------------------------------------------
+// 変数を定義
+// ----------------------------------------------------------------
+
+// コンテンツ幅
+$layout-width-inner: 980px;
+
+// カラー
+$color-base: #FAFAFA;
+$color-main: #2C2C2C;
+$color-active: #FF5F32;
+$color-yellow: #F7B500;
+$color-gray: #F7F7F9;
+$color-lightGray: #9b9b9b;
+$color-dark: #5D5D5D;
+$color-white: #fff;
+
+// フォントファミリー
+$ff-notosans-medium: noto-sans-cjk-jp, sans-serif;
+$ff-gothic:  'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','Meiryo UI',sans-serif;
+$ff-hiramaru: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+$ff-mincho: 'Noto Serif JP', 游明朝, 'Yu Mincho', YuMincho, 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', HGS明朝E, メイリオ, Meiryo, serif;
+$ff-base: $ff-gothic;
+$fz-base: 1.6rem;
+$lh-base: 1;
+
+// 重なり順
+$layer: (
+  modal: 100,// モーダル
+  drawer: 40,// ドロワーボタン
+  sp-menu: 35,// ドロワーメニュー
+  floating: 30,// トップへ戻る
+  header: 20,// ヘッダー
+  default: 1,// デフォルト
+  underlay: -10// マイナス
+);
+// 例）
+// .drawer {
+//   z-index: map-get(g.$layer, "drawer");
+// }

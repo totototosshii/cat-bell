@@ -1,0 +1,27 @@
+@use "../global" as g;
+
+// 接頭辞：ly_
+
+// ----------------------------------------------------------------
+// ヘッダーレイアウト
+// ----------------------------------------------------------------
+.ly_header{
+  padding: 44px 56px 20px 56px;
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: map-get(g.$layer, "header");
+  transition: all .4s;
+  @include	g.mq(){
+    padding: 10px 4vw;
+  }
+}
+.ly_headerInner{
+  display:	flex;
+  align-items: baseline;
+  @include	g.mq(){
+    justify-content: space-between;
+    align-items: center;
+  }
+}

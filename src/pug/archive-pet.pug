@@ -1,0 +1,259 @@
+doctype html
+html(lang="ja")
+  head(prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: https://ogp.me/ns/website#")
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title 猫種一覧
+    meta(name="description" content="猫と暮らそう 安心・安全な猫専門ペットショップ")
+    meta(name="format-detection" content="telephone=no")
+    meta(property="og:title" content="猫種一覧")
+    meta(property="og:type" content="article")
+    meta(property="og:description" content="猫と暮らそう 安心・安全な猫専門ペットショップ")
+    meta(property="og:url" content="このページのURL")
+    meta(property="og:image" content="絶対パスで指定（1200×630以上推奨）")
+    meta(property="og:locale" content="ja_JP")
+    meta(property="og:site_name" content="CAT BELL")
+    meta(property="fb:app_id" content="FacebookID")
+    meta(name="twitter:card" content="summary")
+    meta(name="twitter:site" content="@ユーザー名")
+    script.
+      (function(d) {
+      var config = {
+        kitId: 'yxe4bgl',
+        scriptTimeout: 3000,
+        async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    script(src="https://cdn.jsdelivr.net/npm/viewport-extra@1.0.3/dist/viewport-extra.min.js")
+    script.
+      (function () {
+      let ua = navigator.userAgent
+      let sp = ua.indexOf('iPhone') > -1 || (ua.indexOf('Android') > -1 && ua.indexOf('Mobile') > -1)
+      let tab = !sp && (ua.indexOf('iPad') > -1 || (ua.indexOf('Macintosh') > -1 && 'ontouchend' in document) || ua.indexOf('Android') > -1)
+      new ViewportExtra(tab ? 1200 : 375) })()
+    link(rel="icon" href="絶対パスで指定")
+    link(rel="apple-touch-icon" sizes="180x180" href="絶対パスで指定")
+    link(rel="stylesheet", href="./css/style.css?ver")
+  body.ly_under.js_noScroll
+    header.ly_header.js_headerScroll
+      div.ly_headerInner
+        h1.el_lv1Heading
+          a(href="index.html")
+            img(src="img/home/logo.svg", alt="CAT BELL")
+        nav.bl_headerNav.js_headerNav
+          ul.bl_headerList
+            li
+              a(href="archive.html") ペットを探す
+            li
+              a(href="") お店を探す
+            li
+              a(href="") ブログ一覧
+        button(type="button").el_drawerBtn.js_drawerBtn
+          span.el_drawerLine
+          span.el_visuallyHidden メニューを開閉する
+
+    main.ly_main
+      ol.bl_breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a(href="index.html" itemprop="item")
+            span(itemprop="name") ホーム
+          meta(itemprop="position" content=1)
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a(href="archive.html" itemprop="item")
+            span(itemprop="name") 猫種一覧
+          meta(itemprop="position" content=2)
+      section.ly_section.ly_section__pet.hp_pt15
+        div.ly_sectionInner
+          h2.el_lv2Heading ペットを探す
+            br
+            |
+            span Find a pet
+          ul.bl_cardUnit.bl_cardUnit__col4Pet
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link スコティッシュ
+                  br
+                  | フォールド
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/4columns/01.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link アメリカン
+                  br
+                  | ショートヘア
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/4columns/02.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link メインクーン
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/4columns/03.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link エキゾチック
+                  br
+                  | ショートヘア
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/4columns/04.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link ラグドール
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/4columns/05.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link ブリティッシュ
+                  br
+                  | ショートヘア
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/4columns/06.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link マンチカン
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/4columns/07.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link サイベリアン
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/4columns/08.png", alt="")
+          ul.bl_cardUnit.bl_cardUnit__col3Pet
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link ノルウェージャンフォレストキャット
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/3columns/01.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link ミヌエット
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/3columns/02.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link ロシアンブルー
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/3columns/03.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link シャルトリュー
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/3columns/04.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link ノルウェージャンフォレストキャット
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/3columns/01.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link ミヌエット
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/3columns/02.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link ロシアンブルー
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/3columns/03.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link シャルトリュー
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/3columns/04.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link ノルウェージャンフォレストキャット
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/3columns/01.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link ミヌエット
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/3columns/02.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link ロシアンブルー
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/3columns/03.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link ノルウェージャンフォレストキャット
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/3columns/04.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link ノルウェージャンフォレストキャット
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/3columns/01.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link ミヌエット
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/3columns/02.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link ロシアンブルー
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/3columns/03.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link シャルトリュー
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/3columns/04.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link ノルウェージャンフォレストキャット
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/3columns/01.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link ミヌエット
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/3columns/02.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link ロシアンブルー
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/3columns/03.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link シャルトリュー
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/3columns/04.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link ノルウェージャンフォレストキャット
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/3columns/01.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link ミヌエット
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/3columns/02.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link ロシアンブルー
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/3columns/03.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link ノルウェージャンフォレストキャット
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/3columns/04.png", alt="")
+          button(type="button").el_btn.el_btn__archive.js_morePet すべての猫種一覧を見る
+
+    footer.ly_footer
+      div.ly_footerInner
+        div.bl_footerContent
+          a(href="index.html")
+            img(src="img/home/logo.svg", alt="CAT BELL")
+          ul.bl_footerList
+            li
+              a(href="archive.html") ペットを探す
+            li
+              a(href="") お店を探す
+            li
+              a(href="") ブログ一覧
+        small &copy; 2020-2022 CAT BELL Co., Ltd.
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js")
+    script(src="./js/bundle.js?ver")

@@ -1,0 +1,46 @@
+@use "../global" as g;
+// ----------------------------------------------------------------
+// JavaScriptやjQueryに関わるクラス
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// ドロワー開閉
+// ----------------------------------------------------------------
+// ドロワー展開時にスクロールを無効
+.js_noScroll.is_active{
+	overflow: hidden;
+}
+// ドロワー展開時のアニメーション
+.js_drawerBtn.is_active .el_drawerLine{
+	background-color:	transparent;
+	&::before, &::after{
+		top: 50%;
+		background-color:	g.$color-main;
+	}
+	&::before{
+		transform: translateY(-50%) rotate(45deg);
+	}
+	&::after{
+		transform: translateY(-50%) rotate(-45deg);
+	}
+}
+// ドロワー展開時のメニュー
+.js_headerNav.is_active{
+	transform: translateX(0);
+}
+
+// ----------------------------------------------------------------
+//	ヘッダースクロール
+// ----------------------------------------------------------------
+.js_headerScroll.is_active{
+	background-color:	g.$color-white;
+	opacity: 0.8;
+}
+
+// ----------------------------------------------------------------
+//	「すべての猫種一覧を見る」をクリックしたら６件ずつ追加で表示
+// ----------------------------------------------------------------
+.bl_cardUnit__col3Pet > .bl_card.is_active{
+	opacity: 0;
+	height: 0;
+	margin: 0;
+}

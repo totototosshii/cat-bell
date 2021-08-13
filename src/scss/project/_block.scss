@@ -1,0 +1,497 @@
+@use "../global" as g;
+
+// 接頭辞：bl_
+
+// ----------------------------------------------------------------
+// ヘッダー
+// ----------------------------------------------------------------
+.bl_headerNav{
+  font-family:	g.$ff-notosans-medium;
+  font-weight: bold;
+  @include	g.mq('pc'){
+    @include	g.fz(14);
+    margin-left: 64px;
+  }
+  @include	g.mq(){
+    @include	g.fz(16);
+    width: 100%;
+    height: 100%;
+    background-color:	rgba(255, 255, 255, .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    transition: transform .4s;
+    z-index: map-get(g.$layer, "sp-menu");
+  }
+}
+.bl_headerList{
+  display: flex;
+  justify-content: space-between;
+  @include	g.mq('pc'){
+    li:not(:first-of-type){
+      margin-left: 56px;
+    }
+  }
+  a{
+    color: g.$color-main;
+    display: block;
+    line-height:	g.division(21, 14);
+    padding: 9.5px 0;
+    transition: color .4s;
+  }
+  @include	g.mq('pc'){
+    a:hover{
+      color: g.$color-active;
+    }
+  }
+  @include	g.mq('sp'){
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20vh;
+    > li{
+      line-height: 1.7;
+      margin-bottom: 2em;
+    }
+  }
+}
+// ----------------------------------------------------------------
+// フッター
+// ----------------------------------------------------------------
+.bl_footerContent{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include	g.mq(){
+    flex-direction: column;
+  }
+  > a{
+    display: block;
+    img{
+      width: 147px;
+    }
+  }
+}
+.bl_footerList{
+  display: flex;
+  @include	g.mq(){
+    flex-direction: column;
+    margin-top: 1em;
+    li:not(:last-of-type){
+      margin-bottom: 1em;
+    }
+  }
+  a{
+    color:	g.$color-main;
+    font-family:	g.$ff-notosans-medium;
+    @include	g.fz(14);
+    line-height:	g.division(21,	14);
+    padding: 6px 0;
+    transition: color .4s;
+  }
+  @include	g.mq('pc'){
+    li:not(:last-of-type){
+      margin-right: 56px;
+    }
+    a:hover{
+      color: g.$color-active;
+    }
+  }
+}
+small{
+  color: g.$color-lightGray;
+  display: inline-block;
+  @include	g.fz(10);
+  line-height:	g.division(15,	10);
+  margin-top: 25.05px;
+}
+
+
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// トップページ
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+//  ファーストビュー
+// ----------------------------------------------------------------
+.bl_fvContent{
+  padding-top: 237px;
+  position: relative;
+  z-index: map-get(g.$layer, "default");
+  @include	g.mq(){
+    padding-top: 172px;
+  }
+  p{
+    line-height:	g.division(24,	16);
+    letter-spacing:	g.division(16, 1000	)	+	em;
+    color: g.$color-dark;
+  }
+}
+.bl_fvBtn_wrap{
+  margin-top: 20px;
+}
+// ----------------------------------------------------------------
+//  お知らせ
+// ----------------------------------------------------------------
+.bl_vertPosts{
+  @include	g.mq('pc'){
+    margin-left: 32px;
+  }
+}
+.bl_vertPosts_item:not(:last-of-type){
+  margin-bottom: 19px;
+}
+.bl_vertPosts_date{
+  color: g.$color-dark;
+  display: inline-block;
+  @include	g.fz(14);
+  line-height:	g.division(21,	14);
+  min-width: 88px;
+}
+.bl_vertPosts_ttl{
+  color: g.$color-main;
+  text-decoration: underline;
+  margin-left: 12px;
+  &:hover{
+    color: g.$color-active;
+    text-decoration: underline;
+  }
+}
+// ----------------------------------------------------------------
+//  ペットを探す（下層ページの猫種一覧にも使用）
+// ----------------------------------------------------------------
+.bl_cardUnit.bl_cardUnit__col4Pet{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 50px;
+  @include	g.mq(){
+    padding: 0;
+  }
+}
+// 各カードに対する指定
+.bl_cardUnit__col4Pet > .bl_card{
+  width: 20.91%;
+  margin-right: 5.45%;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  @include	g.mq('pc'){
+    margin-bottom: 50px;
+    &:hover .bl_card_link::before{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: map-get(g.$layer, "default");
+    }
+    &:hover .bl_card_link{
+      color: g.$color-active;
+    }
+    &:hover .bl_card_imgWrapper{
+      opacity: 0.5;
+    }
+  }
+  @include	g.mq(){
+    width: 45%;
+    margin-right: 10%;
+    margin-bottom: 40px;
+  }
+}
+.bl_cardUnit__col4Pet > .bl_card:nth-of-type(4n){
+  @include	g.mq('pc'){
+    margin-right: 0;
+  }
+}
+.bl_cardUnit__col4Pet > .bl_card:nth-of-type(2n){
+  @include	g.mq(){
+    margin-right: 0;
+  }
+}
+.bl_cardUnit__col4Pet .bl_card_ttl{
+  @include	g.fz(18);
+  letter-spacing:	1px;
+  line-height:	g.division(27,	18);
+  text-align: center;
+  margin-top: 26px;
+  @include	g.mq(){
+    @include	g.fz(15);
+  }
+}
+.bl_cardUnit__col4Pet .bl_card_link{
+  color: g.$color-main;
+  display: block;
+  min-height: 54px;
+  transition: color .4s;
+}
+.bl_cardUnit__col4Pet .bl_card_imgWrapper{
+  transition: opacity .4s;
+}
+// ----------------------------------------------------------------
+//  お店を探す
+// ----------------------------------------------------------------
+.bl_map{
+  position: relative;
+  margin: 77px auto 64px;
+  @include	g.mq('pc'){
+    max-width: 672px;
+    width: 100%;
+    height: 392px;
+  }
+  @include	g.mq(){
+    max-width: 335px;
+    height: 163px;
+  }
+  img{
+    width: 506px;
+    position: absolute;
+    top:-77px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include	g.mq(){
+      width: 260px;
+    }
+  }
+}
+// ----------------------------------------------------------------
+//  ブログ
+// ----------------------------------------------------------------
+.bl_cardUnit.bl_cardUnit__col4Blog{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 54px;
+  @include	g.mq(){
+    flex-direction: column;
+    padding: 0;
+  }
+}
+// 各カードに対する指定
+.bl_cardUnit__col4Blog > .bl_card{
+  width: 21.225%;
+  margin-right: 5.03%;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: left;
+  @include	g.mq('pc'){
+    &:hover .bl_card_link::before{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: map-get(g.$layer, "default");
+    }
+    &:hover .bl_card_link{
+      color: g.$color-active;
+    }
+    &:hover .bl_card_imgWrapper{
+      opacity: 0.5;
+    }
+  }
+  @include	g.mq(){
+    width: 100%;
+    margin-right: 0;
+    &:not(:last-of-type){
+      margin-bottom: 50px;
+    }
+  }
+}
+.bl_cardUnit__col4Blog > .bl_card:nth-of-type(4n){
+  margin-right: 0;
+}
+.bl_cardUnit__col4Blog .bl_card_imgWrapper{
+  position: relative;
+  padding-top: 100%;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  @include	g.mq(){
+    margin-bottom: 4vw;
+  }
+}
+.bl_cardUnit__col4Blog img{
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.bl_cardUnit__col4Blog .bl_card_ttl{
+  @include	g.fz(16);
+  line-height:	g.division(24,	16);
+}
+.bl_cardUnit__col4Blog .bl_card_time{
+  @include	g.fz(12);
+  line-height:	g.division(19,	12);
+  color: g.$color-lightGray;
+}
+.bl_cardUnit__col4Blog .bl_card_link{
+  color: g.$color-main;
+  display: block;
+  min-height: 72px;
+  transition: color .4s;
+  @include	g.mq(){
+    min-height: 2em;
+  }
+}
+.bl_cardUnit__col4Blog .bl_card_imgWrapper{
+  @include	g.mq('pc'){
+    transition: opacity .4s;
+    margin-bottom: 28px;
+  }
+}
+.bl_cardUnit__col4Blog .bl_card_time{
+  margin-top: 6px;
+}
+// ----------------------------------------------------------------
+//  サイトについて
+// ----------------------------------------------------------------
+.bl_aboutContent{
+  text-align: left;
+  @include	g.mq('pc'){
+    max-width: 470px;
+    margin-left: auto;
+  }
+}
+.bl_about_ttl{
+  @include	g.fz(20);
+  line-height:	g.division(30,	20);
+}
+.bl_about_txt{
+  color: g.$color-dark;
+  line-height:	g.division(24,	16);
+  margin-top: 18px;
+  @include	g.mq(){
+    .br{
+      display: none;
+    }
+  }
+}
+
+
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// 猫種一覧ページ
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+.bl_cardUnit.bl_cardUnit__col3Pet{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 50px;
+  margin-top: -8px;
+  margin-bottom: 14px;
+  @include	g.mq(){
+    padding: 0;
+  }
+}
+// 各カードに対する指定
+.bl_cardUnit__col3Pet > .bl_card{
+  display: flex;
+  opacity: 1;
+  transition: opacity .4s;
+  @include	g.mq('pc'){
+    width: 30.91%;
+    margin-right: 3.635%;
+    position: relative;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    margin-bottom: 50px;
+    &:hover .bl_card_link::before{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: map-get(g.$layer, "default");
+    }
+    &:hover .bl_card_link{
+      color: g.$color-active;
+    }
+    &:hover .bl_card_imgWrapper{
+      opacity: 0.5;
+    }
+  }
+  @include	g.mq(){
+    width: 45%;
+    margin-right: 10%;
+    margin-bottom: 40px;
+    flex-direction: column-reverse;
+  }
+}
+.bl_cardUnit__col3Pet > .bl_card:nth-of-type(3n){
+  @include	g.mq('pc'){
+    margin-right: 0;
+  }
+}
+.bl_cardUnit__col3Pet > .bl_card:nth-of-type(2n){
+  @include	g.mq(){
+    margin-right: 0;
+  }
+}
+.bl_cardUnit__col3Pet .bl_card_ttl{
+  @include	g.fz(16);
+  line-height:	g.division(24,	16);
+  text-align: left;
+  margin-top: 10px;
+  margin-left: 1em;
+  @include	g.mq(){
+    @include	g.fz(15);
+    text-align: center;
+  }
+}
+.bl_cardUnit__col3Pet .bl_card_link{
+  color: g.$color-main;
+  display: block;
+  min-height: 54px;
+  transition: color .4s;
+}
+.bl_cardUnit__col3Pet .bl_card_imgWrapper{
+  @include	g.mq('pc'){
+    max-width: 96px;
+    width: 100%;
+    transition: opacity .4s;
+  }
+}
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// パンくずリスト
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+.bl_breadcrumb{
+  max-width: g.$layout-width-inner;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  @include	g.mq(){
+    padding: 0 4vw;
+  }
+  li:not(:last-of-type):after{
+    content: ">";
+    color: g.$color-dark;
+  }
+  a{
+    color: g.$color-dark;
+    display: inline-block;
+    @include	g.fz(12);
+    line-height:	g.division(18,	12);
+    padding: 0 .7em 0 1em;
+    @include	g.mq('pc'){
+      transition: color .4s;
+      &:hover{
+        color: g.$color-active;
+      }
+    }
+  }
+}

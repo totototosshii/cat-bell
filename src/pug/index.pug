@@ -1,0 +1,225 @@
+doctype html
+html(lang="ja")
+  head(prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: https://ogp.me/ns/website#")
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title CAT BELL
+    meta(name="description" content="猫と暮らそう 安心・安全な猫専門ペットショップ")
+    meta(name="format-detection" content="telephone=no")
+    meta(property="og:title" content="CAT BELL")
+    meta(property="og:type" content="website")
+    meta(property="og:description" content="猫と暮らそう 安心・安全な猫専門ペットショップ")
+    meta(property="og:url" content="このページのURL")
+    meta(property="og:image" content="絶対パスで指定（1200×630以上推奨）")
+    meta(property="og:locale" content="ja_JP")
+    meta(property="og:site_name" content="CAT BELL")
+    meta(property="fb:app_id" content="FacebookID")
+    meta(name="twitter:card" content="summary")
+    meta(name="twitter:site" content="@ユーザー名")
+    script.
+      (function(d) {
+      var config = {
+        kitId: 'yxe4bgl',
+        scriptTimeout: 3000,
+        async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    script(src="https://cdn.jsdelivr.net/npm/viewport-extra@1.0.3/dist/viewport-extra.min.js")
+    script.
+      (function () {
+      let ua = navigator.userAgent
+      let sp = ua.indexOf('iPhone') > -1 || (ua.indexOf('Android') > -1 && ua.indexOf('Mobile') > -1)
+      let tab = !sp && (ua.indexOf('iPad') > -1 || (ua.indexOf('Macintosh') > -1 && 'ontouchend' in document) || ua.indexOf('Android') > -1)
+      new ViewportExtra(tab ? 1200 : 375) })()
+    link(rel="icon" href="絶対パスで指定")
+    link(rel="apple-touch-icon" sizes="180x180" href="絶対パスで指定")
+    link(rel="stylesheet", href="./css/style.css?ver")
+  body.ly_home.js_noScroll
+    header.ly_header.js_headerScroll
+      div.ly_headerInner
+        h1.el_lv1Heading
+          a(href="index.html")
+            img(src="img/home/logo.svg", alt="CAT BELL")
+        nav.bl_headerNav.js_headerNav
+          ul.bl_headerList
+            li
+              a(href="archive.html") ペットを探す
+            li
+              a(href="") お店を探す
+            li
+              a(href="") ブログ一覧
+        button(type="button").el_drawerBtn.js_drawerBtn
+          span.el_drawerLine
+          span.el_visuallyHidden メニューを開閉する
+
+    main.ly_main
+      div.ly_fv
+        div.ly_fvInner
+          div.bl_fvContent
+            h2.el_lv2Heading.el_lv2Heading__fv 猫と暮らそう
+            p 安心・安全な猫専門ペットショップ
+            div.bl_fvBtn_wrap
+              a(href="archive.html").el_btn.el_btn__fv 猫種一覧を見る
+              a(href="").el_btn.el_btn__fv お店を見る
+          img(src="img/home/mv.png", alt="")
+      section.ly_section.ly_section__info
+        div.ly_sectionInner
+          h2.el_lv2Heading.el_lv2Heading__info お知らせ
+          ul.bl_vertPosts
+            li.bl_vertPosts_item
+              time(date-time="2022.02.24").bl_vertPosts_date 2022.02.24
+              a(href="").bl_vertPosts_ttl 猫にまつわるヒーリング効果とは！？プレゼントキャンペーンも実施中♪
+            li.bl_vertPosts_item
+              time(date-time="2022.02.22").bl_vertPosts_date 2022.02.22
+              a(href="").bl_vertPosts_ttl ねこの日★祝！レア種も仲間入り、ふれあいコーナーで癒されて♪
+            li.bl_vertPosts_item
+              time(date-time="2022.02.02").bl_vertPosts_date 2022.02.02
+              a(href="").bl_vertPosts_ttl 【新宿店】ポイント2倍Day！この機会をお見逃しなく！
+            li.bl_vertPosts_item
+              time(date-time="2022.01.04").bl_vertPosts_date 2022.01.04
+              a(href="").bl_vertPosts_ttl 新年SEAL！療法食10%OFF&copy;ペットアイテムおまとめ買いでプレゼント
+      section.ly_section.ly_section__pet
+        div.ly_sectionInner
+          h2.el_lv2Heading ペットを探す
+            br
+            |
+            span Find a pet
+          ul.bl_cardUnit.bl_cardUnit__col4Pet
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link スコティッシュ
+                  br
+                  | フォールド
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/4columns/01.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link アメリカン
+                  br
+                  | ショートヘア
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/4columns/02.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link メインクーン
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/4columns/03.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link エキゾチック
+                  br
+                  | ショートヘア
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/4columns/04.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link ラグドール
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/4columns/05.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link ブリティッシュ
+                  br
+                  | ショートヘア
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/4columns/06.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link マンチカン
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/4columns/07.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="").bl_card_link サイベリアン
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/4columns/08.png", alt="")
+          a(href="archive.html").el_btn.el_btn__archive 猫種一覧を見る
+      section.ly_section.ly_section__shop
+        div.ly_sectionInner
+          h2.el_lv2Heading お店を探す
+            br
+            |
+            span Find a store
+          div.bl_map
+            img(src="img/home/map.png", alt="日本地図のイラスト")
+            a(href="").el_btn.el_btn__mapSapporo 札幌店
+            a(href="").el_btn.el_btn__mapMiyagi 宮城店
+            a(href="").el_btn.el_btn__mapSinjuku 新宿店
+            a(href="").el_btn.el_btn__mapIshikawa 石川店
+            a(href="").el_btn.el_btn__mapUmeda 梅田店
+            a(href="").el_btn.el_btn__mapShizuoka 静岡店
+            a(href="").el_btn.el_btn__mapFukuoka 福岡店
+            a(href="").el_btn.el_btn__mapKagoshima 鹿児島店
+          a(href="").el_btn.el_btn__archive 店舗一覧を見る
+      section.ly_section.ly_section__blog
+        div.ly_sectionInner
+          h2.el_lv2Heading ブログ
+            br
+            |
+            span Blog
+          ul.bl_cardUnit.bl_cardUnit__col4Blog
+            li.bl_card
+              time(datetime="2022.02.24").bl_card_time 2022.02.24
+              h3.bl_card_ttl
+                a(href="").bl_card_link 猫にまつわるヒーリング効果とは！？プレゼントキャンペーンも実施中♪
+              figure.bl_card_imgWrapper
+                img(src="img/blog/00.jpg", alt="")
+            li.bl_card
+              time(datetime="2022.02.22").bl_card_time 2022.02.22
+              h3.bl_card_ttl
+                a(href="").bl_card_link ねこの日★祝！レア種も仲間入り、ふれあいコーナーで癒されて♪
+              figure.bl_card_imgWrapper
+                img(src="img/blog/01.jpg", alt="")
+            li.bl_card
+              time(datetime="2021.12.24").bl_card_time 2021.12.24
+              h3.bl_card_ttl
+                a(href="").bl_card_link 【新宿店】ポイント2倍Day！この機会をお見逃しなく！
+              figure.bl_card_imgWrapper
+                img(src="img/blog/02.jpg", alt="")
+            li.bl_card
+              time(datetime="2021.12.24").bl_card_time 2021.12.24
+              h3.bl_card_ttl
+                a(href="").bl_card_link 新年SEAL！療法食10%OFF&copy;ペットアイテムおまとめ買いでプレゼント
+              figure.bl_card_imgWrapper
+                img(src="img/blog/03.jpg", alt="")
+          a(href="").el_btn.el_btn__archive ブログ一覧を見る
+      section.ly_section.ly_section__about
+        div.ly_sectionInner
+          h2.el_lv2Heading サイトについて
+            br
+            |
+            span About
+          div.bl_aboutContent
+            h3.bl_about_ttl ペットと人との笑顔ある未来の創造
+            p.bl_about_txt 家族の絆を深める、子供の情操教育、ヒーリング効果など、
+              br.br
+              | ペットと暮らすメリットが証明されてきており、
+              br.br
+              | それらの効果は人々の暮らしに必要不可欠な”笑顔”を
+              br.br
+              | もたらすことができます。
+              br
+              | CAT BELLは、ペットというかけがえのない生命を
+              br.br
+              | お客様へご提供することで、笑顔ある未来を創造し、
+              br.br
+              | より豊かな社会環境の構築に貢献いたします。
+          img(src="img/home/about_01.png", alt="")
+
+    footer.ly_footer
+      div.ly_footerInner
+        div.bl_footerContent
+          a(href="index.html")
+            img(src="img/home/logo.svg", alt="CAT BELL")
+          ul.bl_footerList
+            li
+              a(href="archive.html") ペットを探す
+            li
+              a(href="") お店を探す
+            li
+              a(href="") ブログ一覧
+        small &copy; 2020-2022 CAT BELL Co., Ltd.
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js")
+    script(src="./js/bundle.js?ver")
