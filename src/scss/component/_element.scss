@@ -220,6 +220,71 @@
   bottom: 0;
   left: 0;
 }
+// 各店舗の猫一覧カード内のリンクボタン
+.el_btn__catDetail{
+  background-color: g.$color-active;
+  border: 1px solid g.$color-active;
+  color: g.$color-white;
+  @include	g.fz(18);
+  font-weight: 600;
+  line-height:	g.division(18,	27);
+  width: 280px;
+  padding: 23px 0 23px 0;
+  border-radius: 30px;
+  position: relative;
+  &:hover{
+    color: g.$color-active;
+    background-color: g.$color-white;
+  }
+  &::after{
+    content: "";
+    width: 8px;
+    height: 14px;
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+    background-image: url(../img/common/arrow_white.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &:hover::after{
+    background-image: url(../img/common/arrow_orange.svg);
+  }
+}
+// ページ下の店舗詳細セクションボタン
+.el_btn__shopDetail{
+  border: 1px solid g.$color-active;
+  color: g.$color-active;
+  @include	g.fz(18);
+  font-weight: 600;
+  line-height:	g.division(18,	27);
+  background-color:	g.$color-white;
+  width: 420px;
+  padding: 23px 0 23px 0;
+  border-radius: 30px;
+  position: relative;
+  @include	g.mq(){
+    width: 100%;
+    @include	g.fz(14);
+  }
+  &:hover{
+    opacity: 0.5;
+    color: g.$color-active;
+  }
+  &::after{
+    content: "";
+    width: 8px;
+    height: 14px;
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+    background-image: url(../img/common/arrow_orange.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
 // ----------------------------------------------------------------
 //  ヘッダーロゴ
 // ----------------------------------------------------------------

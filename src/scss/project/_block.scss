@@ -495,3 +495,220 @@ small{
     }
   }
 }
+
+
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// 各店舗の猫一覧ページ
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+.bl_MediaList{
+  margin-bottom: 52px;
+}
+.bl_Media{
+  display: flex;
+  @include	g.mq('pc'){
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+  }
+  @include	g.mq(){
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .bl_Media_imgWrapper{
+    flex: 0 1 38.37%;
+    margin-right: 3.266%;
+    position: relative;
+    overflow: hidden;
+    padding-top: 26.5%;
+    @include	g.mq(){
+      width: 100%;
+      margin-right: 0;
+      padding-top: 64%;
+    }
+    img{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 20px;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .bl_Media_body{
+    @include	g.mq('pc'){
+      /* flex-growの初期値は0[伸びる比率] */
+      flex: 1;
+    }
+    @include	g.mq(){
+      margin-top: 1em;
+    }
+  }
+  .bl_Media_ttl{
+    @include	g.fz(24);
+    line-height:	g.division(36,	24);
+    margin-bottom: 17px;
+  }
+  dl{
+    @include	g.mq('pc'){
+      margin-bottom: 37px;
+    }
+    @include	g.mq(){
+      margin-bottom: 24px;
+    }
+    > div{
+      display: flex;
+      align-items: center;
+      @include	g.fz(14);
+      &:first-of-type{
+        margin-bottom: 12.5px;
+      }
+      &:nth-of-type(2){
+        margin-bottom: 5px;
+      }
+    }
+  }
+  dt{
+    color: g.$color-lightGray;
+    flex-basis: 56px;
+    margin-right: 16px;
+    font-weight: 300;
+  }
+  dd{
+    color: g.$color-dark;
+    font-weight: 300;
+  }
+  span{
+    color: g.$color-main;
+    @include	g.fz(20);
+    font-weight: 600;
+    line-height:	g.division(30,	20);
+  }
+  &:not(:first-of-type){
+    padding-top: 48px;
+  }
+  &:not(:last-of-type){
+    padding-bottom: 48px;
+    border-bottom: 1px solid #e7e7e7;
+  }
+}
+.bl_pager{
+  display: flex;
+  overflow: auto;
+}
+.bl_pager_inner{
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  > *:last-child{
+    margin-right: 0;
+  }
+  > li{
+    margin-right: 12px;
+  }
+}
+.bl_pager_link{
+  color: g.$color-lightGray;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: block;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover{
+    color: g.$color-main;
+  }
+}
+/* ページ下の店舗詳細セクション */
+.bl_halfMedia{
+  display: flex;
+  @include	g.mq('pc'){
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+  }
+  @include	g.mq(){
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .bl_halfMedia_imgWrapper{
+    position: relative;
+    overflow: hidden;
+    flex: 0 1 43.266%;
+    margin-right: 3.266%;
+    padding-top: 23.675%;
+    @include	g.mq(){
+      width: 100%;
+      margin-right: 0;
+      padding-top: 64%;
+    }
+    img{
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      border-radius: 20px;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .bl_halfMedia_body{
+    /* flex-growの初期値は0[伸びる比率] */
+    flex: 1;
+    text-align: left;
+    margin-bottom: 2px;
+    @include	g.mq(){
+      margin-top: 1em;
+    }
+  }
+  .bl_halfMedia_ttl{
+    @include	g.fz(24);
+    line-height:	g.division(36,	24);
+    margin-bottom: 17px;
+  }
+}
+.bl_basicInfo_wrap{
+  margin-bottom: 24px;
+}
+.bl_basicInfo{
+  display: flex;
+  @include	g.fz(14);
+  @include	g.mq('pc'){
+    align-items: center;
+  }
+  @include	g.mq(){
+    flex-direction: column;
+  }
+  &:not(:nth-of-type(3n)){
+    margin-bottom: 12.5px;
+    @include	g.mq(){
+      margin-bottom: 1.2em;
+    }
+  }
+  &:nth-of-type(3n){
+    margin-bottom: 8px;
+  }
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+  dt{
+    color: g.$color-lightGray;
+    font-weight: 300;
+    @include	g.mq('pc'){
+      flex-basis: 56px;
+      margin-right: 16px;
+    }
+    @include	g.mq(){
+      margin-bottom: 8px;
+    }
+  }
+  dd{
+    color: g.$color-dark;
+    font-weight: 300;
+  }
+}
