@@ -919,9 +919,6 @@ dd {
     padding-top: 70px;
   }
 }
-.ly_under .ly_sectionInner {
-  padding: 0 4vw;
-}
 
 .ly_section__shopCat_list {
   padding-bottom: 0;
@@ -1544,17 +1541,17 @@ small {
   width: 100%;
 }
 @media (min-width: 768px) {
-  .bl_Media .bl_Media_body {
+  .bl_Media .bl_mediaBody {
     /* flex-growの初期値は0[伸びる比率] */
     flex: 1;
   }
 }
 @media (max-width: 767px) {
-  .bl_Media .bl_Media_body {
+  .bl_Media .bl_mediaBody {
     margin-top: 1em;
   }
 }
-.bl_Media .bl_Media_ttl {
+.bl_Media .bl_mediaTtl {
   font-size: 2.4rem;
   line-height: 1.5;
   margin-bottom: 17px;
@@ -2150,5 +2147,9 @@ small {
 
 .hp_pt15 {
   padding-top: 15px !important;
+}
+
+.hp-px4vw {
+  padding: 0 4vw;
 }
 /*# sourceMappingURL=sourcemaps/style.css.map */

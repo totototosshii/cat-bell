@@ -537,7 +537,7 @@ small{
       height: 100%;
     }
   }
-  .bl_Media_body{
+  .bl_mediaBody{
     @include	g.mq('pc'){
       /* flex-growの初期値は0[伸びる比率] */
       flex: 1;
@@ -546,7 +546,7 @@ small{
       margin-top: 1em;
     }
   }
-  .bl_Media_ttl{
+  .bl_mediaTtl{
     @include	g.fz(24);
     line-height:	g.division(36,	24);
     margin-bottom: 17px;
