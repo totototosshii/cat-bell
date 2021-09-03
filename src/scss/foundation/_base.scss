@@ -20,9 +20,13 @@ input, textarea{
   height: 100%;
 }
 
-a:hover{
-  transition: all .4s;
-  text-decoration: none;
+a{
+  color: inherit;
+  &:hover{
+    transition: all .4s;
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 h1,

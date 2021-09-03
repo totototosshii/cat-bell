@@ -36,7 +36,7 @@ html(lang="ja")
     link(rel="icon" href="絶対パスで指定")
     link(rel="apple-touch-icon" sizes="180x180" href="絶対パスで指定")
     link(rel="stylesheet", href="./css/style.css?ver")
-  body.ly_under.js_noScroll
+  body.ly_under.hp-pt0.js_noScroll
     header.ly_header.js_headerScroll
       div.ly_headerInner
         h1.el_lv1Heading
@@ -53,22 +53,119 @@ html(lang="ja")
         button(type="button").el_drawerBtn.js_drawerBtn
           span.el_drawerLine
           span.el_visuallyHidden メニューを開閉する
+    div.ly_breadcrumbWrapper
+      ol.bl_breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a(href="index.html" itemprop="item")
+            span(itemprop="name") ホーム
+          meta(itemprop="position" content=1)
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a(href="archive.html" itemprop="item")
+            span(itemprop="name") ブログ一覧
+          meta(itemprop="position" content=2)
     div.ly_blogWrapper
       main.ly_main
-        ol.bl_breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
-          li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
-            a(href="index.html" itemprop="item")
-              span(itemprop="name") ホーム
-            meta(itemprop="position" content=1)
-          li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
-            a(href="archive.html" itemprop="item")
-              span(itemprop="name") 猫種一覧
-            meta(itemprop="position" content=2)
         ul.bl_blogList
-          li
-            figure.bl_blogMedia_thumb
-              img(src="img/blog/00.jpg")
-
+          li.bl_blogMedia_contents
+            article
+              figure.bl_blogMedia_thumb
+                img(src="img/blog/00.jpg")
+              div.bl_blogMedia_body
+                time(date-time="2022.02.24") 2022.02.24
+                p.bl_blogMedia_txt 人とコミュニケーションをとること、物理的に触れたり、間接的に感じたりすることが、今や遠隔で完結できるようになった。もともと「繋がり」という形を持たない結びつきではあるが、あらゆる物事と実際に接点を持つ場面がが減っている中、生身の身体が受け取る感覚はこれからどんなふうに変わっていくのだろうか。
+                h2.bl_blogMedia_ttl
+                  a(href="").bl_blogMedia_ttlLink 猫にまつわるヒーリング効果とは！？プレゼントキャンペーンも実施中♪
+                ul.blogMedia_tag
+                  li
+                    a(href="").blogMedia_tagLink #ヘルスケア
+                  li
+                    a(href="").blogMedia_tagLink #プレゼント
+                  li
+                    a(href="").blogMedia_tagLink #キャンペーン
+          li.bl_blogMedia_contents
+            article
+              figure.bl_blogMedia_thumb
+                img(src="img/blog/01.jpg")
+              div.bl_blogMedia_body
+                time(date-time="") 2022.02.22
+                p.bl_blogMedia_txt 人とコミュニケーションをとること、物理的に触れたり、間接的に感じたりすることが、今や遠隔で完結できるようになった。もともと「繋がり」という形を持たない結びつきではあが、あらゆる物事と実際に接点を持…
+                h2.bl_blogMedia_ttl
+                  a(href="").bl_blogMedia_ttlLink ねこの日★祝！レア種も仲間入り、ふれあいコーナーで癒されて♪ねこの日★祝！レア種も仲間入り、ふれあいコーナーで癒…
+                ul.blogMedia_tag
+                  li
+                    a(href="").blogMedia_tagLink #キャンペーン
+                  li
+                    a(href="").blogMedia_tagLink #ヘルスケア
+          li.bl_blogMedia_contents
+            article
+              figure.bl_blogMedia_thumb
+                img(src="img/blog/02.jpg")
+              div.bl_blogMedia_body
+                time(date-time="2022.02.22") 2022.02.22
+                p.bl_blogMedia_txt 人とコミュニケーションをとること、物理的に触れたり、間接的に感じたりすることが、今や遠隔で完結できるようになった。もともと「繋がり」という形を持たない結びつきではあが、あらゆる物事と実際に接点を持…
+                h2.bl_blogMedia_ttl
+                  a(href="").bl_blogMedia_ttlLink 【新宿店】ポイント2倍Day！この機会をお見逃しなく！
+                ul.blogMedia_tag
+                  li
+                    a(href="").blogMedia_tagLink #ポイントDay
+                  li
+                    a(href="").blogMedia_tagLink #ヘルスケア
+          li.bl_blogMedia_contents
+            article
+              figure.bl_blogMedia_thumb
+                img(src="img/blog/03.jpg")
+              div.bl_blogMedia_body
+                time(date-time="2022.01.04") 2022.01.04
+                p.bl_blogMedia_txt 人とコミュニケーションをとること、物理的に触れたり、間接的に感じたりすることが、今や遠隔で完結できるようになった。
+                h2.bl_blogMedia_ttl
+                  a(href="").bl_blogMedia_ttlLink 新年SEAL！療法食10%OFF
+                ul.blogMedia_tag
+                  li
+                    a(href="").blogMedia_tagLink #プレゼント
+                  li
+                    a(href="").blogMedia_tagLink #ヘルスケア
+                  li
+                    a(href="").blogMedia_tagLink #ごはん
+          li.bl_blogMedia_contents
+            article
+              figure.bl_blogMedia_thumb
+                img(src="img/blog/04.jpg")
+              div.bl_blogMedia_body
+                time(date-time="2021.12.20") 2021.12.20
+                p.bl_blogMedia_txt 人とコミュニケーションをとること、物理的に触れたり、間接的に感じたりすることが、今や遠隔で完結できるようになった。もともと「繋がり」という形を持たない結びつきではあが、あらゆる物事と実際に接点を持…
+                h2.bl_blogMedia_ttl
+                  a(href="").bl_blogMedia_ttlLink 新入りさん紹介★穏やかで甘え上手なスコティッシュフォールド
+                ul.blogMedia_tag
+                  li
+                    a(href="").blogMedia_tagLink #新入りさん
+          li.bl_blogMedia_contents
+            article
+              figure.bl_blogMedia_thumb
+                img(src="img/blog/01.jpg")
+              div.bl_blogMedia_body
+                time(date-time="") 2022.02.22
+                p.bl_blogMedia_txt 人とコミュニケーションをとること、物理的に触れたり、間接的に感じたりすることが、今や遠隔で完結できるようになった。もともと「繋がり」という形を持たない結びつきではあが、あらゆる物事と実際に接点を持…
+                h2.bl_blogMedia_ttl
+                  a(href="").bl_blogMedia_ttlLink ねこの日★祝！レア種も仲間入り、ふれあいコーナーで癒されて♪ねこの日★祝！レア種も仲間入り、ふれあいコーナーで癒…
+                ul.blogMedia_tag
+                  li
+                    a(href="").blogMedia_tagLink #キャンペーン
+                  li
+                    a(href="").blogMedia_tagLink #ヘルスケア
+          li.bl_blogMedia_contents
+            article
+              figure.bl_blogMedia_thumb
+                img(src="img/blog/02.jpg")
+              div.bl_blogMedia_body
+                time(date-time="2022.02.22") 2022.02.22
+                p.bl_blogMedia_txt 人とコミュニケーションをとること、物理的に触れたり、間接的に感じたりすることが、今や遠隔で完結できるようになった。もともと「繋がり」という形を持たない結びつきではあが、あらゆる物事と実際に接点を持…
+                h2.bl_blogMedia_ttl
+                  a(href="").bl_blogMedia_ttlLink 【新宿店】ポイント2倍Day！この機会をお見逃しなく！
+                ul.blogMedia_tag
+                  li
+                    a(href="").blogMedia_tagLink #ポイントDay
+                  li
+                    a(href="").blogMedia_tagLink #ヘルスケア
         nav.bl_pager
           ul.bl_pager_inner
             li
@@ -83,7 +180,50 @@ html(lang="ja")
               a(href="").bl_pager_link 5
 
       aside.ly_aside
-
+        h3.bl_asideHead_pickUp ピックアップ
+        ul.bl_asideBlog_list
+          li.bl_asideBlog_contents
+            article
+              figure.bl_asideBlog_thumb
+                img(src="img/blog/01.jpg")
+              div.bl_asideBlog_body
+                h4.bl_asideBlog_ttl
+                  a(href="") ねこの日★祝！レア種も仲間入り、ふれあいコーナーで癒されて♪
+                time(date-time="2022.02.22") 2022.02.22
+          li.bl_asideBlog_contents
+            article
+              figure.bl_asideBlog_thumb
+                img(src="img/blog/02.jpg")
+              div.bl_asideBlog_body
+                h4.bl_asideBlog_ttl
+                  a(href="") 【新宿店】ポイント2倍Day！この機会をお見逃しなく！
+                time(date-time="2022.02.02") 2022.02.02
+          li.bl_asideBlog_contents
+            article
+              figure.bl_asideBlog_thumb
+                img(src="img/blog/03.jpg")
+              div.bl_asideBlog_body
+                h4.bl_asideBlog_ttl
+                  a(href="") 新年SEAL！療法食10%OFF
+                time(date-time="2022.01.04") 2022.01.04
+        h3.bl_asideHead_keyWord キーワード
+        ul.bl_asideKey_wordList
+          li
+            a(href="").bl_asideKey_wordLink #ヘルスケア
+          li
+            a(href="").bl_asideKey_wordLink #新入りさん
+          li
+            a(href="").bl_asideKey_wordLink #里親募集
+          li
+            a(href="").bl_asideKey_wordLink #キャンペーン
+          li
+            a(href="").bl_asideKey_wordLink #プレゼント
+          li
+            a(href="").bl_asideKey_wordLink #ポイントDay
+          li
+            a(href="").bl_asideKey_wordLink #ごはん
+          li
+            a(href="").bl_asideKey_wordLink #おやつ
     footer.ly_footer
       div.ly_footerInner
         div.bl_footerContent

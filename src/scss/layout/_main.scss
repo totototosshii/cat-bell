@@ -37,6 +37,7 @@
   text-align: center;
   @include	g.mq(){
     width: 100%;
+    padding: 0 4vw;
   }
 }
 // ----------------------------------------------------------------
@@ -111,9 +112,6 @@
   }
   @include	g.mq(){
     padding-bottom: 60px;
-    .ly_sectionInner{
-      padding: 0 4vw;
-    }
   }
 }
 // ----------------------------------------------------------------
@@ -199,4 +197,26 @@
       margin-bottom: 19px;
     }
   }
+}
+
+
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// ブログ一覧、ブログ詳細ページ
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+.ly_blogWrapper{
+  position: relative;
+  margin-top: -143px;
+  > .ly_main{
+    max-width: 980px;
+    margin: 0 auto;
+    padding-bottom: 96px;
+  }
+}
+.ly_breadcrumbWrapper{
+  max-width: 980px;
+  margin: 125px auto 0 auto;
+  position: relative;
+  z-index: map-get(g.$layer, "floating");
 }
