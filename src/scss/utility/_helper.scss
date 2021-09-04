@@ -19,3 +19,8 @@
 .hp-pt0{
   padding-top: 0 !important;
 }
+@include	g.mq('pc'){
+  .hp_pt637{
+    padding-top: 637px !important;
+  }
+}

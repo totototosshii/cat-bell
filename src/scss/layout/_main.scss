@@ -212,6 +212,9 @@
     max-width: 980px;
     margin: 0 auto;
     padding-bottom: 96px;
+    @include	g.mq(){
+      padding: 0 4vw 48px 4vw;
+    }
   }
 }
 .ly_breadcrumbWrapper{
@@ -219,4 +222,7 @@
   margin: 125px auto 0 auto;
   position: relative;
   z-index: map-get(g.$layer, "floating");
+  @include	g.mq(){
+    margin-top: 70px;
+  }
 }
