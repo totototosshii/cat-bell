@@ -237,12 +237,8 @@
     }
   }
 }
-.ly_section__shopDetail{
-  border-top: 1px solid #e7e7e7;
-  padding-top: 64px;
-  padding-bottom: 64px;
-  max-width: 684px;
-  margin-right: auto;
+.ly_shopPet .ly_section__shopDetail .ly_sectionInner{
+  max-width: 876px;
 }
 .ly_breadcrumbWrapper{
   max-width: 980px;
@@ -258,6 +254,13 @@
   @include	g.mq(){
     margin-top: 4vw;
   }
+}
+.ly_blogSingle > .ly_section__shopDetail{
+  border-top: 1px solid #e7e7e7;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  max-width: 684px;
+  margin-right: auto;
 }
 .ly_section__newPost{
   border-top: 1px solid #e7e7e7;

@@ -978,12 +978,8 @@ dd {
   }
 }
 
-.ly_section__shopDetail {
-  border-top: 1px solid #e7e7e7;
-  margin-right: auto;
-  max-width: 684px;
-  padding-bottom: 64px;
-  padding-top: 64px;
+.ly_shopPet .ly_section__shopDetail .ly_sectionInner {
+  max-width: 876px;
 }
 
 .ly_breadcrumbWrapper {
@@ -1005,6 +1001,14 @@ dd {
   .ly_blogInner > .ly_blogSingle {
     margin-top: 4vw;
   }
+}
+
+.ly_blogSingle > .ly_section__shopDetail {
+  border-top: 1px solid #e7e7e7;
+  margin-right: auto;
+  max-width: 684px;
+  padding-bottom: 64px;
+  padding-top: 64px;
 }
 
 .ly_section__newPost {
@@ -1853,6 +1857,18 @@ small {
 .bl_basicInfo_wrap .bl_basicInfo dd {
   color: #5D5D5D;
   font-weight: 300;
+}
+
+.bl_shopPet .bl_halfMedia_imgWrapper {
+  flex: 0 1 48.402%;
+  margin-right: 3.654%;
+  padding-top: 26.485%;
+}
+@media (max-width: 767px) {
+  .bl_shopPet .bl_halfMedia_imgWrapper {
+    margin-right: 0;
+    padding-top: 64%;
+  }
 }
 
 /* ブログ一覧 */

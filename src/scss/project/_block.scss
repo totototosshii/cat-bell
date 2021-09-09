@@ -713,7 +713,17 @@ small{
     }
   }
 }
-
+.bl_shopPet{
+  .bl_halfMedia_imgWrapper{
+    flex: 0 1 48.402%;
+    padding-top: 26.485%;
+    margin-right: 3.654%;
+    @include	g.mq(){
+      padding-top: 64%;
+      margin-right: 0;
+    }
+  }
+}
 
 // ----------------------------------------------------------------
 // ブログ一覧、ブログ詳細ページ

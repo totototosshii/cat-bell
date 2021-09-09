@@ -54,14 +54,14 @@ html(lang="ja")
           span.el_drawerLine
           span.el_visuallyHidden メニューを開閉する
 
-    main.ly_main
+    main.ly_main.ly_shopPet
       ol.bl_breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
         li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
           a(href="index.html" itemprop="item")
             span(itemprop="name") ホーム
           meta(itemprop="position" content=1)
         li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
-          a(href="archive.html" itemprop="item")
+          a(href="archive-pet.html" itemprop="item")
             span(itemprop="name") 猫種一覧
           meta(itemprop="position" content=2)
         li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
@@ -230,7 +230,7 @@ html(lang="ja")
                 a(href="").bl_pager_link 5
       section.ly_section.ly_section__shopDetail
         div.ly_sectionInner
-          div.bl_halfMedia
+          div.bl_halfMedia.bl_shopPet
             div.bl_halfMedia_body
               h3.bl_halfMedia_ttl 新宿店
               dl.bl_basicInfo_wrap
