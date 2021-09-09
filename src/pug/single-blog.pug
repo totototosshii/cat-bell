@@ -36,7 +36,7 @@ html(lang="ja")
     link(rel="icon" href="絶対パスで指定")
     link(rel="apple-touch-icon" sizes="180x180" href="絶対パスで指定")
     link(rel="stylesheet", href="./css/style.css?ver")
-  body.ly_under.hp-pt0.js_noScroll
+  body.ly_under.hp-pt0.ly_blogWrapper.js_noScroll
     header.ly_header.js_headerScroll
       div.ly_headerInner
         h1.el_lv1Heading
@@ -49,7 +49,7 @@ html(lang="ja")
             li
               a(href="") お店を探す
             li
-              a(href="") ブログ一覧
+              a(href="archive-blog.html") ブログ一覧
         button(type="button").el_drawerBtn.js_drawerBtn
           span.el_drawerLine
           span.el_visuallyHidden メニューを開閉する
@@ -60,18 +60,19 @@ html(lang="ja")
             span(itemprop="name") ホーム
           meta(itemprop="position" content=1)
         li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
-          a(href="archive.html" itemprop="item")
+          a(href="archive-blog.html" itemprop="item")
             span(itemprop="name") ブログ一覧
           meta(itemprop="position" content=2)
         li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
-          a(href="archive.html" itemprop="item")
+          a(href="single-blog.html" itemprop="item")
             span(itemprop="name") 猫にまつわるヒーリング効果とは！？プレゼントキャンペーンも実施中♪
           meta(itemprop="position" content=3)
-    div.ly_blogWrapper
-      main.ly_main
+    div.ly_blogInner
+      main.ly_main.ly_blogSingle
         article.bl_blogMedia_detail
-          figure.bl_blogMedia_thumb
-            img(src="img/blog/00.jpg")
+          div.bl_blogMedia_thumb
+            figure.bl_blogMedia_inner
+              img(src="img/blog/00.jpg")
           div.bl_blogMedia_body
             time(date-time="2022.02.24") 2022.02.24
             h2.bl_blogMedia_ttlH2 猫にまつわるヒーリング効果とは！？プレゼントキャンペーンも実施中♪
@@ -83,8 +84,64 @@ html(lang="ja")
             img(src="img/blogDetail/InsertImage01.jpg")
             p.bl_blogMedia_letter 人とコミュニケーションをとること、物理的に触れたり、間接的に感じたりすることが、今や遠隔で完結できるようになった。もともと「繋がり」という形を持たない結びつきではあるが、あらゆる物事と実際に接点を持つ場面がが減っている中、生身の身体が受け取る感覚はこれからどんなふうに変わっていくのだろうか。
             p.bl_blogMedia_letter 人とコミュニケーションをとること、物理的に触れたり、間接的に感じたりすることが、今や遠隔で完結できるようになった。もともと「繋がり」という形を持たない結びつきではあるが、あらゆる物事と実際に接点を持つ場面がが減っている中、生身の身体が受け取る感覚はこれからどんなふうに変わっていくのだろうか。
-
-      aside.ly_aside.hp_pt637
+            ul.blogMedia_tag
+              li.blogMedia_tagList
+                a(href="").blogMedia_tagLink #ヘルスケア
+              li.blogMedia_tagList
+                a(href="").blogMedia_tagLink #プレゼント
+              li.blogMedia_tagList
+                a(href="").blogMedia_tagLink #キャンペーン
+        section.ly_section.ly_section__shopDetail
+          div.ly_sectionInner
+            div.bl_halfMedia_shop
+              div.bl_halfMedia_body
+                h3.bl_halfMedia_ttl 新宿店
+                dl.bl_basicInfo_wrap
+                  div.bl_basicInfo
+                    dt 住所
+                    dd 東京都新宿区西新宿2-22-2キャットベル
+                  div.bl_basicInfo
+                    dt TEL
+                    dd 22-2222-2222
+                  div.bl_basicInfo
+                    dt 営業時間
+                    dd 平日11：00～19:30/土日祝11:00～20：00
+                  div.bl_basicInfo
+                    dt
+                    dd 休日：年中無休
+              figure.bl_halfMedia_imgWrapper
+                img(src="img/shoplist/sinjyuku.jpg", alt="")
+            a(href="").el_btn.el_btn__shopLink この猫のお取扱い店舗を見る
+        section.ly_section.ly_section__newPost
+          div.ly_sectionInner
+            h3.bl_cardUnit__col4Ttl
+            ul.bl_cardUnit.bl_cardUnit__col4newPost
+              li.bl_card
+                time(datetime="2022.02.24").bl_card_time 2022.02.24
+                h3.bl_card_ttl
+                  a(href="").bl_card_link ねこの日★祝！レア種も仲間入り、ふれあいコーナーで癒…
+                figure.bl_card_imgWrapper
+                  img(src="img/blog/00.jpg", alt="")
+              li.bl_card
+                time(datetime="2022.02.22").bl_card_time 2022.02.22
+                h3.bl_card_ttl
+                  a(href="").bl_card_link ポイント2倍Day！この機会をお見逃しなく！
+                figure.bl_card_imgWrapper
+                  img(src="img/blog/01.jpg", alt="")
+              li.bl_card
+                time(datetime="2021.12.24").bl_card_time 2021.12.24
+                h3.bl_card_ttl
+                  a(href="").bl_card_link 新年SEAL！療法食10%OFF
+                figure.bl_card_imgWrapper
+                  img(src="img/blog/02.jpg", alt="")
+              li.bl_card
+                time(datetime="2021.12.24").bl_card_time 2021.12.24
+                h3.bl_card_ttl
+                  a(href="").bl_card_link 新入りさん紹介★穏やかで甘え上手なスコティッシュフォ…
+                figure.bl_card_imgWrapper
+                  img(src="img/blog/03.jpg", alt="")
+            a(href="archive-blog.html").el_btn.el_btn__archive この店舗のブログを見る
+      aside.ly_aside.hp_pt475
         h3.bl_asideHead_pickUp ピックアップ
         ul.bl_asideBlog_list
           li.bl_asideBlog_contents
@@ -93,7 +150,7 @@ html(lang="ja")
                 img(src="img/blog/01.jpg")
               div.bl_asideBlog_body
                 h4.bl_asideBlog_ttl
-                  a(href="") ねこの日★祝！レア種も仲間入り、ふれあいコーナーで癒されて♪
+                  a(href="single-blog.html") ねこの日★祝！レア種も仲間入り、ふれあいコーナーで癒されて♪
                 time(date-time="2022.02.22") 2022.02.22
           li.bl_asideBlog_contents
             article
@@ -101,7 +158,7 @@ html(lang="ja")
                 img(src="img/blog/02.jpg")
               div.bl_asideBlog_body
                 h4.bl_asideBlog_ttl
-                  a(href="") 【新宿店】ポイント2倍Day！この機会をお見逃しなく！
+                  a(href="single-blog.html") 【新宿店】ポイント2倍Day！この機会をお見逃しなく！
                 time(date-time="2022.02.02") 2022.02.02
           li.bl_asideBlog_contents
             article
@@ -109,7 +166,7 @@ html(lang="ja")
                 img(src="img/blog/03.jpg")
               div.bl_asideBlog_body
                 h4.bl_asideBlog_ttl
-                  a(href="") 新年SEAL！療法食10%OFF
+                  a(href="single-blog.html") 新年SEAL！療法食10%OFF
                 time(date-time="2022.01.04") 2022.01.04
         h3.bl_asideHead_keyWord キーワード
         ul.bl_asideKey_wordList
@@ -140,7 +197,7 @@ html(lang="ja")
             li
               a(href="") お店を探す
             li
-              a(href="") ブログ一覧
+              a(href="archive-blog.html") ブログ一覧
         small &copy; 2020-2022 CAT BELL Co., Ltd.
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js")
     script(src="./js/bundle.js?ver")

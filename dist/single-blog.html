@@ -39,7 +39,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="絶対パスで指定">
     <link rel="stylesheet" href="./css/style.css?ver">
   </head>
-  <body class="ly_under hp-pt0 js_noScroll">
+  <body class="ly_under hp-pt0 ly_blogWrapper js_noScroll">
     <header class="ly_header js_headerScroll">
       <div class="ly_headerInner">
         <h1 class="el_lv1Heading"><a href="index.html"><img src="img/home/logo.svg" alt="CAT BELL"></a></h1>
@@ -47,7 +47,7 @@
           <ul class="bl_headerList">
             <li><a href="archive-pet.html">ペットを探す</a></li>
             <li><a href="">お店を探す</a></li>
-            <li><a href="">ブログ一覧</a></li>
+            <li><a href="archive-blog.html">ブログ一覧</a></li>
           </ul>
         </nav>
         <button class="el_drawerBtn js_drawerBtn" type="button"><span class="el_drawerLine"></span><span class="el_visuallyHidden">メニューを開閉する</span></button>
@@ -58,18 +58,20 @@
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="index.html" itemprop="item"><span itemprop="name">ホーム</span></a>
           <meta itemprop="position" content="1">
         </li>
-        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="archive.html" itemprop="item"><span itemprop="name">ブログ一覧</span></a>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="archive-blog.html" itemprop="item"><span itemprop="name">ブログ一覧</span></a>
           <meta itemprop="position" content="2">
         </li>
-        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="archive.html" itemprop="item"><span itemprop="name">猫にまつわるヒーリング効果とは！？プレゼントキャンペーンも実施中♪</span></a>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="single-blog.html" itemprop="item"><span itemprop="name">猫にまつわるヒーリング効果とは！？プレゼントキャンペーンも実施中♪</span></a>
           <meta itemprop="position" content="3">
         </li>
       </ol>
     </div>
-    <div class="ly_blogWrapper">
-      <main class="ly_main">
+    <div class="ly_blogInner">
+      <main class="ly_main ly_blogSingle">
         <article class="bl_blogMedia_detail">
-          <figure class="bl_blogMedia_thumb"><img src="img/blog/00.jpg"></figure>
+          <div class="bl_blogMedia_thumb">
+            <figure class="bl_blogMedia_inner"><img src="img/blog/00.jpg"></figure>
+          </div>
           <div class="bl_blogMedia_body">
             <time date-time="2022.02.24">2022.02.24</time>
             <h2 class="bl_blogMedia_ttlH2">猫にまつわるヒーリング効果とは！？プレゼントキャンペーンも実施中♪</h2>
@@ -80,17 +82,77 @@
             <h3 class="bl_blogMedia_ttlH3">プレゼントキャンペーンも実施中♪</h3><img src="img/blogDetail/InsertImage01.jpg">
             <p class="bl_blogMedia_letter">人とコミュニケーションをとること、物理的に触れたり、間接的に感じたりすることが、今や遠隔で完結できるようになった。もともと「繋がり」という形を持たない結びつきではあるが、あらゆる物事と実際に接点を持つ場面がが減っている中、生身の身体が受け取る感覚はこれからどんなふうに変わっていくのだろうか。</p>
             <p class="bl_blogMedia_letter">人とコミュニケーションをとること、物理的に触れたり、間接的に感じたりすることが、今や遠隔で完結できるようになった。もともと「繋がり」という形を持たない結びつきではあるが、あらゆる物事と実際に接点を持つ場面がが減っている中、生身の身体が受け取る感覚はこれからどんなふうに変わっていくのだろうか。</p>
+            <ul class="blogMedia_tag">
+              <li class="blogMedia_tagList"><a class="blogMedia_tagLink" href="">#ヘルスケア</a></li>
+              <li class="blogMedia_tagList"><a class="blogMedia_tagLink" href="">#プレゼント</a></li>
+              <li class="blogMedia_tagList"><a class="blogMedia_tagLink" href="">#キャンペーン</a></li>
+            </ul>
           </div>
         </article>
+        <section class="ly_section ly_section__shopDetail">
+          <div class="ly_sectionInner">
+            <div class="bl_halfMedia_shop">
+              <div class="bl_halfMedia_body">
+                <h3 class="bl_halfMedia_ttl">新宿店</h3>
+                <dl class="bl_basicInfo_wrap">
+                  <div class="bl_basicInfo">
+                    <dt>住所</dt>
+                    <dd>東京都新宿区西新宿2-22-2キャットベル</dd>
+                  </div>
+                  <div class="bl_basicInfo">
+                    <dt>TEL</dt>
+                    <dd>22-2222-2222</dd>
+                  </div>
+                  <div class="bl_basicInfo">
+                    <dt>営業時間</dt>
+                    <dd>平日11：00～19:30/土日祝11:00～20：00</dd>
+                  </div>
+                  <div class="bl_basicInfo">
+                    <dt></dt>
+                    <dd>休日：年中無休</dd>
+                  </div>
+                </dl>
+              </div>
+              <figure class="bl_halfMedia_imgWrapper"><img src="img/shoplist/sinjyuku.jpg" alt=""></figure>
+            </div><a class="el_btn el_btn__shopLink" href="">この猫のお取扱い店舗を見る</a>
+          </div>
+        </section>
+        <section class="ly_section ly_section__newPost">
+          <div class="ly_sectionInner">
+            <h3 class="bl_cardUnit__col4Ttl"></h3>
+            <ul class="bl_cardUnit bl_cardUnit__col4newPost">
+              <li class="bl_card">
+                <time class="bl_card_time" datetime="2022.02.24">2022.02.24</time>
+                <h3 class="bl_card_ttl"><a class="bl_card_link" href="">ねこの日★祝！レア種も仲間入り、ふれあいコーナーで癒…</a></h3>
+                <figure class="bl_card_imgWrapper"><img src="img/blog/00.jpg" alt=""></figure>
+              </li>
+              <li class="bl_card">
+                <time class="bl_card_time" datetime="2022.02.22">2022.02.22</time>
+                <h3 class="bl_card_ttl"><a class="bl_card_link" href="">ポイント2倍Day！この機会をお見逃しなく！</a></h3>
+                <figure class="bl_card_imgWrapper"><img src="img/blog/01.jpg" alt=""></figure>
+              </li>
+              <li class="bl_card">
+                <time class="bl_card_time" datetime="2021.12.24">2021.12.24</time>
+                <h3 class="bl_card_ttl"><a class="bl_card_link" href="">新年SEAL！療法食10%OFF</a></h3>
+                <figure class="bl_card_imgWrapper"><img src="img/blog/02.jpg" alt=""></figure>
+              </li>
+              <li class="bl_card">
+                <time class="bl_card_time" datetime="2021.12.24">2021.12.24</time>
+                <h3 class="bl_card_ttl"><a class="bl_card_link" href="">新入りさん紹介★穏やかで甘え上手なスコティッシュフォ…</a></h3>
+                <figure class="bl_card_imgWrapper"><img src="img/blog/03.jpg" alt=""></figure>
+              </li>
+            </ul><a class="el_btn el_btn__archive" href="archive-blog.html">この店舗のブログを見る</a>
+          </div>
+        </section>
       </main>
-      <aside class="ly_aside hp_pt637">
+      <aside class="ly_aside hp_pt475">
         <h3 class="bl_asideHead_pickUp">ピックアップ</h3>
         <ul class="bl_asideBlog_list">
           <li class="bl_asideBlog_contents">
             <article>
               <figure class="bl_asideBlog_thumb"><img src="img/blog/01.jpg"></figure>
               <div class="bl_asideBlog_body">
-                <h4 class="bl_asideBlog_ttl"><a href="">ねこの日★祝！レア種も仲間入り、ふれあいコーナーで癒されて♪</a></h4>
+                <h4 class="bl_asideBlog_ttl"><a href="single-blog.html">ねこの日★祝！レア種も仲間入り、ふれあいコーナーで癒されて♪</a></h4>
                 <time date-time="2022.02.22">2022.02.22</time>
               </div>
             </article>
@@ -99,7 +161,7 @@
             <article>
               <figure class="bl_asideBlog_thumb"><img src="img/blog/02.jpg"></figure>
               <div class="bl_asideBlog_body">
-                <h4 class="bl_asideBlog_ttl"><a href="">【新宿店】ポイント2倍Day！この機会をお見逃しなく！</a></h4>
+                <h4 class="bl_asideBlog_ttl"><a href="single-blog.html">【新宿店】ポイント2倍Day！この機会をお見逃しなく！</a></h4>
                 <time date-time="2022.02.02">2022.02.02</time>
               </div>
             </article>
@@ -108,7 +170,7 @@
             <article>
               <figure class="bl_asideBlog_thumb"><img src="img/blog/03.jpg"></figure>
               <div class="bl_asideBlog_body">
-                <h4 class="bl_asideBlog_ttl"><a href="">新年SEAL！療法食10%OFF</a></h4>
+                <h4 class="bl_asideBlog_ttl"><a href="single-blog.html">新年SEAL！療法食10%OFF</a></h4>
                 <time date-time="2022.01.04">2022.01.04</time>
               </div>
             </article>
@@ -133,7 +195,7 @@
           <ul class="bl_footerList">
             <li><a href="archive-pet.html">ペットを探す</a></li>
             <li><a href="">お店を探す</a></li>
-            <li><a href="">ブログ一覧</a></li>
+            <li><a href="archive-blog.html">ブログ一覧</a></li>
           </ul>
         </div><small>&copy; 2020-2022 CAT BELL Co., Ltd.</small>
       </div>

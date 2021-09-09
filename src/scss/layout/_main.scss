@@ -207,15 +207,42 @@
 // ----------------------------------------------------------------
 .ly_blogWrapper{
   position: relative;
-  margin-top: -143px;
-  > .ly_main{
-    max-width: 980px;
-    margin: 0 auto;
-    padding-bottom: 96px;
-    @include	g.mq(){
-      padding: 0 4vw 48px 4vw;
+  &::before{
+    @include	g.mq('pc'){
+      content: "";
+      position: absolute;
+      background-color:	g.$color-base;
+      top: -132px;
+      right: 0;
+      width: 29.167vw;
+      height: 100%;
+      display: block;
     }
   }
+}
+.ly_blogInner{
+  position: relative;
+  @include	g.mq('pc'){
+    margin-top: 15px;
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+  }
+  > .ly_main{
+    width: 75.512%;
+    padding-bottom: 109px;
+    @include	g.mq(){
+      padding: 0 4vw 48px 4vw;
+      width: 100%;
+    }
+  }
+}
+.ly_section__shopDetail{
+  border-top: 1px solid #e7e7e7;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  max-width: 684px;
+  margin-right: auto;
 }
 .ly_breadcrumbWrapper{
   max-width: 980px;
@@ -225,4 +252,17 @@
   @include	g.mq(){
     margin-top: 70px;
   }
+}
+.ly_blogInner > .ly_blogSingle{
+  padding-bottom: 96px;
+  @include	g.mq(){
+    margin-top: 4vw;
+  }
+}
+.ly_section__newPost{
+  border-top: 1px solid #e7e7e7;
+  padding-top: 79px;
+  padding-bottom: 0;
+  max-width: 684px;
+  margin-right: auto;
 }

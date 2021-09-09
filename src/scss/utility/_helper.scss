@@ -20,6 +20,9 @@
   padding-top: 0 !important;
 }
 @include	g.mq('pc'){
+  .hp_pt475{
+    padding-top: 475px !important;
+  }
   .hp_pt637{
     padding-top: 637px !important;
   }

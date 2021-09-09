@@ -6,18 +6,28 @@
 // ブログ一覧、ブログ詳細ページ
 // ----------------------------------------------------------------
 .ly_aside{
-  width: 29.167%;
-  // height: 100%;
-  height: calc(100% - 132px);
-  background-color:	g.$color-base;
-  padding-top: 801px;
+  width: 24.49%;
+  padding-top: 658px;
   padding-left: 56px;
-  padding-bottom: 56px;
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: relative;
+  height: auto;
+  padding-bottom: 109px;
+  &::before{
+    content: "";
+    position: absolute;
+    background-color:	g.$color-base;
+    width: 100%;
+    height: 107%;
+    top: -7%;
+    left: 0;
+    display: block;
+    z-index: map-get(g.$layer, "underlay");
+    @include	g.mq(){
+      top: 0;
+      height: 100%;
+    }
+  }
   @include	g.mq(){
-    position: static;
     width: 100%;
     padding: 48px 4vw;
     text-align: center;

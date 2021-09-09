@@ -474,6 +474,7 @@ small{
   margin-right: auto;
   margin-left: auto;
   display: flex;
+  flex-wrap: wrap;
   @include	g.mq(){
     padding: 0 4vw;
   }
@@ -623,7 +624,7 @@ small{
     color: g.$color-main;
   }
 }
-/* ページ下の店舗詳細セクション */
+/* 猫一覧ページ下の店舗詳細セクション */
 .bl_halfMedia{
   display: flex;
   @include	g.mq('pc'){
@@ -674,42 +675,42 @@ small{
 }
 .bl_basicInfo_wrap{
   margin-bottom: 24px;
-}
-.bl_basicInfo{
-  display: flex;
-  @include	g.fz(14);
-  @include	g.mq('pc'){
-    align-items: center;
-  }
-  @include	g.mq(){
-    flex-direction: column;
-  }
-  &:not(:nth-of-type(3n)){
-    margin-bottom: 12.5px;
-    @include	g.mq(){
-      margin-bottom: 1.2em;
-    }
-  }
-  &:nth-of-type(3n){
-    margin-bottom: 8px;
-  }
-  &:last-of-type{
-    margin-bottom: 0;
-  }
-  dt{
-    color: g.$color-lightGray;
-    font-weight: 300;
+  .bl_basicInfo{
+    display: flex;
+    @include	g.fz(14);
     @include	g.mq('pc'){
-      flex-basis: 56px;
-      margin-right: 16px;
+      align-items: center;
     }
     @include	g.mq(){
+      flex-direction: column;
+    }
+    &:not(:nth-of-type(3n)){
+      margin-bottom: 12.5px;
+      @include	g.mq(){
+        margin-bottom: 1.2em;
+      }
+    }
+    &:nth-of-type(3n){
       margin-bottom: 8px;
     }
-  }
-  dd{
-    color: g.$color-dark;
-    font-weight: 300;
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+    dt{
+      color: g.$color-lightGray;
+      font-weight: 300;
+      @include	g.mq('pc'){
+        flex-basis: 56px;
+        margin-right: 16px;
+      }
+      @include	g.mq(){
+        margin-bottom: 8px;
+      }
+    }
+    dd{
+      color: g.$color-dark;
+      font-weight: 300;
+    }
   }
 }
 
@@ -719,8 +720,11 @@ small{
 // ----------------------------------------------------------------
 /* ブログ一覧 */
 .bl_blogList{
-  padding-top: 158px;
+  padding-top: 635px;
   margin-bottom: 40px;
+  @include	g.mq(){
+    padding-top: 730px;
+  }
 }
 .bl_blogMedia_contents{
   article{
@@ -734,14 +738,20 @@ small{
   }
   /* 最新記事 */
   &:first-of-type{
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     z-index: map-get(g.$layer, "default");
-    margin-bottom: 64px;
+    @include	g.mq(){
+      top: 15px;
+    }
     .bl_blogMedia_thumb{
       padding-top: 40.8165%;
       width: 100%;
       @include	g.mq(){
         padding-top: 75%;
+        width: 92vw;
+        margin: auto;
       }
     }
     img{
@@ -929,10 +939,12 @@ small{
   @include	g.fz(14);
   line-height:	g.division(21,	14);
   display: block;
+  text-decoration: underline;
   @include	g.mq('pc'){
     &:hover{
       color: g.$color-active;
       opacity: 0.5;
+      text-decoration: underline;
     }
   }
 }
@@ -1048,7 +1060,7 @@ small{
   text-decoration: underline;
   font-weight: 600;
   transition: opacity .4s;
-  @include	g.mq(){
+  @include	g.mq('pc'){
     &:hover{
       color: g.$color-active;
       opacity: 0.5;
@@ -1059,27 +1071,16 @@ small{
 
 /* ブログ詳細 */
 .bl_blogMedia_detail{
-  position: relative;
-  padding-top: 158px;
-  z-index: map-get(g.$layer, "default");
-  .bl_blogMedia_thumb{
-    padding-top: 40.8165%;
-    margin-bottom: 73px;
-    width: 100%;
-    img{
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
+  padding-bottom: 42px;
   .bl_blogMedia_body{
     max-width: 684px;
     width: 100%;
+    margin-top: 473px;
     margin-right: auto;
+    @include	g.mq(){
+      margin-top: 0;
+      padding: 28px 0;
+    }
     img{
       border-radius: 20px;
       margin-bottom: 43px;
@@ -1090,6 +1091,9 @@ small{
     line-height:	g.division(18,	12);
     color: g.$color-lightGray;
     margin-bottom: 20px;
+    @include	g.mq(){
+      margin-bottom: 0;
+    }
   }
   .bl_blogMedia_ttlH2{
     @include	g.fz(28);
@@ -1109,4 +1113,215 @@ small{
     line-height:	g.division(21,	14);
     margin-bottom: 32px;
   }
+}
+.bl_blogMedia_detail .bl_blogMedia_thumb{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: map-get(g.$layer, "default");
+  @include	g.mq(){
+    position: static;
+  }
+  .bl_blogMedia_inner{
+    position: relative;
+    padding-top: 40.8165%;
+    width: 100%;
+    @include	g.mq(){
+      margin: auto;
+      padding-top: 81.525%;
+      width: 92vw;
+    }
+    img{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+/* ブログ詳細ページ下の店舗詳細セクション */
+.bl_halfMedia_shop{
+  display: flex;
+  margin-bottom: 31px;
+  @include	g.mq('pc'){
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+  }
+  @include	g.mq(){
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .bl_halfMedia_imgWrapper{
+    position: relative;
+    overflow: hidden;
+    flex: 0 1 43.266%;
+    margin-right: 3.266%;
+    padding-top: 20.812%;
+    @include	g.mq(){
+      width: 100%;
+      margin-right: 0;
+      padding-top: 64%;
+    }
+    img{
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      border-radius: 20px;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .bl_halfMedia_body{
+    /* flex-growの初期値は0[伸びる比率] */
+    flex: 1;
+    text-align: left;
+    margin-bottom: 2px;
+    @include	g.mq(){
+      margin-top: 1em;
+    }
+  }
+  .bl_halfMedia_ttl{
+    @include	g.fz(20);
+    line-height:	g.division(30,	20);
+    margin-bottom: 10px;
+  }
+  .bl_basicInfo_wrap{
+    margin-bottom: 0;
+  }
+  .bl_basicInfo{
+    display: flex;
+    @include	g.fz(14);
+    @include	g.mq('pc'){
+      align-items: center;
+    }
+    @include	g.mq(){
+      flex-direction: column;
+    }
+    &:not(:nth-of-type(3n)){
+      margin-bottom: 18px;
+      @include	g.mq(){
+        margin-bottom: 1.2em;
+      }
+    }
+    &:nth-of-type(3n){
+      margin-bottom: 8px;
+    }
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+    dt{
+      color: g.$color-lightGray;
+      font-weight: 300;
+      @include	g.mq('pc'){
+        flex-basis: 56px;
+        margin-right: 16px;
+      }
+      @include	g.mq(){
+        margin-bottom: 8px;
+      }
+    }
+    dd{
+      color: g.$color-dark;
+      font-weight: 300;
+    }
+  }
+}
+.bl_cardUnit__col4Ttl{
+  text-align: left;
+}
+.bl_cardUnit__col4newPost{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 23px;
+}
+.bl_cardUnit__col4newPost > .bl_card{
+  width: 21.493%;
+  margin-right: 4.68%;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: left;
+  @include	g.mq('pc'){
+    &:hover .bl_card_link::before{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: map-get(g.$layer, "default");
+    }
+    &:hover .bl_card_link{
+      color: g.$color-active;
+    }
+    &:hover .bl_card_imgWrapper{
+      opacity: 0.5;
+    }
+  }
+  @include	g.mq(){
+    width: 100%;
+    margin-right: 0;
+    &:not(:last-of-type){
+      margin-bottom: 50px;
+    }
+  }
+}
+.bl_cardUnit__col4newPost > .bl_card:nth-of-type(4n){
+  margin-right: 0;
+}
+.bl_cardUnit__col4newPost .bl_card_imgWrapper{
+  position: relative;
+  padding-top: 100%;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  @include	g.mq(){
+    margin-bottom: 4vw;
+  }
+}
+.bl_cardUnit__col4newPost img{
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.bl_cardUnit__col4newPost .bl_card_ttl{
+  @include	g.fz(16);
+  line-height:	g.division(24,	16);
+}
+.bl_cardUnit__col4newPost .bl_card_time{
+  @include	g.fz(12);
+  line-height:	g.division(19,	12);
+  color: g.$color-lightGray;
+}
+.bl_cardUnit__col4newPost .bl_card_link{
+  color: g.$color-main;
+  display: block;
+  min-height: 72px;
+  transition: color .4s;
+  @include	g.mq(){
+    min-height: 2em;
+  }
+}
+.bl_cardUnit__col4newPost .bl_card_imgWrapper{
+  @include	g.mq('pc'){
+    transition: opacity .4s;
+    margin-bottom: 28px;
+  }
+}
+.bl_cardUnit__col4newPost .bl_card_time{
+  margin-top: 6px;
 }
