@@ -52,3 +52,10 @@
 	border: 1px solid g.$color-main;
 	color: g.$color-main;
 }
+
+// ----------------------------------------------------------------
+//	猫詳細の画像切り替え
+// ----------------------------------------------------------------
+.bl_mediaCat_imgItem.is_active img{
+	border: 1px solid g.$color-yellow;
+}

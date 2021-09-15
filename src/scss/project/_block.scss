@@ -1335,3 +1335,157 @@ small{
 .bl_cardUnit__col4newPost .bl_card_time{
   margin-top: 6px;
 }
+
+
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// 猫詳細ページ
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+.bl_mediaCat_wrapper{
+  display: flex;
+  margin-bottom: 54px;
+  @include	g.mq(){
+    flex-direction: column;
+  }
+}
+.bl_mediaCat_imgWrapper{
+  flex: 0 1 59.592%;
+  margin-right: 4.082%;
+  @include	g.mq(){
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  ul{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.bl_mediaCat_img{
+  position: relative;
+  overflow: hidden;
+  padding-top: 65.755%;
+  margin-bottom: 16px;
+  img{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border-radius: 20px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+.bl_mediaCat_imgItem{
+  position: relative;
+  width: 22.947%;
+  padding-top: 22.947%;
+  cursor: pointer;
+  img{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border-radius: 20px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border: 1px solid transparent;
+  }
+}
+.bl_mediaCat_body{
+  flex: 1;
+  text-align: left;
+}
+.bl_mediaCat_ttl{
+  @include	g.fz(28);
+  line-height:	g.division(42,	28);
+  margin-bottom: 22px;
+}
+.bl_mediaCat_sta{
+  margin-bottom: 32px;
+  @include	g.mq(){
+    margin-bottom: 16px;
+  }
+}
+.bl_mediaCat_staInner{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+  dt{
+    @include	g.fz(14);
+    line-height:	g.division(21,	14);
+    color: g.$color-lightGray;
+    margin-right: 16px;
+    width: 15.733%;
+    @include	g.mq(){
+      width: 25%;
+    }
+  }
+  dd{
+    @include	g.fz(14);
+    line-height:	g.division(21,	14);
+    width: 79.778%;
+    @include	g.mq(){
+      width: 75%;
+    }
+  }
+  &:nth-of-type(3n){
+    align-items: center;
+    margin-bottom: 8px;
+    span{
+      @include	g.fz(20);
+      line-height:	g.division(30,	20);
+      font-weight: 600;
+    }
+  }
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+}
+.bl_mediaCat_txtWrapper{
+  text-align: left;
+  background-color:	g.$color-base;
+  color: g.$color-dark;
+  @include	g.fz(14);
+  line-height:	g.division(21,	14);
+  padding: 52px 40px 29px 40px;
+  @include	g.mq(){
+    padding: 42px 30px 19px 30px;
+  }
+  ul{
+    margin-bottom: 1em;
+  }
+  li{
+    position: relative;
+    padding-left: .8em;
+    &::before{
+      content: "";
+      display: block;
+      width: 2px;
+      height: 2px;
+      background-color:	currentColor;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: .4em;
+      transform: translateY(-50%)
+    }
+  }
+}
+.bl_mediaCat_head{
+  @include	g.fz(16);
+  line-height:	g.division(24,	16);
+  font-weight: 600;
+  border-bottom: 1px solid g.$color-lightGray;
+  margin-bottom: 19px;
+}
+.bl_attentionHeading{
+  @include	g.fz(28);
+  line-height:	g.division(42,	28);
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: left;
+}

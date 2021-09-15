@@ -237,9 +237,6 @@
     }
   }
 }
-.ly_shopPet .ly_section__shopDetail .ly_sectionInner{
-  max-width: 876px;
-}
 .ly_breadcrumbWrapper{
   max-width: 980px;
   margin: 125px auto 0 auto;
@@ -268,4 +265,23 @@
   padding-bottom: 0;
   max-width: 684px;
   margin-right: auto;
+}
+.ly_sectionInner.ly_sectionCat_detail{
+  padding-top: 36px;
+  padding-bottom: 56px;
+  border-bottom: 1px solid #e7e7e7;
+  @include	g.mq(){
+    padding-top: 0;
+  }
+}
+.ly_section__attention{
+  padding-top: 0;
+  padding-bottom: 32px;
+  .ly_sectionInner{
+    border-top: 1px solid #e7e7e7;
+    padding-top: 80px;
+    @include	g.mq(){
+      padding-top: 40px;
+    }
+  }
 }

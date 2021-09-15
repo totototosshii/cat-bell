@@ -39,4 +39,25 @@ export function common() {
       }
     });
   });
+
+  // 猫詳細ページの画像切り替え
+  $(function () {
+    // サブ画像がクリックされた時
+    $('.bl_mediaCat_imgItem img').on('click', function () {
+      // クリックされたサブ画像のsrcを変数imgに代入
+      let img = $(this).attr('src');
+      // サブの[.bl_mediaCat_imgItem.is_active img]から[.is_active]を削除（ボーダーが消える）
+      $('.bl_mediaCat_imgItem').removeClass('is_active');
+      // クリックされたサブ画像の親要素[.bl_mediaCat_imgItem]に[.is_active]を追加（ボーダーが付く）
+      $(this).parent().addClass('is_active');
+      // メイン画像を0.05秒かけてフェードアウト
+      $('.bl_mediaCat_img img').fadeOut(50, function () {
+        // メイン画像のsrcに、クリックされたサブ画像のsrcを読み込んでフェードイン
+        $('.bl_mediaCat_img img').attr('src', img).on('load', function () {
+          $(this).fadeIn();
+        });
+      });
+    });
+  });
+
 }

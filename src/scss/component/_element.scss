@@ -322,6 +322,27 @@
     background-size: cover;
   }
 }
+// ネコ一覧ページリンク
+.el_btn__catList_link{
+  @include	g.fz(14);
+  position: relative;
+  padding-right: 14px;
+  &::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    border-bottom: 1px solid currentColor;
+    border-left: 1px solid currentColor;
+    display: block;
+    transform: translateY(-50%) rotate(-135deg);
+  }
+  &:hover{
+    color: g.$color-active;
+  }
+}
 // ----------------------------------------------------------------
 //  ヘッダーロゴ
 // ----------------------------------------------------------------
@@ -384,4 +405,30 @@
   @include	g.mq(){
     margin-bottom: 1em;
   }
+}
+
+
+/* ツールチップのテキスト */
+.el_tooltipTxt {
+  opacity: 0; /* はじめは隠しておく */
+  visibility: hidden; /* はじめは隠しておく */
+  position: absolute; /* 絶対配置 */
+  left: 50%; /* 親に対して中央配置 */
+  transform: translateX(-50%); /* 親に対して中央配置 */
+  bottom: -30px; /* 親要素下からの位置 */
+  display: inline-block;
+  padding: 5px; /* 余白 */
+  white-space: nowrap; /* テキストを折り返さない */
+  font-size: 0.8rem; /* フォントサイズ */
+  line-height: 1.3; /* 行間 */
+  background: #333; /* 背景色 */
+  color: #fff; /* 文字色 */
+  border-radius: 3px; /* 角丸 */
+  transition: 0.3s ease-in; /* アニメーション */
+}
+
+/* ホバー時にツールチップの非表示を解除 */
+.el_btn:hover .el_tooltipTxt {
+  opacity: 1;
+  visibility: visible;
 }

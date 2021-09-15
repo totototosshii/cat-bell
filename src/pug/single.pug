@@ -1,0 +1,202 @@
+doctype html
+html(lang="ja")
+  head(prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: https://ogp.me/ns/website#")
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title 猫詳細
+    meta(name="description" content="猫と暮らそう 安心・安全な猫専門ペットショップ")
+    meta(name="format-detection" content="telephone=no")
+    meta(property="og:title" content="猫詳細")
+    meta(property="og:type" content="article")
+    meta(property="og:description" content="猫と暮らそう 安心・安全な猫専門ペットショップ")
+    meta(property="og:url" content="このページのURL")
+    meta(property="og:image" content="絶対パスで指定（1200×630以上推奨）")
+    meta(property="og:locale" content="ja_JP")
+    meta(property="og:site_name" content="CAT BELL")
+    meta(property="fb:app_id" content="FacebookID")
+    meta(name="twitter:card" content="summary")
+    meta(name="twitter:site" content="@ユーザー名")
+    script.
+      (function(d) {
+      var config = {
+        kitId: 'yxe4bgl',
+        scriptTimeout: 3000,
+        async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    script(src="https://cdn.jsdelivr.net/npm/viewport-extra@1.0.3/dist/viewport-extra.min.js")
+    script.
+      (function () {
+      let ua = navigator.userAgent
+      let sp = ua.indexOf('iPhone') > -1 || (ua.indexOf('Android') > -1 && ua.indexOf('Mobile') > -1)
+      let tab = !sp && (ua.indexOf('iPad') > -1 || (ua.indexOf('Macintosh') > -1 && 'ontouchend' in document) || ua.indexOf('Android') > -1)
+      new ViewportExtra(tab ? 1200 : 375) })()
+    link(rel="icon" href="絶対パスで指定")
+    link(rel="apple-touch-icon" sizes="180x180" href="絶対パスで指定")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css")
+    link(rel="stylesheet", href="./css/style.css?ver")
+  body.ly_under.js_noScroll
+    header.ly_header.js_headerScroll
+      div.ly_headerInner
+        h1.el_lv1Heading
+          a(href="index.html")
+            img(src="img/home/logo.svg", alt="CAT BELL")
+        nav.bl_headerNav.js_headerNav
+          ul.bl_headerList
+            li
+              a(href="archive-pet.html") ペットを探す
+            li
+              a(href="https://cat-bell.toshikilog.net/#shop") お店を探す
+            li
+              a(href="archive-blog.html") ブログ一覧
+        button(type="button").el_drawerBtn.js_drawerBtn
+          span.el_drawerLine
+          span.el_visuallyHidden メニューを開閉する
+
+    main.ly_main
+      ol.bl_breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a(href="index.html" itemprop="item")
+            span(itemprop="name") ホーム
+          meta(itemprop="position" content=1)
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a(href="archive-pet.html" itemprop="item")
+            span(itemprop="name") 猫種一覧
+          meta(itemprop="position" content=2)
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a(href="archive-pet.html" itemprop="item")
+            span(itemprop="name") アメリカンショートヘア
+          meta(itemprop="position" content=3)
+        li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+          a(href="single.html" itemprop="item")
+            span(itemprop="name") アメリカンショートヘア 新宿店
+          meta(itemprop="position" content=4)
+      section.ly_section.hp_pb0
+        div.ly_sectionInner.ly_sectionCat_detail
+          div.bl_mediaCat_wrapper
+            div.bl_mediaCat_imgWrapper
+              figure.bl_mediaCat_img
+                img(src="img/shopDetail/americanShorthair_01.jpg", alt="")
+              ul
+                li.bl_mediaCat_imgItem.is_active
+                  img(src="img/shopDetail/americanShorthair_01.jpg", alt="")
+                li.bl_mediaCat_imgItem
+                  img(src="img/shopDetail/munchkin.jpeg", alt="")
+                li.bl_mediaCat_imgItem
+                  img(src="img/shopDetail/americanShorthair_01.jpg", alt="")
+                li.bl_mediaCat_imgItem
+                  img(src="img/shopDetail/munchkin.jpeg", alt="")
+            div.bl_mediaCat_body
+              h2.bl_mediaCat_ttl アメリカンショートヘア
+              dl.bl_mediaCat_sta
+                div.bl_mediaCat_staInner
+                  dt 生年月日
+                  dd 2022.02.22
+                div.bl_mediaCat_staInner
+                  dt 性別
+                  dd オス
+                div.bl_mediaCat_staInner
+                  dt 生体価格
+                  dd
+                    span 368,800
+                    | 円（税抜）
+                div.bl_mediaCat_staInner
+                  dt 血統書
+                  dd あり（ＳＫＴ）
+              a(href='archive-pet.html').el_btn.el_btn__catList_link アメリカンショートヘア一覧を見る
+          div.bl_mediaCat_txtWrapper
+            h3.bl_mediaCat_head コメント
+            div.bl_mediaCat_txtContent
+              p ★この子は遺伝子病検査を受けています。該当する遺伝子病の発症リスクがないことを証明致します。※証明書発行
+              p ★健康診断受診・マイクロチップ装着・駆虫薬投与済み
+              br
+              p 　新宿店自慢の子たちをお迎えしてくださったオーナー様へのプレゼント
+              ul
+                li ネコちゃんの育て方ブック『ハピネスダイアリー』をプレゼント！（お迎え頂く仔の肉球スタンプ付）
+                li ネコちゃんの育て方DVDもプレゼント！
+                li お店に来てくれた日のお写真プレゼント♪
+                li お店で遊んでいたオモチャもプレゼント♪
+                li お迎え後使える『しつけ・健康診断・すくすく社会化応援クーポン』をプレゼント♪
+                li すくすく社会化応援クーポンは、お手入れ無料体験・お手入れ用品割引・トリミング半額・ホテル割引…とお得なクーポン！！
+                li 今後のお買い物がお得になる【プレミア会員】になります♪
+                li 最後は一緒に家族写真撮影しましょう！
+              br
+              p 　お迎え時には…
+              p 『ハピネスダイアリー』を使って育て方のご説明をさせて頂きますので、初めてネコちゃんをお迎え頂くお客様も安心してお迎え頂けます。育て方のご説明後は、綺麗にお手入れして、チョーカーつけてオーナーさんへお渡しします♡<br>※最長1週間無料でご契約後のお預りが出来ます。1週間以上の場合もご相談ください。
+              br
+              p 　分割(最長60回)でのお支払いもございます
+              p 15回までは金利手数料をCAT BELLが負担します！ご希望のお客様は、身分証明書(免許証・パスポートなど)をお持ちください。
+              br
+              p その他…
+              p お客様に安心してワンちゃん＆ネコちゃんをお迎え頂けるように《ペット保険》やしつけのお悩み解消と、ネコちゃんの習性に合わせた飼育グッズ《ファーストセレクション》などございます。ご来店時には、スタッフより詳しくご説明させて頂きます。ちょっとしたご質問でもお声かけ下さいませ！
+      section.ly_section.ly_section__shopDetail.hp_pt64
+        div.ly_sectionInner.hp_mw876
+          div.bl_halfMedia.bl_shopPet
+            div.bl_halfMedia_body
+              h3.bl_halfMedia_ttl 新宿店
+              dl.bl_basicInfo_wrap
+                div.bl_basicInfo
+                  dt 住所
+                  dd 東京都新宿区西新宿2-22-2キャットベル
+                div.bl_basicInfo
+                  dt TEL
+                  dd 22-2222-2222
+                div.bl_basicInfo
+                  dt 営業時間
+                  dd 平日11：00～19:30/土日祝11:00～20：00
+                div.bl_basicInfo
+                  dt
+                  dd 休日：年中無休
+              span.el_btn.el_btn__shopDetail
+                span.el_tooltipTxt リンクは先は無し
+                | この猫のお取扱い店舗を見る
+            figure.bl_halfMedia_imgWrapper
+              img(src="img/shoplist/sinjyuku.jpg", alt="")
+      section.ly_section.ly_section__attention
+        div.ly_sectionInner
+          h3.bl_attentionHeading ほかにもこんな猫種が注目されています！
+          ul.bl_cardUnit.bl_cardUnit__col4Pet.hp_pr100.hp_pl0
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="single.html").bl_card_link スコティッシュ
+                  br
+                  | フォールド
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/4columns/01.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="single.html").bl_card_link アメリカン
+                  br
+                  | ショートヘア
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/4columns/02.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="single.html").bl_card_link メインクーン
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/4columns/03.png", alt="")
+            li.bl_card
+              h3.bl_card_ttl
+                a(href="single.html").bl_card_link エキゾチック
+                  br
+                  | ショートヘア
+              figure.bl_card_imgWrapper
+                img(src="img/typeList/4columns/04.png", alt="")
+    footer.ly_footer
+      div.ly_footerInner
+        div.bl_footerContent
+          a(href="index.html")
+            img(src="img/home/logo.svg", alt="CAT BELL")
+          ul.bl_footerList
+            li
+              a(href="archive-pet.html") ペットを探す
+            li
+              a(href="https://cat-bell.toshikilog.net/#shop") お店を探す
+            li
+              a(href="archive-blog.html") ブログ一覧
+        small &copy; 2020-2022 CAT BELL Co., Ltd.
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js")
+    script(src="./js/bundle.js?ver")

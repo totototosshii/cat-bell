@@ -13,11 +13,17 @@
 // ----------------------------------------------------------------
 // padding調整用
 // ----------------------------------------------------------------
+.hp_pt64{
+  padding-top: 64px !important;
+}
 .hp_pt15{
   padding-top: 15px !important;
 }
 .hp-pt0{
   padding-top: 0 !important;
+}
+.hp_pb0{
+  padding-bottom: 0 !important;
 }
 @include	g.mq('pc'){
   .hp_pt475{
@@ -26,4 +32,13 @@
   .hp_pt637{
     padding-top: 637px !important;
   }
+  .hp_pr100{
+    padding-right: 100px !important;
+  }
+  .hp_pl0{
+    padding-left: 0 !important;
+  }
+}
+.hp_mw876{
+  max-width: 876px;
 }
