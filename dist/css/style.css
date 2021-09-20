@@ -1044,6 +1044,18 @@ dd {
   }
 }
 
+.ly_shopList .ly_section__shopDetail {
+  padding-top: 64px;
+}
+@media (max-width: 767px) {
+  .ly_shopList .ly_section__shopDetail {
+    padding-top: 34px;
+  }
+}
+.ly_shopList .bl_shopPet:not(:last-of-type) {
+  margin-bottom: 50px;
+}
+
 .ly_aside {
   height: auto;
   padding-bottom: 109px;
@@ -2768,6 +2780,23 @@ small {
   text-align: left;
 }
 
+.bl_halfMedia__column {
+  align-items: center;
+  flex-direction: column-reverse;
+}
+.bl_halfMedia__column .bl_halfMedia_imgWrapper {
+  flex: none;
+  margin-bottom: 50px;
+  margin-right: 0;
+  padding-top: 75%;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .bl_halfMedia__column .bl_halfMedia_imgWrapper {
+    margin-bottom: 30px;
+  }
+}
+
 .el_drawerBtn {
   display: block;
   height: 30px;
@@ -3305,5 +3334,12 @@ small {
 }
 .hp_mw876 {
   max-width: 876px;
+}
+
+.un_h100vh {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
 }
 /*# sourceMappingURL=sourcemaps/style.css.map */

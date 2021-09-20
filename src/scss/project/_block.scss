@@ -1489,3 +1489,21 @@ small{
   margin-bottom: 10px;
   text-align: left;
 }
+
+// ----------------------------------------------------------------
+// 店舗詳細ページ
+// ----------------------------------------------------------------
+.bl_halfMedia__column{
+  flex-direction: column-reverse;
+  align-items: center;
+  .bl_halfMedia_imgWrapper{
+    margin-right: 0;
+    flex: none;
+    width: 100%;
+    padding-top: 75%;
+    margin-bottom: 50px;
+    @include	g.mq(){
+      margin-bottom: 30px;
+    }
+  }
+}
