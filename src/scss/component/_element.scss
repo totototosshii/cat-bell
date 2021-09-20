@@ -1,20 +1,6 @@
 @use "../global" as g;
 
 // 接頭辞：el_
-
-// 使用例
-// h2{
-//   color: #ddd;
-//   @include	g.fz(30);
-// }
-// .txt{
-//   line-height:	g.division(18,	20);
-//   letter-spacing:	g.division(200,	20)	+	em;
-//   @include g.f_around(2, $height: 5, $weight: bold, $spacing: 200);
-//   @include	g.cc();
-//   z-index: map-get(g.$layer, "modal");
-// }
-
 // ----------------------------------------------------------------
 // ドロワーボタン
 // ----------------------------------------------------------------
@@ -405,30 +391,4 @@
   @include	g.mq(){
     margin-bottom: 1em;
   }
-}
-
-
-/* ツールチップのテキスト */
-.el_tooltipTxt {
-  opacity: 0; /* はじめは隠しておく */
-  visibility: hidden; /* はじめは隠しておく */
-  position: absolute; /* 絶対配置 */
-  left: 50%; /* 親に対して中央配置 */
-  transform: translateX(-50%); /* 親に対して中央配置 */
-  bottom: -30px; /* 親要素下からの位置 */
-  display: inline-block;
-  padding: 5px; /* 余白 */
-  white-space: nowrap; /* テキストを折り返さない */
-  font-size: 0.8rem; /* フォントサイズ */
-  line-height: 1.3; /* 行間 */
-  background: #333; /* 背景色 */
-  color: #fff; /* 文字色 */
-  border-radius: 3px; /* 角丸 */
-  transition: 0.3s ease-in; /* アニメーション */
-}
-
-/* ホバー時にツールチップの非表示を解除 */
-.el_btn:hover .el_tooltipTxt {
-  opacity: 1;
-  visibility: visible;
 }

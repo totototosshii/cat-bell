@@ -76,23 +76,3 @@ $breakpoints: (
 }
 // （例）line-height: g.division(34,16);→行間/フォントサイズ
 // （例）letter-spacing: g.division(34,1000) + em;→文字間(AV)/1000em
-
-// デザインカンプの数値をそのまま入力
-// 括弧内は左から、フォントサイズ、行送り、フォントウェイト、トラッキングの順
-// フォントサイズには引数を指定
-@mixin f_around($pixels, $height: false, $weight: false, $spacing: false) {
-  font-size: $pixels * 1rem;
-  @if $weight{
-    font-weight: $weight;
-  }
-  @if $height{
-    line-height: $height / $pixels;
-  }
-  @if $spacing{
-    letter-spacing: ($spacing / 1000) * 1em;
-  }
-}
-// 例）
-// .txt {
-//   @include g.f_around(2, $height: 5, $weight: bold, $spacing: 200);
-// }
