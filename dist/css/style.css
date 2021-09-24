@@ -1666,33 +1666,33 @@ small {
   margin-bottom: 43px;
 }
 
-.bl_blogMedia_detail time {
-  color: #9b9b9b;
-  font-size: 1.2rem;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-.bl_blogMedia_detail .bl_blogMedia_ttlH2 {
+.bl_blogMedia_detail .bl_blogMedia_body h2 {
   font-size: 2.8rem;
   line-height: 1.5;
 }
 
-.bl_blogMedia_detail .bl_blogMedia_ttlH3 {
+.bl_blogMedia_detail .bl_blogMedia_body h3 {
   font-size: 2rem;
   line-height: 1.5;
   margin-bottom: 28px;
   margin-top: 34px;
 }
 
-.bl_blogMedia_detail .bl_blogMedia_ttlH3:not(:first-of-type) {
+.bl_blogMedia_detail .bl_blogMedia_body h3:not(:first-of-type) {
   margin-top: 44px;
 }
 
-.bl_blogMedia_detail .bl_blogMedia_letter {
+.bl_blogMedia_detail .bl_blogMedia_body p {
   font-size: 1.4rem;
   line-height: 1.5;
   margin-bottom: 32px;
+}
+
+.bl_blogMedia_detail time {
+  color: #9b9b9b;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
 .bl_blogMedia_detail .bl_blogMedia_thumb {
