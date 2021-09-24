@@ -41,6 +41,10 @@ export function common() {
   });
 
   // 猫詳細ページの画像切り替え
+  $(window).on('load', function () {
+    // 最初のliにis_activeを追加
+    $('.bl_mediaCat_imgItem:first-of-type').addClass('is_active');
+  });
   $(function () {
     // サブ画像がクリックされた時
     $('.bl_mediaCat_imgItem img').on('click', function () {

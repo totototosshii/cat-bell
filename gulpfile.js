@@ -51,6 +51,7 @@ const buildServer = (done) => {
     // 静的サイト
     server: { baseDir: './dist' },
     // 動的サイト
+    // proxy: "http://cat-bell.local/",
     // proxy: "http://localsite.local/",
     open: true,
     watchOptions: {
