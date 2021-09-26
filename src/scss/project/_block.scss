@@ -1246,6 +1246,9 @@ small{
 }
 .bl_cardUnit__col4Ttl{
   text-align: left;
+  @include	g.fz(20);
+  line-height:	g.division(30,	20);
+  margin-bottom: 9px;
 }
 .bl_cardUnit__col4newPost{
   display: flex;
