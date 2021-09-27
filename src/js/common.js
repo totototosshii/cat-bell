@@ -30,10 +30,12 @@ export function common() {
 
   // 「すべての猫種一覧を見る」をクリックしたら６件ずつ追加で表示
   $(function () {
-    let moreNum = 12;
+    // 最初の８件は削除
+    $('.bl_cardUnit__col3Pet > .bl_card:nth-of-type(-n+8)').remove();
+    let moreNum = 6;
     $('.bl_cardUnit__col3Pet .bl_card:nth-child(n + ' + (moreNum + 1) + ')').addClass('is_active');
     $('.js_morePet').on('click', function () {
-      $('.bl_cardUnit__col3Pet .bl_card.is_active').slice(0, moreNum).removeClass('is_active');
+      $('.bl_cardUnit__col3Pet .bl_card.is_active').slice(0, 6).removeClass('is_active');
       if ($('.bl_cardUnit__col3Pet .bl_card.is_active').length == 0) {
         $('.js_morePet').fadeOut();
       }

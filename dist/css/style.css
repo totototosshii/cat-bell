@@ -1014,7 +1014,25 @@ small {
 }
 
 .bl_cardUnit__col4Pet .bl_card_imgWrapper {
+  border-radius: 50%;
+  overflow: hidden;
+  padding-top: 100%;
+  position: relative;
   transition: opacity 0.4s;
+  width: 100%;
+}
+
+.bl_cardUnit__col4Pet .bl_card_imgWrapper img {
+  -webkit-transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+  height: 100%;
+  left: 50%;
+  object-fit: cover;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 .bl_map {
@@ -1135,6 +1153,27 @@ small {
   display: block;
   min-height: 54px;
   transition: color 0.4s;
+}
+
+.bl_cardUnit__col3Pet .bl_card_imgWrapper {
+  border-radius: 50%;
+  overflow: hidden;
+  padding-top: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.bl_cardUnit__col3Pet .bl_card_imgWrapper img {
+  -webkit-transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+  height: 100%;
+  left: 50%;
+  object-fit: cover;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 .bl_breadcrumb {
@@ -2559,6 +2598,7 @@ small {
 
   .bl_cardUnit__col3Pet .bl_card_imgWrapper {
     max-width: 96px;
+    padding-top: 35.295%;
     transition: opacity 0.4s;
     width: 100%;
   }
