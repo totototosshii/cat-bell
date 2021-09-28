@@ -2929,7 +2929,7 @@ small {
     height: 100%;
     left: 0;
     position: fixed;
-    top: 50px;
+    top: 0;
     transform: translateX(100%);
     transition: -webkit-transform 0.4s;
     transition: transform 0.4s;
@@ -2945,7 +2945,7 @@ small {
   .bl_headerList {
     align-items: center;
     flex-direction: column;
-    padding-top: 13.8vh;
+    padding-top: 20vh;
   }
 
   .bl_headerList > li {
