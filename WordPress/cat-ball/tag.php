@@ -1,6 +1,3 @@
-<!--
-Template Name: 各支店の猫一覧
--->
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
