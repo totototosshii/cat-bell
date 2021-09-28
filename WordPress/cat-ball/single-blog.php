@@ -75,11 +75,11 @@
                       </div>
                       <div class="bl_basicInfo">
                         <dt>営業時間</dt>
-                        <dd>平日11：00～19:30/土日祝11:00～20：0</dd>
+                        <dd>平日11:00～19:30/土日祝11:00～20:00</dd>
                       </div>
                       <div class="bl_basicInfo">
                         <dt></dt>
-                        <dd>休日：年中無休</dd>
+                        <dd>休日:年中無休</dd>
                       </div>
                     </dl>
                   </div>
@@ -105,11 +105,11 @@
                       </div>
                       <div class="bl_basicInfo">
                         <dt>営業時間</dt>
-                        <dd>平日11：00～19:30/土日祝11:00～20：0</dd>
+                        <dd>平日11:00～19:30/土日祝11:00～20:00</dd>
                       </div>
                       <div class="bl_basicInfo">
                         <dt></dt>
-                        <dd>休日：年中無休</dd>
+                        <dd>休日:年中無休</dd>
                       </div>
                     </dl>
                   </div>
@@ -135,11 +135,11 @@
                       </div>
                       <div class="bl_basicInfo">
                         <dt>営業時間</dt>
-                        <dd>平日11：00～19:30/土日祝11:00～20：0</dd>
+                        <dd>平日11:00～19:30/土日祝11:00～20:00</dd>
                       </div>
                       <div class="bl_basicInfo">
                         <dt></dt>
-                        <dd>休日：年中無休</dd>
+                        <dd>休日:年中無休</dd>
                       </div>
                     </dl>
                   </div>
@@ -165,11 +165,11 @@
                       </div>
                       <div class="bl_basicInfo">
                         <dt>営業時間</dt>
-                        <dd>平日11：00～19:30/土日祝11:00～20：0</dd>
+                        <dd>平日11:00～19:30/土日祝11:00～20:00</dd>
                       </div>
                       <div class="bl_basicInfo">
                         <dt></dt>
-                        <dd>休日：年中無休</dd>
+                        <dd>休日:年中無休</dd>
                       </div>
                     </dl>
                   </div>
@@ -195,11 +195,11 @@
                       </div>
                       <div class="bl_basicInfo">
                         <dt>営業時間</dt>
-                        <dd>平日11：00～19:30/土日祝11:00～20：0</dd>
+                        <dd>平日11:00～19:30/土日祝11:00～20:00</dd>
                       </div>
                       <div class="bl_basicInfo">
                         <dt></dt>
-                        <dd>休日：年中無休</dd>
+                        <dd>休日:年中無休</dd>
                       </div>
                     </dl>
                   </div>
@@ -225,11 +225,11 @@
                       </div>
                       <div class="bl_basicInfo">
                         <dt>営業時間</dt>
-                        <dd>平日11：00～19:30/土日祝11:00～20：0</dd>
+                        <dd>平日11:00～19:30/土日祝11:00～20:00</dd>
                       </div>
                       <div class="bl_basicInfo">
                         <dt></dt>
-                        <dd>休日：年中無休</dd>
+                        <dd>休日:年中無休</dd>
                       </div>
                     </dl>
                   </div>
@@ -255,11 +255,11 @@
                       </div>
                       <div class="bl_basicInfo">
                         <dt>営業時間</dt>
-                        <dd>平日11：00～19:30/土日祝11:00～20：0</dd>
+                        <dd>平日11:00～19:30/土日祝11:00～20:00</dd>
                       </div>
                       <div class="bl_basicInfo">
                         <dt></dt>
-                        <dd>休日：年中無休</dd>
+                        <dd>休日:年中無休</dd>
                       </div>
                     </dl>
                   </div>
@@ -285,11 +285,11 @@
                       </div>
                       <div class="bl_basicInfo">
                         <dt>営業時間</dt>
-                        <dd>平日11：00～19:30/土日祝11:00～20：0</dd>
+                        <dd>平日11:00～19:30/土日祝11:00～20:00</dd>
                       </div>
                       <div class="bl_basicInfo">
                         <dt></dt>
-                        <dd>休日：年中無休</dd>
+                        <dd>休日:年中無休</dd>
                       </div>
                     </dl>
                   </div>

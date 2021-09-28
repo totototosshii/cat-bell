@@ -106,11 +106,11 @@
                   </div>
                   <div class="bl_basicInfo">
                     <dt>営業時間</dt>
-                    <dd>平日11：00～19:30/土日祝11:00～20：00</dd>
+                    <dd>平日11:00～19:30/土日祝11:00～20:00</dd>
                   </div>
                   <div class="bl_basicInfo">
                     <dt></dt>
-                    <dd>休日：年中無休</dd>
+                    <dd>休日:年中無休</dd>
                   </div>
                 </dl>
                 <a class="el_btn el_btn__shopDetail" href="<?php echo esc_url(home_url()); ?>/tag/sapporo">この店舗の猫を見る</a>
@@ -136,11 +136,11 @@
                   </div>
                   <div class="bl_basicInfo">
                     <dt>営業時間</dt>
-                    <dd>平日11：00～19:30/土日祝11:00～20：00</dd>
+                    <dd>平日11:00～19:30/土日祝11:00～20:00</dd>
                   </div>
                   <div class="bl_basicInfo">
                     <dt></dt>
-                    <dd>休日：年中無休</dd>
+                    <dd>休日:年中無休</dd>
                   </div>
                 </dl>
                 <a class="el_btn el_btn__shopDetail" href="<?php echo esc_url(home_url()); ?>/tag/miyagi">この店舗の猫を見る</a>
@@ -166,11 +166,11 @@
                   </div>
                   <div class="bl_basicInfo">
                     <dt>営業時間</dt>
-                    <dd>平日11：00～19:30/土日祝11:00～20：00</dd>
+                    <dd>平日11:00～19:30/土日祝11:00～20:00</dd>
                   </div>
                   <div class="bl_basicInfo">
                     <dt></dt>
-                    <dd>休日：年中無休</dd>
+                    <dd>休日:年中無休</dd>
                   </div>
                 </dl>
                 <a class="el_btn el_btn__shopDetail" href="<?php echo esc_url(home_url()); ?>/tag/sinjuku">この店舗の猫を見る</a>
@@ -196,11 +196,11 @@
                   </div>
                   <div class="bl_basicInfo">
                     <dt>営業時間</dt>
-                    <dd>平日11：00～19:30/土日祝11:00～20：00</dd>
+                    <dd>平日11:00～19:30/土日祝11:00～20:00</dd>
                   </div>
                   <div class="bl_basicInfo">
                     <dt></dt>
-                    <dd>休日：年中無休</dd>
+                    <dd>休日:年中無休</dd>
                   </div>
                 </dl>
                 <a class="el_btn el_btn__shopDetail" href="<?php echo esc_url(home_url()); ?>/tag/ishikawa">この店舗の猫を見る</a>
@@ -226,11 +226,11 @@
                   </div>
                   <div class="bl_basicInfo">
                     <dt>営業時間</dt>
-                    <dd>平日11：00～19:30/土日祝11:00～20：00</dd>
+                    <dd>平日11:00～19:30/土日祝11:00～20:00</dd>
                   </div>
                   <div class="bl_basicInfo">
                     <dt></dt>
-                    <dd>休日：年中無休</dd>
+                    <dd>休日:年中無休</dd>
                   </div>
                 </dl>
                 <a class="el_btn el_btn__shopDetail" href="<?php echo esc_url(home_url()); ?>/tag/umeda">この店舗の猫を見る</a>
@@ -256,11 +256,11 @@
                   </div>
                   <div class="bl_basicInfo">
                     <dt>営業時間</dt>
-                    <dd>平日11：00～19:30/土日祝11:00～20：00</dd>
+                    <dd>平日11:00～19:30/土日祝11:00～20:00</dd>
                   </div>
                   <div class="bl_basicInfo">
                     <dt></dt>
-                    <dd>休日：年中無休</dd>
+                    <dd>休日:年中無休</dd>
                   </div>
                 </dl>
                 <a class="el_btn el_btn__shopDetail" href="<?php echo esc_url(home_url()); ?>/tag/shizuoka">この店舗の猫を見る</a>
@@ -286,11 +286,11 @@
                   </div>
                   <div class="bl_basicInfo">
                     <dt>営業時間</dt>
-                    <dd>平日11：00～19:30/土日祝11:00～20：00</dd>
+                    <dd>平日11:00～19:30/土日祝11:00～20:00</dd>
                   </div>
                   <div class="bl_basicInfo">
                     <dt></dt>
-                    <dd>休日：年中無休</dd>
+                    <dd>休日:年中無休</dd>
                   </div>
                 </dl>
                 <a class="el_btn el_btn__shopDetail" href="<?php echo esc_url(home_url()); ?>/tag/fukuoka">この店舗の猫を見る</a>
@@ -316,11 +316,11 @@
                   </div>
                   <div class="bl_basicInfo">
                     <dt>営業時間</dt>
-                    <dd>平日11：00～19:30/土日祝11:00～20：00</dd>
+                    <dd>平日11:00～19:30/土日祝11:00～20:00</dd>
                   </div>
                   <div class="bl_basicInfo">
                     <dt></dt>
-                    <dd>休日：年中無休</dd>
+                    <dd>休日:年中無休</dd>
                   </div>
                 </dl>
                 <a class="el_btn el_btn__shopDetail" href="<?php echo esc_url(home_url()); ?>/tag/kagoshima">この店舗の猫を見る</a>
