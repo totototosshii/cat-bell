@@ -84,7 +84,7 @@
                     </dl>
                   </div>
                   <figure class="bl_halfMedia_imgWrapper">
-                    <img src="http://cat-bell.local/wp-content/uploads/2021/09/sapporo-scaled.jpg" alt="札幌店" width="296" height="142">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/shop/sapporo-scaled.jpg" alt="札幌店" width="296" height="142">
                   </figure>
                 </div>
                 <a class="el_btn el_btn__shopLink" href="<?php echo esc_url(home_url()); ?>/tag/sapporo">この店舗の猫を見る</a>
@@ -114,7 +114,7 @@
                     </dl>
                   </div>
                   <figure class="bl_halfMedia_imgWrapper">
-                    <img src="http://cat-bell.local/wp-content/uploads/2021/09/miyagi-scaled.jpg" alt="宮城店" width="296" height="142">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/shop/miyagi-scaled.jpg" alt="宮城店" width="296" height="142">
                   </figure>
                 </div>
                 <a class="el_btn el_btn__shopLink" href="<?php echo esc_url(home_url()); ?>/tag/miyagi">この店舗の猫を見る</a>
@@ -144,7 +144,7 @@
                     </dl>
                   </div>
                   <figure class="bl_halfMedia_imgWrapper">
-                    <img src="http://cat-bell.local/wp-content/uploads/2021/09/sinjyuku.jpg" alt="新宿店" width="296" height="142">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/shop/sinjyuku.jpg" alt="新宿店" width="296" height="142">
                   </figure>
                 </div>
                 <a class="el_btn el_btn__shopLink" href="<?php echo esc_url(home_url()); ?>/tag/sinjuku">この店舗の猫を見る</a>
@@ -174,7 +174,7 @@
                     </dl>
                   </div>
                   <figure class="bl_halfMedia_imgWrapper">
-                    <img src="http://cat-bell.local/wp-content/uploads/2021/09/ishikawa.jpg" alt="石川店" width="296" height="142">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/shop/ishikawa.jpg" alt="石川店" width="296" height="142">
                   </figure>
                 </div>
                 <a class="el_btn el_btn__shopLink" href="<?php echo esc_url(home_url()); ?>/tag/ishikawa">この店舗の猫を見る</a>
@@ -204,7 +204,7 @@
                     </dl>
                   </div>
                   <figure class="bl_halfMedia_imgWrapper">
-                    <img src="http://cat-bell.local/wp-content/uploads/2021/09/umeda-scaled.jpg" alt="梅田店" width="296" height="142">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/shop/umeda-scaled.jpg" alt="梅田店" width="296" height="142">
                   </figure>
                 </div>
                 <a class="el_btn el_btn__shopLink" href="<?php echo esc_url(home_url()); ?>/tag/umeda">この店舗の猫を見る</a>
@@ -234,7 +234,7 @@
                     </dl>
                   </div>
                   <figure class="bl_halfMedia_imgWrapper">
-                    <img src="http://cat-bell.local/wp-content/uploads/2021/09/shizuoka-scaled.jpg" alt="静岡店" width="296" height="142">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/shop/shizuoka-scaled.jpg" alt="静岡店" width="296" height="142">
                   </figure>
                 </div>
                 <a class="el_btn el_btn__shopLink" href="<?php echo esc_url(home_url()); ?>/tag/shizuoka">この店舗の猫を見る</a>
@@ -264,7 +264,7 @@
                     </dl>
                   </div>
                   <figure class="bl_halfMedia_imgWrapper">
-                    <img src="http://cat-bell.local/wp-content/uploads/2021/09/fukuoka-scaled.jpg" alt="福岡店" width="296" height="142">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/shop/fukuoka-scaled.jpg" alt="福岡店" width="296" height="142">
                   </figure>
                 </div>
                 <a class="el_btn el_btn__shopLink" href="<?php echo esc_url(home_url()); ?>/tag/fukuoka">この店舗の猫を見る</a>
@@ -294,7 +294,7 @@
                     </dl>
                   </div>
                   <figure class="bl_halfMedia_imgWrapper">
-                    <img src="http://cat-bell.local/wp-content/uploads/2021/09/kagosima-scaled.jpg" alt="鹿児島店" width="296" height="142">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/shop/kagosima-scaled.jpg" alt="鹿児島店" width="296" height="142">
                   </figure>
                 </div>
                 <a class="el_btn el_btn__shopLink" href="<?php echo esc_url(home_url()); ?>/tag/kagoshima">この店舗の猫を見る</a>

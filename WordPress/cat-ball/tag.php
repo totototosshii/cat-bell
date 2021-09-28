@@ -119,7 +119,7 @@
                   </div>
                   <div class="bl_basicInfo">
                     <dt>営業時間</dt>
-                    <dd>平日11：00～19:30/土日祝11:00～20：0</dd>
+                    <dd>平日11：00～19:30/土日祝11:00～20：00</dd>
                   </div>
                   <div class="bl_basicInfo">
                     <dt></dt>
@@ -129,7 +129,7 @@
                 <a class="el_btn el_btn__shopDetail" href="javascript:history.back()">前のページに戻る</a>
               </div>
               <figure class="bl_halfMedia_imgWrapper">
-                <img src="http://cat-bell.local/wp-content/uploads/2021/09/sapporo-scaled.jpg" alt="札幌店" width="424" height="232">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/shop/sapporo-scaled.jpg" alt="札幌店" width="424" height="232">
               </figure>
             </div>
 
@@ -149,7 +149,7 @@
                   </div>
                   <div class="bl_basicInfo">
                     <dt>営業時間</dt>
-                    <dd>平日11：00～19:30/土日祝11:00～20：0</dd>
+                    <dd>平日11：00～19:30/土日祝11:00～20：00</dd>
                   </div>
                   <div class="bl_basicInfo">
                     <dt></dt>
@@ -159,7 +159,7 @@
                 <a class="el_btn el_btn__shopDetail" href="javascript:history.back()">前のページに戻る</a>
               </div>
               <figure class="bl_halfMedia_imgWrapper">
-                <img src="http://cat-bell.local/wp-content/uploads/2021/09/miyagi-scaled.jpg" alt="宮城店" width="424" height="232">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/shop/miyagi-scaled.jpg" alt="宮城店" width="424" height="232">
               </figure>
             </div>
 
@@ -179,7 +179,7 @@
                   </div>
                   <div class="bl_basicInfo">
                     <dt>営業時間</dt>
-                    <dd>平日11：00～19:30/土日祝11:00～20：0</dd>
+                    <dd>平日11：00～19:30/土日祝11:00～20：00</dd>
                   </div>
                   <div class="bl_basicInfo">
                     <dt></dt>
@@ -189,7 +189,7 @@
                 <a class="el_btn el_btn__shopDetail" href="javascript:history.back()">前のページに戻る</a>
               </div>
               <figure class="bl_halfMedia_imgWrapper">
-                <img src="http://cat-bell.local/wp-content/uploads/2021/09/sinjyuku.jpg" alt="新宿店" width="424" height="232">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/shop/sinjyuku.jpg" alt="新宿店" width="424" height="232">
               </figure>
             </div>
 
@@ -209,7 +209,7 @@
                   </div>
                   <div class="bl_basicInfo">
                     <dt>営業時間</dt>
-                    <dd>平日11：00～19:30/土日祝11:00～20：0</dd>
+                    <dd>平日11：00～19:30/土日祝11:00～20：00</dd>
                   </div>
                   <div class="bl_basicInfo">
                     <dt></dt>
@@ -219,7 +219,7 @@
                 <a class="el_btn el_btn__shopDetail" href="javascript:history.back()">前のページに戻る</a>
               </div>
               <figure class="bl_halfMedia_imgWrapper">
-                <img src="http://cat-bell.local/wp-content/uploads/2021/09/ishikawa.jpg" alt="石川店" width="424" height="232">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/shop/ishikawa.jpg" alt="石川店" width="424" height="232">
               </figure>
             </div>
 
@@ -239,7 +239,7 @@
                   </div>
                   <div class="bl_basicInfo">
                     <dt>営業時間</dt>
-                    <dd>平日11：00～19:30/土日祝11:00～20：0</dd>
+                    <dd>平日11：00～19:30/土日祝11:00～20：00</dd>
                   </div>
                   <div class="bl_basicInfo">
                     <dt></dt>
@@ -249,7 +249,7 @@
                 <a class="el_btn el_btn__shopDetail" href="javascript:history.back()">前のページに戻る</a>
               </div>
               <figure class="bl_halfMedia_imgWrapper">
-                <img src="http://cat-bell.local/wp-content/uploads/2021/09/umeda-scaled.jpg" alt="梅田店" width="424" height="232">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/shop/umeda-scaled.jpg" alt="梅田店" width="424" height="232">
               </figure>
             </div>
 
@@ -269,7 +269,7 @@
                   </div>
                   <div class="bl_basicInfo">
                     <dt>営業時間</dt>
-                    <dd>平日11：00～19:30/土日祝11:00～20：0</dd>
+                    <dd>平日11：00～19:30/土日祝11:00～20：00</dd>
                   </div>
                   <div class="bl_basicInfo">
                     <dt></dt>
@@ -279,7 +279,7 @@
                 <a class="el_btn el_btn__shopDetail" href="javascript:history.back()">前のページに戻る</a>
               </div>
               <figure class="bl_halfMedia_imgWrapper">
-                <img src="http://cat-bell.local/wp-content/uploads/2021/09/shizuoka-scaled.jpg" alt="静岡店" width="424" height="232">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/shop/shizuoka-scaled.jpg" alt="静岡店" width="424" height="232">
               </figure>
             </div>
 
@@ -299,7 +299,7 @@
                   </div>
                   <div class="bl_basicInfo">
                     <dt>営業時間</dt>
-                    <dd>平日11：00～19:30/土日祝11:00～20：0</dd>
+                    <dd>平日11：00～19:30/土日祝11:00～20：00</dd>
                   </div>
                   <div class="bl_basicInfo">
                     <dt></dt>
@@ -309,7 +309,7 @@
                 <a class="el_btn el_btn__shopDetail" href="javascript:history.back()">前のページに戻る</a>
               </div>
               <figure class="bl_halfMedia_imgWrapper">
-                <img src="http://cat-bell.local/wp-content/uploads/2021/09/fukuoka-scaled.jpg" alt="福岡店" width="424" height="232">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/shop/fukuoka-scaled.jpg" alt="福岡店" width="424" height="232">
               </figure>
             </div>
 
@@ -329,7 +329,7 @@
                   </div>
                   <div class="bl_basicInfo">
                     <dt>営業時間</dt>
-                    <dd>平日11：00～19:30/土日祝11:00～20：0</dd>
+                    <dd>平日11：00～19:30/土日祝11:00～20：00</dd>
                   </div>
                   <div class="bl_basicInfo">
                     <dt></dt>
@@ -339,7 +339,7 @@
                 <a class="el_btn el_btn__shopDetail" href="javascript:history.back()">前のページに戻る</a>
               </div>
               <figure class="bl_halfMedia_imgWrapper">
-                <img src="http://cat-bell.local/wp-content/uploads/2021/09/kagosima-scaled.jpg" alt="鹿児島店" width="424" height="232">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/shop/kagosima-scaled.jpg" alt="鹿児島店" width="424" height="232">
               </figure>
             </div>
         <?php

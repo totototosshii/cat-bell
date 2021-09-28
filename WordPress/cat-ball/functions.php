@@ -224,10 +224,3 @@ function pagination($pages = '', $range = 2)
     }
   }
 }
-
-
-// tag.phpリンクへのショートコード
-function home_url_shortcode() {
-  return get_home_url('url');
-}
-add_shortcode('url', 'home_url_shortcode');
