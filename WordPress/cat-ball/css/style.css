@@ -1024,6 +1024,7 @@ small {
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 1;
 }
 
 .bl_cardUnit__col4Pet .bl_card_imgWrapper {
@@ -1187,6 +1188,7 @@ small {
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 1;
 }
 
 .bl_cardUnit__col3Pet .bl_card_imgWrapper {
