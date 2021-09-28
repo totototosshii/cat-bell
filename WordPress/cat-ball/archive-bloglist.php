@@ -48,11 +48,11 @@
                 <div class="bl_blogMedia_body">
                   <time date-time="<?php the_time('Y.n.j'); ?>"><?php the_time('Y.n.j'); ?></time>
                   <p class="bl_blogMedia_txt">
-                    <?php echo wp_trim_words(get_the_excerpt(), 173, '...'); ?>
+                    <?php echo wp_trim_words(get_the_excerpt(), 98, '...'); ?>
                   </p>
                   <h2 class="bl_blogMedia_ttl">
                     <a class="bl_blogMedia_ttlLink" href="<?php the_permalink(); ?>">
-                      <?php echo wp_trim_words(get_the_title(), 86); ?>
+                      <?php echo wp_trim_words(get_the_title(), 37); ?>
                     </a>
                   </h2>
                   <ul class="blogMedia_tag">
