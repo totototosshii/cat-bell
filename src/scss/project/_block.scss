@@ -16,9 +16,9 @@
     @include	g.fz(16);
     width: 100%;
     height: 100%;
-    background-color:	rgba(255, 255, 255, .8);
+    background-color:	rgba(255, 255, 255, .9);
     position: fixed;
-    top: 0;
+    top: 50px;
     left: 0;
     transform: translateX(100%);
     transition: transform .4s;
@@ -39,6 +39,9 @@
     line-height:	g.division(21, 14);
     padding: 9.5px 0;
     transition: color .4s;
+    @include	g.mq(){
+      padding: 10.5px 10px;
+    }
   }
   @include	g.mq('pc'){
     a:hover{
@@ -48,7 +51,7 @@
   @include	g.mq('sp'){
     flex-direction: column;
     align-items: center;
-    padding-top: 20vh;
+    padding-top: 13.8vh;
     > li{
       line-height: 1.7;
       margin-bottom: 2em;
@@ -227,6 +230,15 @@ small{
   display: block;
   min-height: 54px;
   transition: color .4s;
+  &::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 .bl_cardUnit__col4Pet .bl_card_imgWrapper{
   position: relative;
@@ -354,6 +366,15 @@ small{
   @include	g.mq(){
     min-height: 2em;
   }
+  &::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 .bl_cardUnit__col4Blog .bl_card_imgWrapper{
   @include	g.mq('pc'){
@@ -410,10 +431,10 @@ small{
   display: flex;
   opacity: 1;
   transition: opacity .4s;
+  position: relative;
   @include	g.mq('pc'){
     width: 30.91%;
     margin-right: 3.635%;
-    position: relative;
     justify-content: flex-end;
     flex-direction: row-reverse;
     margin-bottom: 50px;
@@ -467,6 +488,15 @@ small{
   display: block;
   min-height: 54px;
   transition: color .4s;
+  &::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 .bl_cardUnit__col3Pet .bl_card_imgWrapper{
   @include	g.mq('pc'){

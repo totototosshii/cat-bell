@@ -651,6 +651,10 @@ dd {
   padding-left: 0;
 }
 
+button {
+  border: none;
+}
+
 .js_noScroll.is_active {
   overflow: hidden;
 }
@@ -681,8 +685,7 @@ dd {
 }
 
 .js_headerScroll.is_active {
-  background-color: #fff;
-  opacity: 0.8;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .bl_cardUnit__col3Pet > .bl_card.is_active {
@@ -1013,6 +1016,16 @@ small {
   transition: color 0.4s;
 }
 
+.bl_cardUnit__col4Pet .bl_card_link::before {
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
 .bl_cardUnit__col4Pet .bl_card_imgWrapper {
   border-radius: 50%;
   overflow: hidden;
@@ -1107,6 +1120,16 @@ small {
   transition: color 0.4s;
 }
 
+.bl_cardUnit__col4Blog .bl_card_link::before {
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
 .bl_cardUnit__col4Blog .bl_card_time {
   margin-top: 6px;
 }
@@ -1137,6 +1160,7 @@ small {
 .bl_cardUnit__col3Pet > .bl_card {
   display: flex;
   opacity: 1;
+  position: relative;
   transition: opacity 0.4s;
 }
 
@@ -1153,6 +1177,16 @@ small {
   display: block;
   min-height: 54px;
   transition: color 0.4s;
+}
+
+.bl_cardUnit__col3Pet .bl_card_link::before {
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .bl_cardUnit__col3Pet .bl_card_imgWrapper {
@@ -2549,7 +2583,6 @@ small {
     justify-content: flex-end;
     margin-bottom: 50px;
     margin-right: 3.635%;
-    position: relative;
     width: 30.91%;
   }
 
@@ -2889,12 +2922,12 @@ small {
 
   .bl_headerNav {
     -webkit-transform: translateX(100%);
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     font-size: 1.6rem;
     height: 100%;
     left: 0;
     position: fixed;
-    top: 0;
+    top: 50px;
     transform: translateX(100%);
     transition: -webkit-transform 0.4s;
     transition: transform 0.4s;
@@ -2903,10 +2936,14 @@ small {
     z-index: 35;
   }
 
+  .bl_headerList a {
+    padding: 10.5px 10px;
+  }
+
   .bl_headerList {
     align-items: center;
     flex-direction: column;
-    padding-top: 20vh;
+    padding-top: 13.8vh;
   }
 
   .bl_headerList > li {
