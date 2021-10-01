@@ -394,7 +394,7 @@
                 </li>
               <?php endwhile; ?>
             <?php else : ?>
-              <p><?php echo $term->name ?>の他の投稿はありません。</p>
+              <li style="line-height: 1.5;"><?php echo $term->name ?>の他の投稿はありません。</li>
             <?php endif;
             wp_reset_postdata(); ?>
           </ul>

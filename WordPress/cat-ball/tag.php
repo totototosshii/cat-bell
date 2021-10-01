@@ -126,7 +126,10 @@
                     <dd>休日:年中無休</dd>
                   </div>
                 </dl>
-                <a class="el_btn el_btn__shopDetail" href="javascript:history.back()">前のページに戻る</a>
+                <?php $host_name = $_SERVER['HTTP_HOST']; ?>
+                <?php if (!empty($_SERVER['HTTP_REFERER']) && (strpos($_SERVER['HTTP_REFERER'], $host_name) !== false)) : ?>
+                  <a class="el_btn el_btn__shopDetail" href="<?php echo $_SERVER['HTTP_REFERER']; ?>">前のページに戻る</a>
+                <?php endif; ?>
               </div>
               <figure class="bl_halfMedia_imgWrapper">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/shop/sapporo-scaled.jpg" alt="札幌店" width="424" height="232">
@@ -156,7 +159,10 @@
                     <dd>休日:年中無休</dd>
                   </div>
                 </dl>
-                <a class="el_btn el_btn__shopDetail" href="javascript:history.back()">前のページに戻る</a>
+                <?php $host_name = $_SERVER['HTTP_HOST']; ?>
+                <?php if (!empty($_SERVER['HTTP_REFERER']) && (strpos($_SERVER['HTTP_REFERER'], $host_name) !== false)) : ?>
+                  <a class="el_btn el_btn__shopDetail" href="<?php echo $_SERVER['HTTP_REFERER']; ?>">前のページに戻る</a>
+                <?php endif; ?>
               </div>
               <figure class="bl_halfMedia_imgWrapper">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/shop/miyagi-scaled.jpg" alt="宮城店" width="424" height="232">
@@ -186,7 +192,10 @@
                     <dd>休日:年中無休</dd>
                   </div>
                 </dl>
-                <a class="el_btn el_btn__shopDetail" href="javascript:history.back()">前のページに戻る</a>
+                <?php $host_name = $_SERVER['HTTP_HOST']; ?>
+                <?php if (!empty($_SERVER['HTTP_REFERER']) && (strpos($_SERVER['HTTP_REFERER'], $host_name) !== false)) : ?>
+                  <a class="el_btn el_btn__shopDetail" href="<?php echo $_SERVER['HTTP_REFERER']; ?>">前のページに戻る</a>
+                <?php endif; ?>
               </div>
               <figure class="bl_halfMedia_imgWrapper">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/shop/sinjyuku.jpg" alt="新宿店" width="424" height="232">
@@ -216,7 +225,10 @@
                     <dd>休日:年中無休</dd>
                   </div>
                 </dl>
-                <a class="el_btn el_btn__shopDetail" href="javascript:history.back()">前のページに戻る</a>
+                <?php $host_name = $_SERVER['HTTP_HOST']; ?>
+                <?php if (!empty($_SERVER['HTTP_REFERER']) && (strpos($_SERVER['HTTP_REFERER'], $host_name) !== false)) : ?>
+                  <a class="el_btn el_btn__shopDetail" href="<?php echo $_SERVER['HTTP_REFERER']; ?>">前のページに戻る</a>
+                <?php endif; ?>
               </div>
               <figure class="bl_halfMedia_imgWrapper">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/shop/ishikawa.jpg" alt="石川店" width="424" height="232">
@@ -246,7 +258,10 @@
                     <dd>休日:年中無休</dd>
                   </div>
                 </dl>
-                <a class="el_btn el_btn__shopDetail" href="javascript:history.back()">前のページに戻る</a>
+                <?php $host_name = $_SERVER['HTTP_HOST']; ?>
+                <?php if (!empty($_SERVER['HTTP_REFERER']) && (strpos($_SERVER['HTTP_REFERER'], $host_name) !== false)) : ?>
+                  <a class="el_btn el_btn__shopDetail" href="<?php echo $_SERVER['HTTP_REFERER']; ?>">前のページに戻る</a>
+                <?php endif; ?>
               </div>
               <figure class="bl_halfMedia_imgWrapper">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/shop/umeda-scaled.jpg" alt="梅田店" width="424" height="232">
@@ -276,7 +291,10 @@
                     <dd>休日:年中無休</dd>
                   </div>
                 </dl>
-                <a class="el_btn el_btn__shopDetail" href="javascript:history.back()">前のページに戻る</a>
+                <?php $host_name = $_SERVER['HTTP_HOST']; ?>
+                <?php if (!empty($_SERVER['HTTP_REFERER']) && (strpos($_SERVER['HTTP_REFERER'], $host_name) !== false)) : ?>
+                  <a class="el_btn el_btn__shopDetail" href="<?php echo $_SERVER['HTTP_REFERER']; ?>">前のページに戻る</a>
+                <?php endif; ?>
               </div>
               <figure class="bl_halfMedia_imgWrapper">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/shop/shizuoka-scaled.jpg" alt="静岡店" width="424" height="232">
@@ -306,7 +324,10 @@
                     <dd>休日:年中無休</dd>
                   </div>
                 </dl>
-                <a class="el_btn el_btn__shopDetail" href="javascript:history.back()">前のページに戻る</a>
+                <?php $host_name = $_SERVER['HTTP_HOST']; ?>
+                <?php if (!empty($_SERVER['HTTP_REFERER']) && (strpos($_SERVER['HTTP_REFERER'], $host_name) !== false)) : ?>
+                  <a class="el_btn el_btn__shopDetail" href="<?php echo $_SERVER['HTTP_REFERER']; ?>">前のページに戻る</a>
+                <?php endif; ?>
               </div>
               <figure class="bl_halfMedia_imgWrapper">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/shop/fukuoka-scaled.jpg" alt="福岡店" width="424" height="232">
@@ -336,7 +357,10 @@
                     <dd>休日:年中無休</dd>
                   </div>
                 </dl>
-                <a class="el_btn el_btn__shopDetail" href="javascript:history.back()">前のページに戻る</a>
+                <?php $host_name = $_SERVER['HTTP_HOST']; ?>
+                <?php if (!empty($_SERVER['HTTP_REFERER']) && (strpos($_SERVER['HTTP_REFERER'], $host_name) !== false)) : ?>
+                  <a class="el_btn el_btn__shopDetail" href="<?php echo $_SERVER['HTTP_REFERER']; ?>">前のページに戻る</a>
+                <?php endif; ?>
               </div>
               <figure class="bl_halfMedia_imgWrapper">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/shop/kagosima-scaled.jpg" alt="鹿児島店" width="424" height="232">
