@@ -13,7 +13,8 @@
       </ul>
     </nav>
     <button class="el_drawerBtn js_drawerBtn" type="button">
-      <span class="el_drawerLine"></span><span class="el_visuallyHidden">メニューを開閉する</span>
+      <span class="el_drawerLine"></span>
+      <span class="el_visuallyHidden">メニューを開閉する</span>
     </button>
   </div>
 </header>

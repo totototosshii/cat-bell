@@ -35,37 +35,101 @@ function my_setup()
 add_action('after_setup_theme', 'my_setup');
 
 
-/* CSSとJavaScriptの読み込み */
+// CSSとJavaScriptの読み込み
 function my_script_init()
 {
-  // Adobe Fonts CDN
-  wp_enqueue_style(
-    'adobefont',
-    'https://use.typekit.net/yxe4bgl.css'
-  );
-  // CSSの読み込み
+  // 自作のCSSの読み込み
   wp_enqueue_style(
     'style-css',
-    get_template_directory_uri() . '/css/style.css',
+    esc_url(get_theme_file_uri('/css/style.css')),
     array(),
     '1.0.0',
     'all'
   );
-  // JavaScriptの読み込み
+
+  // Viewport Extra
+  wp_enqueue_script(
+    'viewport-extra',
+    'https://cdn.jsdelivr.net/npm/viewport-extra@2.1.1/dist/iife/viewport-extra.min.js',
+    array(),
+    '1.0.3'
+  );
+
+  // WordPressのjQueryを読み込まない
+  wp_deregister_script('jquery');
+
+  // jQueryをCDNから読み込む
+  wp_enqueue_script(
+    'jquery',
+    '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js',
+    array(),
+    '3.6.0',
+    true // wp_footer()の位置で出力
+  );
+
+  // 自作のJavaScriptの読み込み
   wp_enqueue_script(
     'bundle-js',
-    get_template_directory_uri() . '/js/bundle.js',
-    // bundle.jsよりも前にWordPress内部のjQueryを読み込む
-    array('jquery'),
+    esc_url(get_theme_file_uri('/js/bundle.js')),
+    array('jquery'), // bundle.jsよりも前に読み込みたいJSファイルの名前を記述
     '1.0.0',
-    // wp_footer()の位置で出力
-    true
+    true // wp_footer()の位置で出力
   );
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
 
 
-/* 管理画面の「投稿」の名前を「ネコ」に変更 */
+// head内にソースコードを出力
+function wp_head_custom_code()
+{
+  $wp_headCustom = <<<EOM
+    <script>
+      // Adobe Fonts
+      (function(d) {
+        var config = {
+            kitId: 'yxe4bgl',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h = d.documentElement,
+          t = setTimeout(function() {
+            h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function() {
+          a = this.readyState;
+          if (f || a && a != "complete" && a != "loaded") return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config)
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s)
+      })(document);
+    </script>
+    <script>
+      // Viewport Extra
+      (function() {
+        let ua = navigator.userAgent
+        let sp = ua.indexOf('iPhone') > -1 || (ua.indexOf('Android') > -1 && ua.indexOf('Mobile') > -1)
+        let tab = !sp && (ua.indexOf('iPad') > -1 || (ua.indexOf('Macintosh') > -1 && 'ontouchend' in document) || ua.indexOf('Android') > -1)
+        new ViewportExtra(tab ? 1200 : 375)
+      })()
+    </script>
+  EOM;
+  echo $wp_headCustom;
+}
+add_action('wp_head', 'wp_head_custom_code');
+
+
+// 管理画面の「投稿」の名前を「ネコ」に変更
 function change_post_menu_label()
 {
   global $menu;
@@ -94,7 +158,7 @@ add_action('init', 'change_post_object_label');
 add_action('admin_menu', 'change_post_menu_label');
 
 
-/* カスタム投稿タイプの追加 */
+// カスタム投稿タイプの追加
 function create_post_type()
 {
   //カスタム投稿（ブログ）
@@ -205,7 +269,8 @@ function pagination($pages = '', $range = 2)
   $showitems = ($range * 2) + 1;
   global $paged;
   if (empty($paged)) $paged = 1;
-  if ($pages == ''
+  if (
+    $pages == ''
   ) {
     global $wp_query;
     $pages = $wp_query->max_num_pages;
