@@ -5,14 +5,14 @@
  * @codex https://wpdocs.osdn.jp/%E9%96%A2%E6%95%B0%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9/add_theme_support
  */
 /* テーマのセットアップ */
+
 // コンテンツの横幅をセット
 if (!isset($content_width)) {
   $content_width = 980;
 };
 
 
-function my_setup()
-{
+function my_setup() {
   // アイキャッチ画像を有効化
   add_theme_support('post-thumbnails');
   // <head>内にRSSフィードリンクを出力
@@ -25,7 +25,7 @@ function my_setup()
     'comment-form',
     'comment-list',
     'gallery',
-    'caption',
+    'caption'
   ));
   // ブロックエディター用のCSSを有効化
   add_theme_support('wp-block-styles');
@@ -36,8 +36,7 @@ add_action('after_setup_theme', 'my_setup');
 
 
 // CSSとJavaScriptの読み込み
-function my_script_init()
-{
+function my_script_init() {
   // 自作のCSSの読み込み
   wp_enqueue_style(
     'style-css',
@@ -52,7 +51,7 @@ function my_script_init()
     'viewport-extra',
     'https://cdn.jsdelivr.net/npm/viewport-extra@2.1.1/dist/iife/viewport-extra.min.js',
     array(),
-    '1.0.3'
+    '2.1.1'
   );
 
   // WordPressのjQueryを読み込まない
@@ -71,17 +70,16 @@ function my_script_init()
   wp_enqueue_script(
     'bundle-js',
     esc_url(get_theme_file_uri('/js/bundle.js')),
-    array('jquery'), // bundle.jsよりも前に読み込みたいJSファイルの名前を記述
+    array('jquery'),// bundle.jsよりも前に読み込みたいJSファイルの名前を記述
     '1.0.0',
-    true // wp_footer()の位置で出力
+    true// wp_footer()の位置で出力
   );
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
 
 
 // head内にソースコードを出力
-function wp_head_custom_code()
-{
+function wp_head_custom_code() {
   $wp_headCustom = <<<EOM
     <script>
       // Adobe Fonts
@@ -91,14 +89,14 @@ function wp_head_custom_code()
             scriptTimeout: 3000,
             async: true
           },
-          h = d.documentElement,
-          t = setTimeout(function() {
-            h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
-          }, config.scriptTimeout),
-          tk = d.createElement("script"),
-          f = false,
-          s = d.getElementsByTagName("script")[0],
-          a;
+        h = d.documentElement,
+        t = setTimeout(function() {
+          h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
         h.className += " wf-loading";
         tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
         tk.async = true;
@@ -130,8 +128,7 @@ add_action('wp_head', 'wp_head_custom_code');
 
 
 // 管理画面の「投稿」の名前を「ネコ」に変更
-function change_post_menu_label()
-{
+function change_post_menu_label() {
   global $menu;
   global $submenu;
   $menu[5][0] = 'ネコ';
@@ -159,9 +156,8 @@ add_action('admin_menu', 'change_post_menu_label');
 
 
 // カスタム投稿タイプの追加
-function create_post_type()
-{
-  //カスタム投稿（ブログ）
+function create_post_type() {
+  // カスタム投稿（ブログ）
   register_post_type(
     'blog',
     array(
@@ -198,9 +194,9 @@ function create_post_type()
   );
   // カスタムタクソノミー（ブログ：キーワード）
   register_taxonomy(
-    // ↓タクソノミー名
+    // タクソノミー名
     'key-word',
-    // ↓使用するカスタム投稿タイプ名
+    // 使用するカスタム投稿タイプ名
     'blog',
     array(
       'hierarchical'   => true,
@@ -215,9 +211,9 @@ function create_post_type()
   );
   // カスタムタクソノミー（ブログ：各支店）
   register_taxonomy(
-    // ↓タクソノミー名
+    // タクソノミー名
     'shop_cat',
-    // ↓使用するカスタム投稿タイプ名
+    // 使用するカスタム投稿タイプ名
     'blog',
     array(
       'hierarchical'   => true,
@@ -232,9 +228,9 @@ function create_post_type()
   );
   // カスタムタクソノミー（ブログ：ピックアップ）
   register_taxonomy(
-    // ↓タクソノミー名
+    // タクソノミー名
     'pickup_cat',
-    // ↓使用するカスタム投稿タイプ名
+    // 使用するカスタム投稿タイプ名
     'blog',
     array(
       'hierarchical'   => true,
@@ -264,13 +260,11 @@ add_filter('tiny_mce_before_init', function ($init) {
 
 
 // ページネーション
-function pagination($pages = '', $range = 2)
-{
+function pagination($pages = '', $range = 2) {
   $showitems = ($range * 2) + 1;
   global $paged;
   if (empty($paged)) $paged = 1;
-  if (
-    $pages == ''
+  if ($pages == ''
   ) {
     global $wp_query;
     $pages = $wp_query->max_num_pages;
