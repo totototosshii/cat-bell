@@ -5,9 +5,9 @@
 [CAT BELL](https://cat-bell.toshikilog.net/)（WordPressデモサイト）
 
 ### 作業範囲
-コーディング、WordPress
+コーディング、WordPress（自作テーマ）
 ### デザインカンプ提供
-[忍者CODE](https://ninjacode.work/)様（Adobe XD）
+[忍者CODE](https://ninjacode.work/) 様（Adobe XD）
 ### 使用言語
 ・HTML（Pug）<br>
 ・CSS（SCSS）<br>
