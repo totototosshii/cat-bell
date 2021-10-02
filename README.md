@@ -1,12 +1,15 @@
-# CAT BELL
-## WordPressデモサイト
+# [CAT BELL](https://cat-bell.toshikilog.net/)
+## サイト概要
+<img src ="https://user-images.githubusercontent.com/56625030/135709243-13d76cf2-b99c-4746-911e-9123f07f03ea.png" alt="CAT BELL FirstView" width="778" height="516">
+[CAT BELL](https://cat-bell.toshikilog.net/)（WordPressデモサイト）
+
 ### 作業範囲
-静的コーディング、WordPress
+コーディング、WordPress
 ### デザインカンプ提供
-忍者CODE様
+[忍者CODE](https://ninjacode.work/)様（Adobe XD）
 ### 使用言語
-・HTML(Pug)<br>
-・CSS(SCSS)<br>
+・HTML（Pug）<br>
+・CSS（SCSS）<br>
 ・JavaScript<br>
 ・jQuery<br>
 ・PHP
@@ -16,16 +19,3 @@
 ・「[Show Current Template](https://ja.wordpress.org/plugins/show-current-template/)」<br>
 ・「[WP Multibyte Patch](https://eastcoder.com/code/wp-multibyte-patch/)」<br>
 ・「[Yoast Duplicate Post](https://yoast.com/wordpress/plugins/duplicate-post/)」
-### [→実際のサイト](https://cat-bell.toshikilog.net/)
-## gulp-essentials
-## Build Setup
-```bash
-# install dependencies
-$ npm install
-
-# serve with hot reload
-$ npx gulp
-
-# generate static project
-$ npx gulp build
-```
