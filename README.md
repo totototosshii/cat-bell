@@ -1,6 +1,6 @@
 # [CAT BELL](https://cat-bell.toshikilog.net/)
 ## サイト概要
-<img src ="https://user-images.githubusercontent.com/56625030/135709243-13d76cf2-b99c-4746-911e-9123f07f03ea.png" alt="CAT BELL FirstView" width="778" height="516" style="object-fit:contain !important;">
+<img src ="https://user-images.githubusercontent.com/56625030/135709243-13d76cf2-b99c-4746-911e-9123f07f03ea.png" alt="CAT BELL FirstView" width="778">
 
 [CAT BELL](https://cat-bell.toshikilog.net/)（WordPressデモサイト）
 
