@@ -1,8 +1,7 @@
 @use "../global" as g;
-
 // 接頭辞：hp_
 // ----------------------------------------------------------------
-// padding調整用
+// ヘルパークラスは上書き前提のスタイル（!important推奨）
 // ----------------------------------------------------------------
 .hp_pt64{
   padding-top: 64px !important;
@@ -31,5 +30,11 @@
   }
 }
 .hp_mw876{
-  max-width: 876px;
+  max-width: 876px !important;
+}
+.hp_w100{
+  width: 100% !important;
+}
+.z-0{
+  z-index: 0 !important;
 }

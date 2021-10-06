@@ -862,6 +862,13 @@ button {
   margin-bottom: 70px;
 }
 
+.ly_404 {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
 .ly_aside {
   height: auto;
   padding-bottom: 109px;
@@ -2093,6 +2100,10 @@ small {
   text-align: left;
 }
 
+.bl_404wrapper {
+  text-align: center;
+}
+
 .el_drawerBtn {
   display: block;
   height: 30px;
@@ -2442,7 +2453,15 @@ small {
 }
 
 .hp_mw876 {
-  max-width: 876px;
+  max-width: 876px !important;
+}
+
+.hp_w100 {
+  width: 100% !important;
+}
+
+.z-0 {
+  z-index: 0 !important;
 }
 
 @media (min-width: 768px) {

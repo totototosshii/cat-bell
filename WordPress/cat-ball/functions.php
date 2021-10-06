@@ -12,7 +12,8 @@ if (!isset($content_width)) {
 };
 
 
-function my_setup() {
+function my_setup()
+{
   // アイキャッチ画像を有効化
   add_theme_support('post-thumbnails');
   // <head>内にRSSフィードリンクを出力
@@ -36,7 +37,8 @@ add_action('after_setup_theme', 'my_setup');
 
 
 // CSSとJavaScriptの読み込み
-function my_script_init() {
+function my_script_init()
+{
   // 自作のCSSの読み込み
   wp_enqueue_style(
     'style-css',
@@ -70,16 +72,29 @@ function my_script_init() {
   wp_enqueue_script(
     'bundle-js',
     esc_url(get_theme_file_uri('/js/bundle.js')),
-    array('jquery'),// bundle.jsよりも前に読み込みたいJSファイルの名前を記述
+    array('jquery'), // bundle.jsよりも前に読み込みたいJSファイルの名前を記述
     '1.0.0',
-    true// wp_footer()の位置で出力
+    true // wp_footer()の位置で出力
   );
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
 
 
+// ?author=1対策
+add_filter('author_rewrite_rules', '__return_empty_array');
+function disable_author_archive()
+{
+  if ($_GET['author'] || preg_match('#/author/.+#', $_SERVER['REQUEST_URI'])) {
+    wp_redirect(home_url('/404.php'));
+    exit;
+  }
+}
+add_action('init', 'disable_author_archive');
+
+
 // head内にソースコードを出力
-function wp_head_custom_code() {
+function wp_head_custom_code()
+{
   $wp_headCustom = <<<EOM
     <script>
       // Adobe Fonts
@@ -128,7 +143,8 @@ add_action('wp_head', 'wp_head_custom_code');
 
 
 // 管理画面の「投稿」の名前を「ネコ」に変更
-function change_post_menu_label() {
+function change_post_menu_label()
+{
   global $menu;
   global $submenu;
   $menu[5][0] = 'ネコ';
@@ -156,7 +172,8 @@ add_action('admin_menu', 'change_post_menu_label');
 
 
 // カスタム投稿タイプの追加
-function create_post_type() {
+function create_post_type()
+{
   // カスタム投稿（ブログ）
   register_post_type(
     'blog',
@@ -260,11 +277,13 @@ add_filter('tiny_mce_before_init', function ($init) {
 
 
 // ページネーション
-function pagination($pages = '', $range = 2) {
+function pagination($pages = '', $range = 2)
+{
   $showitems = ($range * 2) + 1;
   global $paged;
   if (empty($paged)) $paged = 1;
-  if ($pages == ''
+  if (
+    $pages == ''
   ) {
     global $wp_query;
     $pages = $wp_query->max_num_pages;
