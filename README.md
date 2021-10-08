@@ -20,3 +20,9 @@
 ・「[Show Current Template](https://ja.wordpress.org/plugins/show-current-template/)」<br>
 ・「[WP Multibyte Patch](https://eastcoder.com/code/wp-multibyte-patch/)」<br>
 ・「[Yoast Duplicate Post](https://yoast.com/wordpress/plugins/duplicate-post/)」
+### ポイント
+・ブログはカスタム投稿で実装
+・全投稿タイプにカスタムフィールド（[Advanced Custom Fields PRO](https://www.advancedcustomfields.com/)）を使い、画像と猫のステータス部分を実装
+・カスタムタクソノミーは「キーワード」「各支店」「ピックアップ」の3種類を実装
+・マークアップはPug、スタイリングはSCSSでコーディングしてGulpでコンパイル
+・CSS設計手法は[PRECSS](https://precss.io/ja/)を採用
