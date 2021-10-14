@@ -11,13 +11,56 @@ if (!isset($content_width)) {
   $content_width = 980;
 };
 
+// Clean up wordpress <head>
+remove_action('wp_head', 'feed_links', 2); //RSSフィード
+remove_action('wp_head', 'feed_links_extra', 3); //RSSフィード
+remove_action('wp_head', 'rsd_link'); //Really Simple Discovery
+remove_action('wp_head', 'wlwmanifest_link'); //Windows Live Writer
+remove_action('wp_head', 'index_rel_link'); //indexへのリンク
+remove_action('wp_head', 'parent_post_rel_link', 10, 0); //分割ページへのリンク
+remove_action('wp_head', 'start_post_rel_link', 10, 0); //分割ページへのリンク
+remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0); //前後のページへのリンク
+remove_action('wp_head', 'wp_generator'); //WordPressのバージョン
+remove_action('wp_head', 'print_emoji_detection_script', 7); //絵文字対応
+remove_action('admin_print_scripts', 'print_emoji_detection_script'); //絵文字対応
+remove_action('wp_print_styles', 'print_emoji_styles'); //絵文字対応
+remove_action('admin_print_styles', 'print_emoji_styles'); //絵文字対応
+remove_action('wp_head', 'rest_output_link_wp_head'); //Embed対応
+remove_action('wp_head', 'wp_shortlink_wp_head'); //ショートリンクURL
+//WordPressのバージョン
+function vc_remove_wp_ver_css_js($src)
+{
+  if (strpos($src, 'ver=' . get_bloginfo('version')))
+    $src = remove_query_arg('ver', $src);
+  return $src;
+}
+add_filter('style_loader_src', 'vc_remove_wp_ver_css_js', 9999);
+add_filter('script_loader_src', 'vc_remove_wp_ver_css_js', 9999);
+
+//Gutenbergを使わない場合は「wp-block-library-css」を削除
+function disable_gutenberg_css()
+{
+  wp_dequeue_style('wp-block-library');
+}
+add_action('wp_enqueue_scripts', 'disable_gutenberg_css', 1000);
+
+//「最近のコメント」ウィジェット用のスタイルを出力させない
+// function remove_recent_comments_style()
+// {
+//   global $wp_widget_factory;
+//   remove_action('wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'));
+// }
+// add_action('widgets_init', 'remove_recent_comments_style');
+
+//コメント機能OFF
+add_filter('comments_open', '__return_false');
 
 function my_setup()
 {
   // アイキャッチ画像を有効化
-  add_theme_support('post-thumbnails');
+  // add_theme_support('post-thumbnails');
   // <head>内にRSSフィードリンクを出力
-  add_theme_support('automatic-feed-links');
+  // add_theme_support('automatic-feed-links');
   // タイトルタグ自動生成
   add_theme_support('title-tag');
   // HTML5のタグで出力
@@ -29,12 +72,61 @@ function my_setup()
     'caption'
   ));
   // ブロックエディター用のCSSを有効化
-  add_theme_support('wp-block-styles');
+  // add_theme_support('wp-block-styles');
   // 埋め込みコンテンツレスポンシブ
-  add_theme_support('responsive-embeds');
+  // add_theme_support('responsive-embeds');
 }
 add_action('after_setup_theme', 'my_setup');
 
+// 全てのページで<p>タグを自動挿入させない
+add_action('init', function () {
+  remove_filter('the_excerpt', 'wpautop');
+  remove_filter('the_content', 'wpautop');
+});
+add_filter('tiny_mce_before_init', function ($init) {
+  $init['wpautop'] = false;
+  $init['apply_source_formatting'] = true;
+  return $init;
+});
+
+// ?author=1対策
+add_filter('author_rewrite_rules', '__return_empty_array');
+function disable_author_archive()
+{
+  if ($_GET['author'] || preg_match('#/author/.+#', $_SERVER['REQUEST_URI'])) {
+    wp_redirect(home_url('/404.php'));
+    exit;
+  }
+}
+add_action('init', 'disable_author_archive');
+
+//ダッシュボードにある項目を消す
+function remove_dashboard_widget()
+{
+  //WordPressへようこそ!
+  remove_action('welcome_panel', 'wp_welcome_panel');
+  //アクティビティ
+  remove_meta_box('dashboard_activity', 'dashboard', 'normal');
+  //クイックドラフト
+  remove_meta_box('dashboard_quick_press', 'dashboard', 'side');
+  //WordPressニュース
+  remove_meta_box('dashboard_primary', 'dashboard', 'side');
+  //概要
+  remove_meta_box('dashboard_right_now', 'dashboard', 'normal');
+}
+add_action('wp_dashboard_setup', 'remove_dashboard_widget');
+
+//標準メニュー（サイドバー）を消す
+function remove_menus()
+{
+  //コメント
+  remove_menu_page('edit-comments.php');
+  //外観
+  // remove_menu_page('themes.php');
+  //ツールメニュー
+  remove_menu_page('tools.php');
+}
+add_action('admin_menu', 'remove_menus');
 
 // CSSとJavaScriptの読み込み
 function my_script_init()
@@ -78,19 +170,6 @@ function my_script_init()
   );
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
-
-
-// ?author=1対策
-add_filter('author_rewrite_rules', '__return_empty_array');
-function disable_author_archive()
-{
-  if ($_GET['author'] || preg_match('#/author/.+#', $_SERVER['REQUEST_URI'])) {
-    wp_redirect(home_url('/404.php'));
-    exit;
-  }
-}
-add_action('init', 'disable_author_archive');
-
 
 // head内にソースコードを出力
 function wp_head_custom_code()
@@ -141,7 +220,6 @@ function wp_head_custom_code()
 }
 add_action('wp_head', 'wp_head_custom_code');
 
-
 // 管理画面の「投稿」の名前を「ネコ」に変更
 function change_post_menu_label()
 {
@@ -169,7 +247,6 @@ function change_post_object_label()
 }
 add_action('init', 'change_post_object_label');
 add_action('admin_menu', 'change_post_menu_label');
-
 
 // カスタム投稿タイプの追加
 function create_post_type()
@@ -262,19 +339,6 @@ function create_post_type()
   );
 }
 add_action('init', 'create_post_type');
-
-
-// <p>タグを自動挿入させない
-add_action('init', function () {
-  remove_filter('the_excerpt', 'wpautop');
-  remove_filter('the_content', 'wpautop');
-});
-add_filter('tiny_mce_before_init', function ($init) {
-  $init['wpautop'] = false;
-  $init['apply_source_formatting'] = true;
-  return $init;
-});
-
 
 // ページネーション
 function pagination($pages = '', $range = 2)
