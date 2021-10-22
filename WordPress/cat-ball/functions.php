@@ -100,6 +100,19 @@ function disable_author_archive()
 }
 add_action('init', 'disable_author_archive');
 
+// REST API によるユーザー情報を隠す
+function my_filter_rest_endpoints($endpoints)
+{
+  if (isset($endpoints['/wp/v2/users'])) {
+    unset($endpoints['/wp/v2/users']);
+  }
+  if (isset($endpoints['/wp/v2/users/(?P<id>[\d]+)'])) {
+    unset($endpoints['/wp/v2/users/(?P<id>[\d]+)']);
+  }
+  return $endpoints;
+}
+add_filter('rest_endpoints', 'my_filter_rest_endpoints', 10, 1);
+
 //ダッシュボードにある項目を消す
 function remove_dashboard_widget()
 {
