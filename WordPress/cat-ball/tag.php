@@ -8,6 +8,7 @@
 <?php $tags = get_the_tags(); ?>
 
 <body class="ly_under js_noScroll">
+  <?php get_template_part('template-parts/loading'); ?>
   <?php get_template_part('template-parts/header', 'content'); ?>
   <main class="ly_main ly_shopPet">
     <ol class="bl_breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">

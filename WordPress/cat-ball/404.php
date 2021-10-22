@@ -6,6 +6,7 @@
 </head>
 
 <body class="ly_404 js_noScroll">
+  <?php get_template_part('template-parts/loading'); ?>
   <?php get_template_part('template-parts/header', 'content'); ?>
   <div class="ly_breadcrumbWrapper hp_w100 z-0">
     <ol class="bl_breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">

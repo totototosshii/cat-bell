@@ -6,11 +6,41 @@
 export function common() {
   // iOSのブラウザバック時に強制リロード
   // 参考→https://stray-light.info/wp/ios-safari-backbutton/
-  window.onpageshow = function (event) {
+  window.onpageshow = (event) => {
     if (event.persisted) {
       window.location.reload();
     }
   };
+
+  // ローディングアニメーション
+  // 参考→https://www.webcreatorbox.com/tech/loading-animation
+  window.onload = () => {
+    const loader = document.getElementById('js_loading');
+    loader.classList.add('is_active');
+  };
+
+  // フェードインアニメーション
+  $(function () {
+  // aimation呼び出し(ページ内にjs_fadeUpクラスが存在した場合は「true」)
+  if ($('.js_fadeUp').length) {
+    scrollAnimation();
+  }
+  // aimation関数
+  function scrollAnimation() {
+    $(window).scroll(function () {
+      $('.js_fadeUp').each(function () {
+        // ページ内の全トリガー要素js_fadeUpに対して以下の処理を実行
+        let position = $(this).offset().top,// クラスが付与されている要素のtopからの高さを取得
+          scroll = $(window).scrollTop(),// ブラウザのスクロール位置を取得
+          windowHeight = $(window).height();// windowの高さを取得
+        if (scroll > position - windowHeight + 100) {
+          $(this).addClass('is_active');
+        }
+      });
+    });
+  }
+    $(window).trigger('scroll');
+  });
 
   // ドロワー
   $('.js_drawerBtn').on('click', function () {

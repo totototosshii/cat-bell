@@ -655,6 +655,24 @@ button {
   border: none;
 }
 
+#js_loading.is_active {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.js_fadeUp {
+  -webkit-transform: translateY(50px);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s;
+}
+
+.js_fadeUp.is_active {
+  -webkit-transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .js_noScroll.is_active {
   overflow: hidden;
 }
@@ -708,7 +726,7 @@ button {
   padding: 42.47px 56px 20px 56px;
   position: fixed;
   top: 0;
-  transition: all 0.4s;
+  transition: all 0.6s;
   width: 100%;
   z-index: 20;
 }
@@ -2102,6 +2120,20 @@ small {
 
 .bl_404wrapper {
   text-align: center;
+}
+
+.el_loading {
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: all 1.5s;
+  width: 100vw;
+  z-index: 9999;
 }
 
 .el_drawerBtn {

@@ -6,6 +6,7 @@
 </head>
 
 <body class="ly_home js_noScroll">
+  <?php get_template_part('template-parts/loading'); ?>
   <?php get_template_part('template-parts/header', 'content'); ?>
   <main class="ly_main">
     <div class="ly_fv">

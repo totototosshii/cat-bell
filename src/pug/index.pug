@@ -37,6 +37,8 @@ html(lang="ja")
     link(rel="apple-touch-icon" sizes="180x180" href="絶対パスで指定")
     link(rel="stylesheet", href="./css/style.css?ver")
   body.ly_home.js_noScroll
+    div#js_loading.el_loading
+      img(src="img/common/ajax-loader.gif", alt="loader")
     header.ly_header.js_headerScroll
       div.ly_headerInner
         h1.el_lv1Heading
@@ -86,7 +88,7 @@ html(lang="ja")
             br
             |
             span Find a pet
-          ul.bl_cardUnit.bl_cardUnit__col4Pet
+          ul.bl_cardUnit.bl_cardUnit__col4Pet.js_fadeUp
             li.bl_card
               h3.bl_card_ttl
                 a(href="single.html").bl_card_link スコティッシュ
@@ -137,7 +139,7 @@ html(lang="ja")
                 img(src="img/typeList/4columns/08.png", alt="")
           a(href="archive-pet.html").el_btn.el_btn__archive 猫種一覧を見る
       section.ly_section.ly_section__shop#shop
-        div.ly_sectionInner
+        div.ly_sectionInner.js_fadeUp
           h2.el_lv2Heading お店を探す
             br
             |
@@ -154,7 +156,7 @@ html(lang="ja")
             a(href="page-shopdetail.html").el_btn.el_btn__mapKagoshima 鹿児島店
           a(href="page-shoplist.html").el_btn.el_btn__archive 店舗一覧を見る
       section.ly_section.ly_section__blog
-        div.ly_sectionInner
+        div.ly_sectionInner.js_fadeUp
           h2.el_lv2Heading ブログ
             br
             |
@@ -186,7 +188,7 @@ html(lang="ja")
                 img(src="img/blog/03.jpg", alt="")
           a(href="archive-blog.html").el_btn.el_btn__archive ブログ一覧を見る
       section.ly_section.ly_section__about
-        div.ly_sectionInner
+        div.ly_sectionInner.js_fadeUp
           h2.el_lv2Heading サイトについて
             br
             |

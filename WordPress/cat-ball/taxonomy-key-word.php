@@ -6,6 +6,7 @@
 </head>
 
 <body class="ly_under hp-pt0 ly_blogWrapper js_noScroll">
+  <?php get_template_part('template-parts/loading'); ?>
   <?php get_template_part('template-parts/header', 'content'); ?>
   <div class="ly_breadcrumbWrapper">
     <ol class="bl_breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
