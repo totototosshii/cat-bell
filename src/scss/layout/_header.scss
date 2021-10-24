@@ -11,7 +11,7 @@
   left: 0;
   width: 100%;
   z-index: map-get(g.$layer, "header");
-  transition: all .6s;
+  transition: all .8s;
   @include	g.mq(){
     padding: 10px 4vw;
   }

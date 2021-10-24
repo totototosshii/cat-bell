@@ -12,9 +12,9 @@
     <div class="ly_fv">
       <div class="ly_fvInner">
         <div class="bl_fvContent">
-          <h2 class="el_lv2Heading el_lv2Heading__fv">猫と暮らそう</h2>
-          <p>安心・安全な猫専門ペットショップ</p>
-          <div class="bl_fvBtn_wrap">
+          <h2 class="el_lv2Heading el_lv2Heading__fv js_lv2Heading__fv">猫と暮らそう</h2>
+          <p class="bl_fvContent_txt js_fvContent_txt">安心・安全な猫専門ペットショップ</p>
+          <div class="bl_fvBtn_wrap js_fvBtn_wrap">
             <a class="el_btn el_btn__fv" href="<?php echo esc_url(home_url()); ?>/archive-pet">猫種一覧を見る</a>
             <a class="el_btn el_btn__fv" href="<?php echo esc_url(home_url()); ?>/shoplist">お店を見る</a>
           </div>
@@ -23,7 +23,7 @@
       </div>
     </div>
     <section class="ly_section ly_section__info">
-      <div class="ly_sectionInner">
+      <div class="ly_sectionInner ly_section_innerInfo js_section_innerInfo">
         <h2 class="el_lv2Heading el_lv2Heading__info">お知らせ</h2>
         <ul class="bl_vertPosts">
           <?php
@@ -46,7 +46,7 @@
       </div>
     </section>
     <section class="ly_section ly_section__pet">
-      <div class="ly_sectionInner">
+      <div class="ly_sectionInner js_fadeUp">
         <h2 class="el_lv2Heading">ペットを探す<br><span>Find a pet</span></h2>
         <ul class="bl_cardUnit bl_cardUnit__col4Pet">
           <?php
@@ -83,7 +83,7 @@
       </div>
     </section>
     <section class="ly_section ly_section__shop" id="shop">
-      <div class="ly_sectionInner">
+      <div class="ly_sectionInner js_fadeUp">
         <h2 class="el_lv2Heading">お店を探す<br><span>Find a store</span></h2>
         <div class="bl_map">
           <img src="<?php echo get_template_directory_uri(); ?>/img/home/map.png" alt="日本地図のイラスト" width="506" height="454">
@@ -100,7 +100,7 @@
       </div>
     </section>
     <section class="ly_section ly_section__blog">
-      <div class="ly_sectionInner">
+      <div class="ly_sectionInner js_fadeUp">
         <h2 class="el_lv2Heading">ブログ<br><span>Blog</span></h2>
         <ul class="bl_cardUnit bl_cardUnit__col4Blog">
           <?php
@@ -138,7 +138,7 @@
       </div>
     </section>
     <section class="ly_section ly_section__about">
-      <div class="ly_sectionInner">
+      <div class="ly_sectionInner js_fadeUp">
         <h2 class="el_lv2Heading">サイトについて<br><span>About</span></h2>
         <div class="bl_aboutContent">
           <h3 class="bl_about_ttl">ペットと人との笑顔ある未来の創造</h3>

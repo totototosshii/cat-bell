@@ -12,6 +12,25 @@ export function common() {
     }
   };
 
+  $(function () {
+    $(window).on('load', function () {
+      //1秒かけてテキストを表示
+      $('.js_lv2Heading__fv').css({ opacity: '1', transition: '1s' });
+      $('.js_fvContent_txt').css({ opacity: '1', transition: '1s' });
+      $('.js_fvBtn_wrap').css({ opacity: '1', transition: '1s' });
+      $('.js_section_innerInfo').css({ opacity: '1', transition: '1s' });
+      $(function () {
+        setTimeout(function () {
+          //1秒後にis_activeクラスを付与
+          $('.js_lv2Heading__fv').addClass('is_active');
+          $('.js_fvContent_txt').addClass('is_active');
+          $('.js_fvBtn_wrap').addClass('is_active');
+          $('.js_section_innerInfo').addClass('is_active');
+        }, 1000)
+      })
+    })
+  });
+
   // ローディングアニメーション
   // 参考→https://www.webcreatorbox.com/tech/loading-animation
   window.onload = () => {
@@ -33,7 +52,7 @@ export function common() {
         let position = $(this).offset().top,// クラスが付与されている要素のtopからの高さを取得
           scroll = $(window).scrollTop(),// ブラウザのスクロール位置を取得
           windowHeight = $(window).height();// windowの高さを取得
-        if (scroll > position - windowHeight + 100) {
+        if (scroll > position - windowHeight + 150) {
           $(this).addClass('is_active');
         }
       });

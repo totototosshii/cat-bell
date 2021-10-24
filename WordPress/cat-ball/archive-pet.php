@@ -49,7 +49,7 @@
           endif;
           wp_reset_postdata(); ?>
         </ul>
-        <ul class="bl_cardUnit bl_cardUnit__col3Pet">
+        <ul class="bl_cardUnit bl_cardUnit__col3Pet js_fadeUp">
           <?php
           $the_query = new WP_Query(array(
             'post_type' => 'post',
@@ -78,7 +78,7 @@
           endif;
           wp_reset_postdata(); ?>
         </ul>
-        <button class="el_btn el_btn__archive js_morePet" type="button">すべての猫種一覧を見る</button>
+        <button class="el_btn el_btn__archive js_morePet js_fadeUp" type="button">すべての猫種一覧を見る</button>
       </div>
     </section>
   </main>

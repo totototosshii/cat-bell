@@ -1,5 +1,4 @@
 @use "../global" as g;
-
 // 接頭辞：ly_
 // ----------------------------------------------------------------
 // トップページ
@@ -80,6 +79,21 @@
       flex-direction: column;
       padding: 4vw;
     }
+  }
+}
+.ly_section_innerInfo{
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  &::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:	g.$color-base;
   }
 }
 // ----------------------------------------------------------------
