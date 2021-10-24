@@ -1010,10 +1010,10 @@ small {
   color: #5D5D5D;
   letter-spacing: 0.016em;
   line-height: 1.5;
-  max-width: 260px;
   opacity: 0;
   overflow: hidden;
   position: relative;
+  width: 270px;
 }
 
 .bl_fvContent_txt::before {
@@ -1212,6 +1212,7 @@ small {
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 1;
 }
 
 .bl_cardUnit__col4Blog .bl_card_time {
