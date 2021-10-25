@@ -779,7 +779,6 @@ button {
 
 .ly_section__info .ly_sectionInner {
   background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 16px;
   display: flex;
   text-align: left;
 }
@@ -791,7 +790,7 @@ button {
 }
 
 .ly_section_innerInfo::before {
-  background-color: #FAFAFA;
+  background-color: #FF5F32;
   content: "";
   display: inline-block;
   height: 100%;

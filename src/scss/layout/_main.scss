@@ -66,7 +66,6 @@
   .ly_sectionInner{
     background-color: rgba(255,255,255,.7);
     display: flex;
-    border-radius: 16px;
     text-align: left;
     @include	g.mq('pc'){
       padding: 38px 40px 17px 40px;
@@ -93,7 +92,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color:	g.$color-base;
+    background-color:	g.$color-active;
   }
 }
 // ----------------------------------------------------------------
