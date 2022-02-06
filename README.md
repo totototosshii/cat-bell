@@ -19,7 +19,7 @@
 ・「[All-in-One WP Migration](https://servmask.com/)」<br>
 ・「[Show Current Template](https://ja.wordpress.org/plugins/show-current-template/)」<br>
 ・「[WP Multibyte Patch](https://eastcoder.com/code/wp-multibyte-patch/)」<br>
-・「[Yoast Duplicate Post](https://yoast.com/wordpress/plugins/duplicate-post/)」
+・「[Yoast Duplicate Post](https://yoast.com/wordpress/plugins/duplicate-post/)」<br>
 ・「[SiteGuard WP Plugin](https://ja.wordpress.org/plugins/siteguard/)」
 ### ポイント
 ・ブログはカスタム投稿で実装<br>
