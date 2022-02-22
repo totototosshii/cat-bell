@@ -22,8 +22,8 @@ input, textarea{
 
 a{
   color: inherit;
+  transition: all .4s;
   &:hover{
-    transition: all .4s;
     text-decoration: none;
     color: inherit;
   }

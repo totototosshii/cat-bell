@@ -38,3 +38,13 @@
 .z-0{
   z-index: 0 !important;
 }
+.hp_ghLink{
+  background-color:	g.$color-active !important;
+  color: #fff !important;
+  border-radius: 17px !important;
+  padding: .5em !important;
+  transition: opacity .4s !important;
+  &:hover{
+    opacity: .5 !important;
+  }
+}

@@ -8,6 +8,7 @@
         <li><a href="<?php echo esc_url(home_url()); ?>/archive-pet">ペットを探す</a></li>
         <li><a href="<?php echo esc_url(home_url()); ?>/#shop">お店を探す</a></li>
         <li><a href="<?php echo esc_url(home_url()); ?>/archive-blog">ブログ一覧</a></li>
+        <li><a class="hp_ghLink" href="https://github.com/totototosshii/cat-bell" target="_blank" rel="noopener noreferrer">ソースコード（GitHub）</a></li>
       </ul>
     </div>
     <small>&copy; 2020-2022 CAT BELL Co., Ltd.</small>
