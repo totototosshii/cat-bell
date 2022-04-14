@@ -26,6 +26,7 @@
 .bl_headerList{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   @include	g.mq('pc'){
     li:not(:first-of-type){
       margin-left: 56px;
@@ -55,6 +56,9 @@
       margin-bottom: 2em;
     }
   }
+}
+.bl_cssValidator{
+
 }
 // ----------------------------------------------------------------
 // フッター
@@ -104,7 +108,7 @@ small{
   display: inline-block;
   @include	g.fz(10);
   line-height:	g.division(15,	10);
-  margin-top: 25.05px;
+  margin-top: 25px;
 }
 
 

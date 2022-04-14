@@ -13,11 +13,8 @@
   *,
   *::before,
   *::after {
-    -webkit-animation-delay: -1ms;
     animation-delay: -1ms;
-    -webkit-animation-duration: 1ms;
     animation-duration: 1ms;
-    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
     background-attachment: initial;
     transition-delay: 0s;
@@ -26,15 +23,10 @@
 }
 
 html {
-  font: 400 1rem/1.5 system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu,
-    Cantarell, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
   background: inherit;
   vertical-align: baseline;
   word-break: normal;
   color: inherit;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -69,16 +61,6 @@ hr {
 }
 hr:not([size]) {
   height: 1px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0 initial 0.5rem;
-  font: inherit inherit 500 unset/1.2 inherit;
 }
 
 h1 {
@@ -133,15 +115,12 @@ abbr[title],
 abbr[data-bs-original-title],
 acronym[title],
 acronym[data-bs-original-title] {
-  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
-  -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
 }
 
 address {
-  font: normal inherit inherit/inherit inherit;
   margin: 0 0 1rem;
 }
 
@@ -154,13 +133,6 @@ ol,
 ul,
 dl {
   margin: 0 0 1rem;
-}
-
-ol ol,
-ul ul,
-ol ul,
-ul ol {
-  margin: 0;
 }
 
 nav li {
@@ -219,7 +191,6 @@ a {
   color: #3333e1;
   background-color: transparent;
   text-decoration: none;
-  word-break: break-word;
 }
 a:hover {
   color: #3434e0;
@@ -264,7 +235,6 @@ pre {
   margin-bottom: 1rem;
   font-size: 0.875em;
   overflow: auto;
-  -ms-overflow-style: scrollbar;
 }
 pre code {
   font-size: inherit;
@@ -326,7 +296,6 @@ svg:not(:root) {
 
 img {
   border: 0;
-  -ms-interpolation-mode: bicubic;
 }
 
 table {
@@ -345,7 +314,6 @@ caption {
 
 th {
   text-align: inherit;
-  text-align: -webkit-match-parent;
 }
 
 thead,
@@ -369,7 +337,6 @@ button {
 }
 button:focus {
   outline: dotted 1px;
-  outline: -webkit-focus-ring-color auto 5px;
 }
 
 input,
@@ -393,7 +360,6 @@ input,
 select,
 textarea {
   background-color: transparent;
-  border: 1px solid WindowFrame;
   color: inherit;
   font: inherit;
   letter-spacing: inherit;
@@ -410,29 +376,10 @@ select {
 }
 
 select {
-  -moz-appearance: none;
-  -webkit-appearance: none;
   text-transform: none;
   word-wrap: normal;
 }
-select:not([multiple]):not([size]) {
-  background-image: "data:image/svg+xmlcharset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='4'%3E%3Cpath d='M4 0h6L7 4'/%3E%3C/svg%3E";
-}
 
-::-ms-expand {
-  display: none;
-}
-
-[list]::-webkit-calendar-picker-indicator {
-  display: none;
-}
-
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-}
 button:not(disabled),
 [type="button"]:not(disabled),
 [type="reset"]:not(disabled),
@@ -440,14 +387,8 @@ button:not(disabled),
   cursor: pointer;
 }
 
-::-webkit-file-upload-button {
-  font: inherit;
-  -webkit-appearance: button;
-}
-
 textarea {
   overflow: auto;
-  -ms-overflow-style: scrollbar;
   resize: vertical;
   vertical-align: top;
 }
@@ -456,7 +397,6 @@ fieldset {
   min-width: 0;
   padding: 0.35em 0.75em 0.625em;
   margin: 0;
-  border: 1px solid inherit;
 }
 
 legend {
@@ -483,52 +423,16 @@ dialog {
   border: solid;
   color: inherit;
   display: block;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   left: 0;
   margin: auto;
   padding: 1em;
   position: absolute;
   right: 0;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
 }
 dialog:not([open]) {
   display: none;
-}
-
-::-webkit-datetime-edit-fields-wrapper,
-::-webkit-datetime-edit-text,
-::-webkit-datetime-edit-minute,
-::-webkit-datetime-edit-hour-field,
-::-webkit-datetime-edit-day-field,
-::-webkit-datetime-edit-month-field,
-::-webkit-datetime-edit-year-field {
-  padding: 0;
-}
-
-::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
-  height: auto;
-}
-
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.54;
-}
-
-input::-webkit-input-placeholder {
-  opacity: 1;
-}
-
-input::-moz-placeholder {
-  opacity: 1;
-}
-
-input:-ms-input-placeholder {
-  opacity: 1;
 }
 
 input::placeholder {
@@ -537,17 +441,7 @@ input::placeholder {
 
 [type="search"] {
   outline-offset: -2px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   box-sizing: content-box;
-}
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
-  -webkit-appearance: none;
-  -moz-appearance: none;
 }
 
 [type="tel"],
@@ -555,23 +449,6 @@ input[type="search"]::-webkit-search-results-decoration {
 [type="email"],
 [type="number"] {
   direction: ltr;
-}
-
-::-webkit-color-swatch-wrapper {
-  padding: 0;
-}
-
-::-moz-focus-inner {
-  padding: 0;
-  border-style: none;
-}
-
-::-moz-ui-invalid {
-  box-shadow: none;
-}
-
-::-moz-focusring {
-  outline: 1px dotted ButtonText;
 }
 
 output {
@@ -587,7 +464,6 @@ canvas,
 video {
   display: inline;
   display: inline-block;
-  zoom: 1;
   max-width: 100%;
 }
 
@@ -631,6 +507,5 @@ template {
   display: initial;
 }
 [aria-hidden="false"][hidden="false"]:not(:focus) {
-  clip: rect(0, 0, 0, 0);
   position: absolute;
 }

@@ -5,14 +5,15 @@
 //  フッターレイアウト
 // ----------------------------------------------------------------
 .ly_footer{
-  padding: 55px 0 4px 0;
+  padding: 35px 0 5px 0;
   border-top: 1px solid g.$color-yellow;
   @include	g.mq(){
     padding-top: 30px;
   }
 }
 .ly_footerInner{
-  max-width: 800px;
+  max-width: 930px;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
 }
