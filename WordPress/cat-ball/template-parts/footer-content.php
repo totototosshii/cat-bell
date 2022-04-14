@@ -2,7 +2,7 @@
   <div class="ly_footerInner">
     <div class="bl_footerContent">
       <a href="<?php echo esc_url(home_url('/')); ?>">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/home/logo.svg" alt="CAT BELL" width="147" height="31.95">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/home/logo.svg" alt="CAT BELL" width="147" height="32">
       </a>
       <ul class="bl_footerList">
         <li><a href="<?php echo esc_url(home_url()); ?>/archive-pet">ペットを探す</a></li>
