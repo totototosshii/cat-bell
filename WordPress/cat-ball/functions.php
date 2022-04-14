@@ -55,8 +55,7 @@ add_action('wp_enqueue_scripts', 'disable_gutenberg_css', 1000);
 //コメント機能OFF
 add_filter('comments_open', '__return_false');
 
-function my_setup()
-{
+function my_setup() {
   // アイキャッチ画像を有効化
   // add_theme_support('post-thumbnails');
   // <head>内にRSSフィードリンクを出力
@@ -114,8 +113,7 @@ function my_filter_rest_endpoints($endpoints)
 add_filter('rest_endpoints', 'my_filter_rest_endpoints', 10, 1);
 
 //ダッシュボードにある項目を消す
-function remove_dashboard_widget()
-{
+function remove_dashboard_widget() {
   //WordPressへようこそ!
   remove_action('welcome_panel', 'wp_welcome_panel');
   //アクティビティ
@@ -130,8 +128,7 @@ function remove_dashboard_widget()
 add_action('wp_dashboard_setup', 'remove_dashboard_widget');
 
 //標準メニュー（サイドバー）を消す
-function remove_menus()
-{
+function remove_menus() {
   //コメント
   remove_menu_page('edit-comments.php');
   //外観
@@ -142,8 +139,7 @@ function remove_menus()
 add_action('admin_menu', 'remove_menus');
 
 // CSSとJavaScriptの読み込み
-function my_script_init()
-{
+function my_script_init() {
   // 自作のCSSの読み込み
   wp_enqueue_style(
     'style-css',
@@ -177,16 +173,15 @@ function my_script_init()
   wp_enqueue_script(
     'bundle-js',
     esc_url(get_theme_file_uri('/js/bundle.js')),
-    array('jquery'), // bundle.jsよりも前に読み込みたいJSファイルの名前を記述
+    array('jquery'),// bundle.jsよりも前に読み込みたいJSファイルの名前を記述
     '1.0.0',
-    true // wp_footer()の位置で出力
+    true// wp_footer()の位置で出力
   );
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
 
 // head内にソースコードを出力
-function wp_head_custom_code()
-{
+function wp_head_custom_code() {
   $wp_headCustom = <<<EOM
     <script>
       // Adobe Fonts
@@ -234,8 +229,7 @@ function wp_head_custom_code()
 add_action('wp_head', 'wp_head_custom_code');
 
 // 管理画面の「投稿」の名前を「ネコ」に変更
-function change_post_menu_label()
-{
+function change_post_menu_label() {
   global $menu;
   global $submenu;
   $menu[5][0] = 'ネコ';
@@ -262,8 +256,7 @@ add_action('init', 'change_post_object_label');
 add_action('admin_menu', 'change_post_menu_label');
 
 // カスタム投稿タイプの追加
-function create_post_type()
-{
+function create_post_type() {
   // カスタム投稿（ブログ）
   register_post_type(
     'blog',
@@ -354,13 +347,11 @@ function create_post_type()
 add_action('init', 'create_post_type');
 
 // ページネーション
-function pagination($pages = '', $range = 2)
-{
+function pagination($pages = '', $range = 2) {
   $showitems = ($range * 2) + 1;
   global $paged;
   if (empty($paged)) $paged = 1;
-  if (
-    $pages == ''
+  if ($pages == ''
   ) {
     global $wp_query;
     $pages = $wp_query->max_num_pages;

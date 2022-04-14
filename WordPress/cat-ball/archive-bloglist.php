@@ -1,6 +1,3 @@
-<!--
-	Template Name: ブログ一覧
--->
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
@@ -34,6 +31,8 @@
           'order' => 'DESC'
         ));
         $max_num_pages = $the_query->max_num_pages;
+        $utc_published = date('Y-m-dTH:i:sZ', get_post_timestamp());
+        $published = get_the_date("Y.m.d");
         if ($the_query->have_posts()) :
         ?>
           <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
@@ -47,7 +46,7 @@
                   </figure>
                 <?php endif; ?>
                 <div class="bl_blogMedia_body">
-                  <time date-time="<?php the_time('Y.n.j'); ?>"><?php the_time('Y.n.j'); ?></time>
+                  <time date-time="<?php echo $utc_published; ?>" itemprop="datePublished"><?php echo $published; ?></time>
                   <p class="bl_blogMedia_txt">
                     <?php echo wp_trim_words(get_the_excerpt(), 98, '...'); ?>
                   </p>
@@ -97,6 +96,8 @@
             )
           )
         ));
+        $utc_published = date('Y-m-dTH:i:sZ', get_post_timestamp());
+        $published = get_the_date("Y.m.d");
         if ($the_query->have_posts()) :
         ?>
           <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
@@ -115,7 +116,7 @@
                 <?php endif; ?>
                 <div class="bl_asideBlog_body">
                   <h4 class="bl_asideBlog_ttl"><a href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 32, '...'); ?></a></h4>
-                  <time date-time="<?php the_time(); ?>"><?php the_time(); ?></time>
+                  <time date-time="<?php echo $utc_published; ?>" itemprop="datePublished"><?php echo $published; ?></time>
                 </div>
               </article>
             </li>

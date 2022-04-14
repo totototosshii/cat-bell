@@ -33,11 +33,13 @@
             'post_status' => 'publish',
             'order' => 'DESC'
           ));
+          $utc_published = date('Y-m-dTH:i:sZ', get_post_timestamp());
+          $published = get_the_date("Y.m.d");
           if ($the_query->have_posts()) :
           ?>
             <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
               <li class="bl_vertPosts_item">
-                <time class="bl_vertPosts_date" date-time="<?php the_time(); ?>"><?php the_time(); ?></time><a class="bl_vertPosts_ttl" href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 33, '...'); ?></a>
+                <time class="bl_vertPosts_date" date-time="<?php echo $utc_published; ?>" itemprop="datePublished"><?php echo $published; ?></time><a class="bl_vertPosts_ttl" href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 33, '...'); ?></a>
               </li>
           <?php endwhile;
           endif;
@@ -46,9 +48,9 @@
       </div>
     </section>
     <section class="ly_section ly_section__pet">
-      <div class="ly_sectionInner js_fadeUp">
-        <h2 class="el_lv2Heading">ペットを探す<br><span>Find a pet</span></h2>
-        <ul class="bl_cardUnit bl_cardUnit__col4Pet">
+      <div class="ly_sectionInner">
+        <h2 class="el_lv2Heading js_fadeUp">ペットを探す<br><span>Find a pet</span></h2>
+        <ul class="bl_cardUnit bl_cardUnit__col4Pet js_fadeUp">
           <?php
           $the_query = new WP_Query(array(
             'post_type' => 'post',
@@ -79,13 +81,13 @@
           endif;
           wp_reset_postdata(); ?>
         </ul>
-        <a class="el_btn el_btn__archive" href="<?php echo esc_url(home_url()); ?>/archive-pet">猫種一覧を見る</a>
+        <a class="el_btn el_btn__archive js_fadeUp" href="<?php echo esc_url(home_url()); ?>/archive-pet">猫種一覧を見る</a>
       </div>
     </section>
     <section class="ly_section ly_section__shop" id="shop">
-      <div class="ly_sectionInner js_fadeUp">
-        <h2 class="el_lv2Heading">お店を探す<br><span>Find a store</span></h2>
-        <div class="bl_map">
+      <div class="ly_sectionInner">
+        <h2 class="el_lv2Heading js_fadeUp">お店を探す<br><span>Find a store</span></h2>
+        <div class="bl_map js_fadeUp">
           <img src="<?php echo get_template_directory_uri(); ?>/img/home/map.png" alt="日本地図のイラスト" width="506" height="454">
           <a class="el_btn el_btn__mapSapporo" href="<?php echo esc_url(home_url()); ?>/tag/sapporo">札幌店</a>
           <a class="el_btn el_btn__mapMiyagi" href="<?php echo esc_url(home_url()); ?>/tag/miyagi">宮城店</a>
@@ -96,13 +98,13 @@
           <a class="el_btn el_btn__mapFukuoka" href="<?php echo esc_url(home_url()); ?>/tag/fukuoka">福岡店</a>
           <a class="el_btn el_btn__mapKagoshima" href="<?php echo esc_url(home_url()); ?>/tag/kagoshima">鹿児島店</a>
         </div>
-        <a class="el_btn el_btn__archive" href="<?php echo esc_url(home_url()); ?>/shoplist">店舗一覧を見る</a>
+        <a class="el_btn el_btn__archive js_fadeUp" href="<?php echo esc_url(home_url()); ?>/shoplist">店舗一覧を見る</a>
       </div>
     </section>
     <section class="ly_section ly_section__blog">
-      <div class="ly_sectionInner js_fadeUp">
-        <h2 class="el_lv2Heading">ブログ<br><span>Blog</span></h2>
-        <ul class="bl_cardUnit bl_cardUnit__col4Blog">
+      <div class="ly_sectionInner">
+        <h2 class="el_lv2Heading js_fadeUp">ブログ<br><span>Blog</span></h2>
+        <ul class="bl_cardUnit bl_cardUnit__col4Blog js_fadeUp">
           <?php
           $the_query = new WP_Query(array(
             'post_type' => 'blog',
@@ -110,11 +112,13 @@
             'post_status' => 'publish',
             'order' => 'DESC'
           ));
+          $utc_published = date('Y-m-dTH:i:sZ', get_post_timestamp());
+          $published = get_the_date("Y.m.d");
           if ($the_query->have_posts()) :
           ?>
             <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
               <li class="bl_card">
-                <time class="bl_card_time" datetime="<?php the_time(); ?>"><?php the_time(); ?></time>
+                <time class="bl_card_time" datetime="<?php echo $utc_published; ?>" itemprop="datePublished"><?php echo $published; ?></time>
                 <h3 class="bl_card_ttl">
                   <a class="bl_card_link" href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 33, '...'); ?></a>
                 </h3>
@@ -134,17 +138,17 @@
           endif;
           wp_reset_postdata(); ?>
         </ul>
-        <a class="el_btn el_btn__archive" href="<?php echo esc_url(home_url()); ?>/archive-blog">ブログ一覧を見る</a>
+        <a class="el_btn el_btn__archive js_fadeUp" href="<?php echo esc_url(home_url()); ?>/archive-blog">ブログ一覧を見る</a>
       </div>
     </section>
     <section class="ly_section ly_section__about">
-      <div class="ly_sectionInner js_fadeUp">
-        <h2 class="el_lv2Heading">サイトについて<br><span>About</span></h2>
-        <div class="bl_aboutContent">
+      <div class="ly_sectionInner">
+        <h2 class="el_lv2Heading js_fadeUp">サイトについて<br><span>About</span></h2>
+        <div class="bl_aboutContent js_fadeUp">
           <h3 class="bl_about_ttl">ペットと人との笑顔ある未来の創造</h3>
           <p class="bl_about_txt">家族の絆を深める、子供の情操教育、ヒーリング効果など、<br class="br">ペットと暮らすメリットが証明されてきており、<br class="br">それらの効果は人々の暮らしに必要不可欠な”笑顔”を<br class="br">もたらすことができます。<br>CAT BELLは、ペットというかけがえのない生命を<br class="br">お客様へご提供することで、笑顔ある未来を創造し、<br class="br">より豊かな社会環境の構築に貢献いたします。</p>
         </div>
-        <img src="<?php echo get_template_directory_uri(); ?>/img/home/about_01.png" alt="" width="363" height="403">
+        <img class="js_fadeUp" src="<?php echo get_template_directory_uri(); ?>/img/home/about_01.png" alt="" width="363" height="403">
       </div>
     </section>
   </main>
