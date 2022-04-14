@@ -38,7 +38,7 @@
           <?php endif; ?>
         </div>
         <div class="bl_blogMedia_body">
-          <time date-time="<?php the_time(); ?>"><?php the_time(); ?></time>
+          <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
           <h2 class="bl_blogMedia_ttlH2"><?php the_title(); ?></h2>
           <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
               <?php the_content(); ?>

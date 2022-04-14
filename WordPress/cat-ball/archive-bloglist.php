@@ -31,8 +31,6 @@
           'order' => 'DESC'
         ));
         $max_num_pages = $the_query->max_num_pages;
-        $utc_published = date('Y-m-dTH:i:sZ', get_post_timestamp());
-        $published = get_the_date("Y.m.d");
         if ($the_query->have_posts()) :
         ?>
           <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
@@ -46,7 +44,7 @@
                   </figure>
                 <?php endif; ?>
                 <div class="bl_blogMedia_body">
-                  <time datetime="<?php echo $utc_published; ?>" itemprop="datePublished"><?php echo $published; ?></time>
+                  <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
                   <p class="bl_blogMedia_txt">
                     <?php echo wp_trim_words(get_the_excerpt(), 98, '...'); ?>
                   </p>
@@ -96,8 +94,6 @@
             )
           )
         ));
-        $utc_published = date('Y-m-dTH:i:sZ', get_post_timestamp());
-        $published = get_the_date("Y.m.d");
         if ($the_query->have_posts()) :
         ?>
           <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
@@ -116,7 +112,7 @@
                 <?php endif; ?>
                 <div class="bl_asideBlog_body">
                   <h4 class="bl_asideBlog_ttl"><a href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 32, '...'); ?></a></h4>
-                  <time datetime="<?php echo $utc_published; ?>" itemprop="datePublished"><?php echo $published; ?></time>
+                  <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
                 </div>
               </article>
             </li>

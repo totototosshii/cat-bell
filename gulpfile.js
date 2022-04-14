@@ -3,7 +3,7 @@ const sass = require('gulp-sass')(require('sass'));
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
 const postcss = require('gulp-postcss');
-const autoprefixer = require('autoprefixer');
+// const autoprefixer = require('autoprefixer');
 const cssdeclsort = require('css-declaration-sorter');
 const gcmq = require('gulp-group-css-media-queries');
 const mode = require('gulp-mode')();
@@ -27,10 +27,10 @@ const bundleJs = () => {
 
 const compileSass = (done) => {
   const postcssPlugins = [
-    autoprefixer({
-      grid: "autoplace",
-      cascade: false,
-    }),
+    // autoprefixer({
+    //   grid: "autoplace",
+    //   cascade: false,
+    // }),
     cssdeclsort({ order: 'alphabetical' })
   ];
   src('./src/scss/**/*.scss', { sourcemaps: true })
