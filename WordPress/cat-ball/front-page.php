@@ -39,7 +39,7 @@
           ?>
             <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
               <li class="bl_vertPosts_item">
-                <time class="bl_vertPosts_date" date-time="<?php echo $utc_published; ?>" itemprop="datePublished"><?php echo $published; ?></time><a class="bl_vertPosts_ttl" href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 33, '...'); ?></a>
+                <time class="bl_vertPosts_date" datetime="<?php echo $utc_published; ?>" itemprop="datePublished"><?php echo $published; ?></time><a class="bl_vertPosts_ttl" href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 33, '...'); ?></a>
               </li>
           <?php endwhile;
           endif;

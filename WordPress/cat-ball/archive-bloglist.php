@@ -46,7 +46,7 @@
                   </figure>
                 <?php endif; ?>
                 <div class="bl_blogMedia_body">
-                  <time date-time="<?php echo $utc_published; ?>" itemprop="datePublished"><?php echo $published; ?></time>
+                  <time datetime="<?php echo $utc_published; ?>" itemprop="datePublished"><?php echo $published; ?></time>
                   <p class="bl_blogMedia_txt">
                     <?php echo wp_trim_words(get_the_excerpt(), 98, '...'); ?>
                   </p>
@@ -116,7 +116,7 @@
                 <?php endif; ?>
                 <div class="bl_asideBlog_body">
                   <h4 class="bl_asideBlog_ttl"><a href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 32, '...'); ?></a></h4>
-                  <time date-time="<?php echo $utc_published; ?>" itemprop="datePublished"><?php echo $published; ?></time>
+                  <time datetime="<?php echo $utc_published; ?>" itemprop="datePublished"><?php echo $published; ?></time>
                 </div>
               </article>
             </li>
