@@ -220,7 +220,7 @@ function wp_head_custom_code() {
         let ua = navigator.userAgent
         let sp = ua.indexOf('iPhone') > -1 || (ua.indexOf('Android') > -1 && ua.indexOf('Mobile') > -1)
         let tab = !sp && (ua.indexOf('iPad') > -1 || (ua.indexOf('Macintosh') > -1 && 'ontouchend' in document) || ua.indexOf('Android') > -1)
-        new ViewportExtra(tab ? 1200 : 375)
+        new ViewportExtra(tab ? 1024 : 375)
       })()
     </script>
   EOM;
@@ -365,8 +365,10 @@ function pagination($pages = '', $range = 2) {
     for ($i = 1; $i <= $pages; $i++) {
       if (1 != $pages && (!($i >= $paged + $range + 1 || $i <= $paged - $range - 1) || $pages <= $showitems)) {
         //三項演算子での条件分岐
-        echo ($paged == $i) ? "<li><span class=\"bl_pager_link is_active\">" . $i . "</li>\n" : "<li><a class=\"bl_pager_link\" href='" . get_pagenum_link($i) . "'>" . $i . "</a></li>\n";
+        echo ($paged == $i) ? "<li><span class=\"bl_pager_link is_active\">" . $i . "</span></li>\n" : "<li><a class=\"bl_pager_link\" href='" . get_pagenum_link($i) . "'>" . $i . "</a></li>\n";
       }
     }
+    echo "</ul>\n";
+    echo "</nav>\n";
   }
 }
