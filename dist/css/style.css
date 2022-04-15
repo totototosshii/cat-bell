@@ -538,7 +538,7 @@ button {
 .js_fvContent_txt.is_active::before,
 .js_fvBtn_wrap.is_active::before,
 .js_section_innerInfo.is_active::before {
-  transform: translateX(100%);
+  transform: translateX(105%);
   transition: transform 0.8s;
 }
 
@@ -632,7 +632,8 @@ button {
 
 .ly_fvInner {
   margin: 0 auto;
-  max-width: 940px;
+  max-width: 970px;
+  padding: 0 15px;
   position: relative;
   width: 100%;
 }
@@ -644,7 +645,7 @@ button {
 }
 
 .ly_section__info .ly_sectionInner {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.6);
   display: flex;
   text-align: left;
 }
@@ -676,7 +677,11 @@ button {
 
 .ly_section__blog {
   background-color: #FAFAFA;
-  padding-bottom: 60px;
+  padding: 60px 0;
+}
+
+.ly_section__blog .ly_sectionInner {
+  padding: 0 15px;
 }
 
 .ly_section__about {
@@ -803,12 +808,13 @@ button {
 
 .ly_footer {
   border-top: 1px solid #F7B500;
-  padding: 35px 0 5px 0;
+  padding: 35px 0 15px 0;
 }
 
 .ly_footerInner {
   margin: 0 auto;
-  max-width: 930px;
+  max-width: 960px;
+  padding: 0 15px;
   text-align: center;
   width: 100%;
 }
@@ -862,8 +868,8 @@ button {
 small {
   color: #9b9b9b;
   display: inline-block;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.1rem;
+  line-height: 1.3636363636;
   margin-top: 25px;
 }
 
@@ -2104,7 +2110,7 @@ small {
 }
 
 .el_btn__fv:nth-of-type(2) {
-  margin-left: 8px;
+  margin-left: 14px;
 }
 
 .el_btn__fv:hover {
@@ -2334,7 +2340,7 @@ small {
   color: #FF5F32;
   display: inline-block;
   font-family: "ヒラギノ丸ゴ ProN", "Hiragino Maru Gothic ProN", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   letter-spacing: 2px;
   line-height: 1.5833333333;
   margin-bottom: 30px;
@@ -2402,14 +2408,17 @@ small {
 
 .hp_ghLink {
   background-color: #FF5F32 !important;
+  border: 1px solid transparent !important;
   border-radius: 17px !important;
   color: #fff !important;
-  padding: 0.5em !important;
-  transition: opacity 0.4s !important;
+  padding: 0.5em 0.6em !important;
+  transition: background-color 0.4s, border 0.4s, color 0.4s !important;
 }
 
 .hp_ghLink:hover {
-  opacity: 0.5 !important;
+  background-color: transparent !important;
+  border: 1px solid currentColor !important;
+  color: #FF5F32 !important;
 }
 
 @media (min-width: 768px) {
@@ -2481,7 +2490,7 @@ small {
   }
 
   .bl_vertPosts {
-    margin-left: 32px;
+    margin-left: 3.679%;
   }
 
   .bl_cardUnit__col4Pet > .bl_card {
@@ -2705,9 +2714,13 @@ small {
   }
 
   .el_btn__archive:hover {
-    border: 1px solid currentColor;
-    color: #FF5F32;
-    opacity: 0.5;
+    background-color: #FF5F32;
+    border: 1px solid transparent;
+    color: #fff;
+  }
+
+  .el_btn__archive:hover::before {
+    background-image: url(../img/common/arrow_white.svg);
   }
 
   .el_btn__mapSapporo,
@@ -2805,7 +2818,7 @@ small {
   }
 
   .ly_fvInner img {
-    transform: translateX(-50%);
+    right: -19%;
   }
 
   .ly_section__info {
@@ -2884,7 +2897,11 @@ small {
   }
 
   .ly_footer {
-    padding-top: 30px;
+    padding: 30px 0 8px 0;
+  }
+
+  .ly_footerInner {
+    padding: 0 4vw;
   }
 
   .bl_headerNav {
@@ -2929,7 +2946,7 @@ small {
   }
 
   .bl_fvContent {
-    padding-top: 172px;
+    padding-top: 49.885%;
   }
 
   .bl_cardUnit.bl_cardUnit__col4Pet {

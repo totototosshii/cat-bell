@@ -91,7 +91,7 @@
     padding: 8px 0
   }
   &:nth-of-type(2){
-    margin-left: 8px;
+    margin-left: 14px;
     @include	g.mq(){
       margin-left: 10px;
     }
@@ -114,9 +114,12 @@
   padding: 15.5px 0;
   @include	g.mq('pc'){
     &:hover{
-      border: 1px solid currentColor;
-      color: g.$color-active;
-      opacity: 0.5;
+      border: 1px solid transparent;
+      background-color:	g.$color-active;
+      color: #fff;
+      &::before{
+        background-image: url(../img/common/arrow_white.svg);
+      }
     }
   }
   @include	g.mq(){
@@ -370,7 +373,7 @@
   }
   span{
     color: g.$color-active;
-    @include	g.fz(12);
+    @include	g.fz(13);
     font-family:	g.$ff-hiramaru;
     letter-spacing:	2px;
     line-height:	g.division(19,	12);

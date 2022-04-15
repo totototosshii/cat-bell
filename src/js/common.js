@@ -12,26 +12,24 @@ export function common() {
     }
   };
 
-  $(function () {
-    $(window).on('load', function () {
-      // 1秒かけてテキストを表示
-      $('.js_lv2Heading__fv').css({ opacity: '1', transition: '1s' });
-      $('.js_fvContent_txt').css({ opacity: '1', transition: '1s' });
-      $('.js_fvBtn_wrap').css({ opacity: '1', transition: '1s' });
-      $('.js_section_innerInfo').css({ opacity: '1', transition: '1s' });
-      $(function () {
-        setTimeout(function () {
-          // 1秒後にis_activeクラスを付与
-          $('.js_lv2Heading__fv').addClass('is_active');
-          $('.js_fvContent_txt').addClass('is_active');
-          $('.js_fvBtn_wrap').addClass('is_active');
-          $('.js_section_innerInfo').addClass('is_active');
-        }, 1000)
-        setTimeout(function () {
-          // お知らせの背景にborder-radiusを適用
-          $('.js_section_innerInfo').css({ borderRadius: '16px' });
-        }, 2000)
-      })
+  $(window).on('load', function () {
+    // 1秒かけてテキストを表示
+    $('.js_lv2Heading__fv').css({ opacity: '1', transition: '1s' });
+    $('.js_fvContent_txt').css({ opacity: '1', transition: '1s' });
+    $('.js_fvBtn_wrap').css({ opacity: '1', transition: '1s' });
+    $('.js_section_innerInfo').css({ opacity: '1', transition: '1s' });
+    $(function () {
+      setTimeout(function () {
+        // 1秒後にis_activeクラスを付与
+        $('.js_lv2Heading__fv').addClass('is_active');
+        $('.js_fvContent_txt').addClass('is_active');
+        $('.js_fvBtn_wrap').addClass('is_active');
+        $('.js_section_innerInfo').addClass('is_active');
+      }, 1000)
+      setTimeout(function () {
+        // お知らせの背景にborder-radiusを適用
+        $('.js_section_innerInfo').css({ borderRadius: '16px' });
+      }, 2000)
     })
   });
 

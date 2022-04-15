@@ -57,9 +57,6 @@
     }
   }
 }
-.bl_cssValidator{
-
-}
 // ----------------------------------------------------------------
 // フッター
 // ----------------------------------------------------------------
@@ -106,8 +103,8 @@
 small{
   color: g.$color-lightGray;
   display: inline-block;
-  @include	g.fz(10);
-  line-height:	g.division(15,	10);
+  @include	g.fz(11);
+  line-height:	g.division(15,	11);
   margin-top: 25px;
 }
 
@@ -125,7 +122,7 @@ small{
   position: relative;
   z-index: map-get(g.$layer, "default");
   @include	g.mq(){
-    padding-top: 172px;
+    padding-top: 49.885%;
   }
 }
 .bl_fvContent_txt{
@@ -169,7 +166,7 @@ small{
 // ----------------------------------------------------------------
 .bl_vertPosts{
   @include	g.mq('pc'){
-    margin-left: 32px;
+    margin-left: 3.679%;
   }
 }
 .bl_vertPosts_item:not(:last-of-type){

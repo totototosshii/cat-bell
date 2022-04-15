@@ -40,11 +40,14 @@
 }
 .hp_ghLink{
   background-color:	g.$color-active !important;
+  border: 1px solid transparent !important;
   color: #fff !important;
   border-radius: 17px !important;
-  padding: .5em !important;
-  transition: opacity .4s !important;
+  padding: .5em .6em !important;
+  transition: background-color .4s, border .4s, color .4s !important;
   &:hover{
-    opacity: .5 !important;
+    background-color:	transparent !important;
+    border: 1px solid currentColor !important;
+    color: g.$color-active !important;
   }
 }
