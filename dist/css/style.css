@@ -861,7 +861,7 @@ button {
   font-family: noto-sans-cjk-jp, sans-serif;
   font-size: 1.4rem;
   line-height: 2;
-  padding: 6px 0;
+  padding: 9.5px 0;
   transition: color 0.4s;
 }
 
@@ -882,7 +882,7 @@ small {
 .bl_fvContent_txt {
   color: #5D5D5D;
   letter-spacing: 0.016em;
-  line-height: 1.5;
+  line-height: 1.3333333333;
   opacity: 0;
   overflow: hidden;
   position: relative;
@@ -920,7 +920,7 @@ small {
 }
 
 .bl_vertPosts_item:not(:last-of-type) {
-  margin-bottom: 19px;
+  margin-bottom: 1em;
 }
 
 .bl_vertPosts_date {
@@ -933,6 +933,7 @@ small {
 
 .bl_vertPosts_ttl {
   color: #2C2C2C;
+  line-height: 1.5;
   margin-left: 12px;
   text-decoration: underline;
 }

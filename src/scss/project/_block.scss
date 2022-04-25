@@ -88,7 +88,7 @@
     font-family:	g.$ff-notosans-medium;
     @include	g.fz(14);
     line-height:	2;
-    padding: 6px 0;
+    padding: 9.5px 0;
     transition: color .4s;
   }
   @include	g.mq('pc'){
@@ -126,7 +126,7 @@ small{
   }
 }
 .bl_fvContent_txt{
-  line-height:	g.division(24,	16);
+  line-height:	g.division(24,	18);
   letter-spacing:	g.division(16, 1000	)	+	em;
   color: g.$color-dark;
   width: 270px;
@@ -170,7 +170,7 @@ small{
   }
 }
 .bl_vertPosts_item:not(:last-of-type){
-  margin-bottom: 19px;
+  margin-bottom: 1em;
 }
 .bl_vertPosts_date{
   color: g.$color-dark;
@@ -182,6 +182,7 @@ small{
 .bl_vertPosts_ttl{
   color: g.$color-main;
   text-decoration: underline;
+  line-height:	1.5;
   margin-left: 12px;
   &:hover{
     color: g.$color-active;

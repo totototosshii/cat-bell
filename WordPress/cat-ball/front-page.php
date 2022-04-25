@@ -139,7 +139,7 @@
     </section>
     <section class="ly_section ly_section__about">
       <div class="ly_sectionInner">
-        <h2 class="el_lv2Heading js_fadeUp">サイトについて<br><span>About</span></h2>
+        <h2 class="el_lv2Heading js_fadeUp">CAT BELLについて<br><span>About</span></h2>
         <div class="bl_aboutContent js_fadeUp">
           <h3 class="bl_about_ttl">ペットと人との笑顔ある未来の創造</h3>
           <p class="bl_about_txt">家族の絆を深める、子供の情操教育、ヒーリング効果など、<br class="br">ペットと暮らすメリットが証明されてきており、<br class="br">それらの効果は人々の暮らしに必要不可欠な”笑顔”を<br class="br">もたらすことができます。<br>CAT BELLは、ペットというかけがえのない生命を<br class="br">お客様へご提供することで、笑顔ある未来を創造し、<br class="br">より豊かな社会環境の構築に貢献いたします。</p>
