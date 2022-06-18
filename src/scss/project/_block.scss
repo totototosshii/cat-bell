@@ -133,6 +133,9 @@ small{
   position: relative;
   overflow: hidden;
   opacity: 0;
+  @include	g.mq(){
+    width: 100%;
+  }
   &::before{
     content: "";
     display: inline-block;
@@ -146,7 +149,8 @@ small{
 }
 .bl_fvBtn_wrap{
   margin-top: 20px;
-  display: inline-block;
+  display: inline-flex;
+  justify-content: space-between;
   position: relative;
   overflow: hidden;
   opacity: 0;

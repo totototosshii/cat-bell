@@ -87,13 +87,13 @@
   padding: 15px 0;
   @include	g.mq(){
     @include	g.fz(15);
-    width: 140px;
+    max-width: 140px;
     padding: 8px 0
   }
   &:nth-of-type(2){
-    margin-left: 14px;
+    margin-left: 3.647%;
     @include	g.mq(){
-      margin-left: 10px;
+      margin-left: 3.574%;
     }
   }
   &:hover{
