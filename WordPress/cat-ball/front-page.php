@@ -19,7 +19,7 @@
             <a class="el_btn el_btn__fv" href="<?php echo esc_url(home_url()); ?>/shoplist">お店を見る</a>
           </div>
         </div>
-        <img src="<?php echo get_template_directory_uri(); ?>/img/home/mv.png" alt="猫と暮らそう" width="940" height="587">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/home/mv_ver02.png" alt="猫と暮らそう" width="940" height="587">
       </div>
     </div>
     <section class="ly_section ly_section__info">
@@ -71,7 +71,7 @@
                 if (!empty($url)) :
                 ?>
                   <figure class="bl_card_imgWrapper">
-                    <img src="<?php echo $url ?>" alt="<?php echo $alt ?>" width="184" height="184">
+                    <img src="<?php echo $url ?>" alt="<?php echo $alt ?>" width="184" height="184" loading="lazy">
                   </figure>
                 <?php endif; ?>
               </li>
@@ -86,7 +86,7 @@
       <div class="ly_sectionInner">
         <h2 class="el_lv2Heading js_fadeUp">お店を探す<br><span>Find a store</span></h2>
         <div class="bl_map js_fadeUp">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/home/map.png" alt="日本地図のイラスト" width="506" height="454">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/home/map.svg" alt="日本地図のイラスト" width="506" height="454" loading="lazy">
           <a class="el_btn el_btn__mapSapporo" href="<?php echo esc_url(home_url()); ?>/tag/sapporo">札幌店</a>
           <a class="el_btn el_btn__mapMiyagi" href="<?php echo esc_url(home_url()); ?>/tag/miyagi">宮城店</a>
           <a class="el_btn el_btn__mapSinjuku" href="<?php echo esc_url(home_url()); ?>/tag/sinjuku">新宿店</a>
@@ -126,7 +126,7 @@
                 if (!empty($url)) :
                 ?>
                   <figure class="bl_card_imgWrapper">
-                    <img src="<?php echo $url ?>" alt="<?php echo $alt ?>" width="208" height="208">
+                    <img src="<?php echo $url ?>" alt="<?php echo $alt ?>" width="208" height="208" loading="lazy">
                   </figure>
                 <?php endif; ?>
               </li>
@@ -144,7 +144,7 @@
           <h3 class="bl_about_ttl">ペットと人との笑顔ある未来の創造</h3>
           <p class="bl_about_txt">家族の絆を深める、子供の情操教育、ヒーリング効果など、<br class="br">ペットと暮らすメリットが証明されてきており、<br class="br">それらの効果は人々の暮らしに必要不可欠な”笑顔”を<br class="br">もたらすことができます。<br>CAT BELLは、ペットというかけがえのない生命を<br class="br">お客様へご提供することで、笑顔ある未来を創造し、<br class="br">より豊かな社会環境の構築に貢献いたします。</p>
         </div>
-        <img class="js_fadeUp" src="<?php echo get_template_directory_uri(); ?>/img/home/about_01.png" alt="" width="363" height="403">
+        <img class="js_fadeUp" src="<?php echo get_template_directory_uri(); ?>/img/home/about_01.png" alt="" width="363" height="403" loading="lazy">
       </div>
     </section>
   </main>
